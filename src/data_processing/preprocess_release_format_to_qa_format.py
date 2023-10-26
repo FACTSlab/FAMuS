@@ -37,10 +37,13 @@ def famusInstance2QAInstances(instance,
             if role_spans == []:
                 answers = {'text': [] ,
                         'answer_start': []}
+            # If there are multiple role fillers for a role, we only take the first one
+            # This is a limitation of the SQuAD format
+            # There might be a better way to handle this, but this is the baseline approach
             else:
-                role_span_tupl = role_spans[0][0]
-                answers = {'text': [role_span_tupl[0]],
-                        'answer_start': [role_span_tupl[1]]}
+                first_role_filler = role_spans[0]
+                answers = {'text': [first_role_filler[0]],
+                        'answer_start': [first_role_filler[1]]}
                 
             curr_squad_instance['answers'] = answers
 

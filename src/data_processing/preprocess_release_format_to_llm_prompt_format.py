@@ -364,9 +364,7 @@ def famus_role_spans_to_llm_response_dict(role_annotations):
             response_dict[role_name] = []
         else:
             for span in role_spans:
-                # it is assumed that there is only one span per coref cluster
-                coref_single_value = span[0]
-                span_text = coref_single_value[0]
+                span_text = span[0]
                 if role_name in response_dict:
                     response_dict[role_name].append(span_text)
                 else:

@@ -33,16 +33,22 @@ def _modify_template_spans(frame_name: str,
         if role_spans != []:
             # we modify the indices for each span in the role
             # print(copied_role_spans)
-            # index 0 for all refers to the fact that there is a single span 
-            # in each coref cluster of a role span
             for current_span in copied_role_spans:
-                current_span[0][1] += charoffset
-                current_span[0][2] += charoffset
-                current_span[0][3] += tokenoffset
-                current_span[0][4] += tokenoffset
-                span_index_list.append(spans_to_idx_map[tuple(current_span[0][1:5])])
-        
-        new_template_dict[role_name] = copied_role_spans
+                current_span[1] += charoffset
+                current_span[2] += charoffset
+                current_span[3] += tokenoffset
+                current_span[4] += tokenoffset
+                span_index_list.append(spans_to_idx_map[tuple(current_span[1:5])])
+            # Each span in Iter-X is supposed to be a list of coref mentions
+            # so we wrap each span in a list, because we have only one coref 
+            # mention per span
+            coref_copied_role_spans = []
+            for current_span in copied_role_spans:
+                coref_copied_role_spans.append([current_span])
+        # empty role spans
+        else:
+            coref_copied_role_spans = []
+        new_template_dict[role_name] = coref_copied_role_spans
 
     # find the indices of the spans in the all-spans list
     span_index_list_unique = sorted(list(set(span_index_list)))
@@ -211,12 +217,12 @@ def parse_arguments():
     parser.add_argument('--input_dir', 
                         type=str, 
                         required=True,
-                        default = "/data/svashishtha/FAMuS/data/cross_doc_role_extraction/",
+                        default = "data/cross_doc_role_extraction/",
                         help='Path to the input release format files')
     
     parser.add_argument('--output_dir', type=str, 
                         required=True,
-                        default = "/data/svashishtha/FAMuS/data/cross_doc_role_extraction/iterx_format",
+                        default = "data/cross_doc_role_extraction/iterx_format",
                         help='Path to the output iterx format files')
     
     return parser.parse_args()

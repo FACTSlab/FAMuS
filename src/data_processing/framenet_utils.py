@@ -5,6 +5,7 @@ from bs4.element import Tag
 from collections import defaultdict
 from stanza.pipeline.core import Pipeline as StanzaPipeline
     
+ALL_FRAMES = set([frame.name for frame in fn.frames()])
 
 def frame_to_def(frame: str,
                 stanza_pipeline: StanzaPipeline):
@@ -296,7 +297,7 @@ def get_all_relations(frame, relation_type='Inheritance', variable = 'Child'):
     return children
 
 
-# ALL_FRAMES = set([frame.name for frame in fn.frames()])
+
 # # all_event_frames = bfs_children("Event")
 # ALL_FRAMES = set([frame.name for frame in fn.frames()])
 # # all_event_frames = bfs_children("Event")

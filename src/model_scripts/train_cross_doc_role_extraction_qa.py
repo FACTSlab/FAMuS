@@ -194,11 +194,8 @@ def main():
     
     def objective(trial: optuna.Trial):
         # Hyperparameters to tune and their ranges
-        # learning_rate = trial.suggest_float("learning_rate", 1e-6, 1e-4, log=True)
-        # weight_decay = trial.suggest_float("weight_decay", 1e-6, 1e-1, log=True)
-
-        learning_rate = args.learning_rate
-        weight_decay = args.weight_decay
+        learning_rate = trial.suggest_float("learning_rate", 1e-6, 1e-4, log=True)
+        weight_decay = trial.suggest_float("weight_decay", 1e-6, 1e-1, log=True)
         
         trial_output_dir = os.path.join(model_output_dir, f"trial-{trial.number}")
         os.makedirs(trial_output_dir, exist_ok=True)

@@ -143,7 +143,7 @@ def parse_args():
     
     parser.add_argument("--num_optuna_trials",
                        type=int,
-                       defualt = 5,
+                       default = 5,
                        help="Number of optuna trials to run")
 
     parser.add_argument("--experiment_name",

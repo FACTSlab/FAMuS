@@ -116,12 +116,18 @@ def max_distances(data: list):
             print(doc['instance_id'])
         else:
             # compute distances between first and last role in report
-            first_report_role, last_report_role = find_first_last_role(report_roles)
-            report_distances.append(distance(first_report_role, last_report_role))
+            if len(report_roles) == 1:
+                report_distances.append(0)
+            else:
+                first_report_role, last_report_role = find_first_last_role(report_roles)
+                report_distances.append(distance(first_report_role, last_report_role))
 
             # compute distances between first and last role in source
-            first_source_role, last_source_role = find_first_last_role(source_roles)
-            source_distances.append(distance(first_source_role, last_source_role))
+            if len(source_roles) == 1:
+                source_distances.append(0)
+            else:
+                first_source_role, last_source_role = find_first_last_role(source_roles)
+                source_distances.append(distance(first_source_role, last_source_role))
         
     return report_distances, source_distances
 

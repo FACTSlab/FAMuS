@@ -58,7 +58,7 @@ Variance: `308.68651296922593` \
 
 ### Source
 ![Alt text](assets/source_distances.png "Source Distances")
-![Alt text](asset/ssource_distances_100bucket.png "Source Distances 100 Buckets")
+![Alt text](assets/source_distances_100bucket.png "Source Distances 100 Buckets")
 
 Mean: `203.41981132075472` \
 Median: `64.5` \

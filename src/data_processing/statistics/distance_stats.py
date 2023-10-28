@@ -159,19 +159,19 @@ def main():
     print(report_count, source_count)
 
     # plt histogram
-    # plt.hist(report_distances, bins=10)
-    # plt.title("Distance between first and last role in report")
-    # plt.xlabel("Distance")
-    # plt.ylabel("Frequency")
-    # plt.savefig(os.path.join(args.output_dir, "report_distances.png"))
-    # plt.clf()
+    plt.hist(report_distances, bins=10)
+    plt.title("Distance between first and last role in report")
+    plt.xlabel("Distance")
+    plt.ylabel("Frequency")
+    plt.savefig(os.path.join(args.output_dir, "report_distances.png"))
+    plt.clf()
 
-    # plt.hist(source_distances, bins=10)
-    # plt.title("Distance between first and last role in source")
-    # plt.xlabel("Distance")
-    # plt.ylabel("Frequency")
-    # plt.savefig(os.path.join(args.output_dir, "source_distances.png"))
-    # plt.clf()
+    plt.hist(source_distances, bins=10)
+    plt.title("Distance between first and last role in source")
+    plt.xlabel("Distance")
+    plt.ylabel("Frequency")
+    plt.savefig(os.path.join(args.output_dir, "source_distances.png"))
+    plt.clf()
 
     # print statistics
     if args.verbose:

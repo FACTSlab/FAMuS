@@ -47,7 +47,7 @@ Top 10 Frames with least roles (normalized by number of roles in a frame):
 ## Distance Statistics
 ### Report 
 ![Alt text](assets/report_distances.png "Report Distances")
-![Alt text](asset/sreport_distances_100bucket.png "Report Distances 100 Buckets")
+![Alt text](assets/report_distances_100bucket.png "Report Distances 100 Buckets")
 
 Mean: `18.857704402515722` \
 Median: `14.0` \

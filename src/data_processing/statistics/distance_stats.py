@@ -6,11 +6,9 @@ Distance between the first filled roles and last filled role in report/source.
 """
 
 import os 
-import sys
 import json
 import argparse
 import numpy as np
-import pandas as pd
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
@@ -45,6 +43,48 @@ def find_first_last_role(roles: list):
             last_role = role
     return first_role, last_role
 
+def check_repeated_role_filler(data: list):
+    """
+    Checks the data to see how often role fillers are repeated in report/source
+    """
+    report_count = 0
+    source_count = 0
+    for doc in tqdm(data):
+        report_info = doc["report_dict"]["role_annotations"]
+        source_info = doc["source_dict"]["role_annotations"]
+        report_roles = []
+        for frame in report_info:
+            if frame == 'role-spans-indices-in-all-spans':
+                continue
+            if report_info[frame] != []:
+                for role in report_info[frame]:
+                    report_roles.append(role[3:5])
+
+        source_roles = []
+        for frame in source_info:
+            if frame == 'role-spans-indices-in-all-spans':
+                continue
+            if source_info[frame] != []:
+                for role in source_info[frame]:
+                    source_roles.append(role[3:5])
+
+        if len(report_roles) != 0 and len(source_roles) != 0:
+            first_report_role, last_report_role = find_first_last_role(report_roles)
+            if distance(first_report_role, last_report_role) == 0:
+                if len(report_roles) > 1:
+                    print('repeated role in report')
+                    print(doc['instance_id'])
+                    report_count += 1
+
+            first_source_role, last_source_role = find_first_last_role(source_roles)
+            if distance(first_source_role, last_source_role) == 0:
+                if len(source_roles) > 1:
+                    print('repeated role in source')
+                    print(doc['instance_id'])
+                    source_count += 1
+
+    return report_count, source_count
+            
 def max_distances(data: list):
     """
     Computes the distance between the first role and last role in report/source
@@ -109,20 +149,23 @@ def main():
     print(len(data))
     report_distances, source_distances = max_distances(data)
 
-    # plt histogram
-    plt.hist(report_distances, bins=10)
-    plt.title("Distance between first and last role in report")
-    plt.xlabel("Distance")
-    plt.ylabel("Frequency")
-    plt.savefig(os.path.join(args.output_dir, "report_distances.png"))
-    plt.clf()
+    report_count, source_count = check_repeated_role_filler(data)
+    print(report_count, source_count)
 
-    plt.hist(source_distances, bins=10)
-    plt.title("Distance between first and last role in source")
-    plt.xlabel("Distance")
-    plt.ylabel("Frequency")
-    plt.savefig(os.path.join(args.output_dir, "source_distances.png"))
-    plt.clf()
+    # plt histogram
+    # plt.hist(report_distances, bins=10)
+    # plt.title("Distance between first and last role in report")
+    # plt.xlabel("Distance")
+    # plt.ylabel("Frequency")
+    # plt.savefig(os.path.join(args.output_dir, "report_distances.png"))
+    # plt.clf()
+
+    # plt.hist(source_distances, bins=10)
+    # plt.title("Distance between first and last role in source")
+    # plt.xlabel("Distance")
+    # plt.ylabel("Frequency")
+    # plt.savefig(os.path.join(args.output_dir, "source_distances.png"))
+    # plt.clf()
 
     # print statistics
     if args.verbose:

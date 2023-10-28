@@ -9,12 +9,12 @@ The basic statistics for the dataset are generated using the `basic_statistics.p
 3. The average number of filled roles for each individual frame.
 
 ### Token Counts 
-Average Report Tokens: `58.95529411764706`
-Min Report Tokens: `10`
-Max Report Tokens: `526`
-Average Source Token: `1163.9843137254902`
-Min Source Tokens: `154`
-Max Source Tokens: `5553`
+Average Report Tokens: `58.95529411764706` \
+Min Report Tokens: `10` \
+Max Report Tokens: `526` \
+Average Source Token: `1163.9843137254902` \
+Min Source Tokens: `154` \
+Max Source Tokens: `5553` \
 
 ### Role Counts
 For json outputs of the specific frame/role data see `sorted_norm_roles.json`
@@ -43,3 +43,26 @@ Top 10 Frames with least roles (normalized by number of roles in a frame):
 8. `Cause_motion`-> `0.2727272727272727`
 9. `Apply_heat`-> `0.2285714285714286`
 10. `Education_teaching`-> `0.21538461538461537`
+
+## Distance Statistics
+### Report 
+![Alt text](assets/report_distances.png "Report Distances")
+![Alt text](asset/sreport_distances_100bucket.png "Report Distances 100 Buckets")
+
+Mean: `18.857704402515722` \
+Median: `14.0` \
+Max: `135` \
+Min: `0` \
+Standard deviation: `17.569476741474855` \
+Variance: `308.68651296922593` \
+
+### Source
+![Alt text](assets/source_distances.png "Source Distances")
+![Alt text](asset/ssource_distances_100bucket.png "Source Distances 100 Buckets")
+
+Mean: `203.41981132075472` \
+Median: `64.5` \
+Max: `3311` \
+Min: `0` \
+Standard deviation: `386.984062919` \
+Variance: `149756.66495342352` 

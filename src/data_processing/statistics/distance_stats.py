@@ -1,10 +1,3 @@
-"""
-distance statistics: 
-Distance is computed as the number of tokens.
-distribution of the distance between the first role filler and the last role filler in report and source docs. 
-Distance between the first filled roles and last filled role in report/source.
-"""
-
 import os 
 import json
 import argparse

@@ -54,7 +54,7 @@ Median: `14.0` \
 Max: `135` \
 Min: `0` \
 Standard deviation: `17.569476741474855` \
-Variance: `308.68651296922593` \
+Variance: `308.68651296922593` 
 
 ### Source
 ![Alt text](assets/source_distances.png "Source Distances")

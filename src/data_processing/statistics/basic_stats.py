@@ -1,16 +1,8 @@
-"""
-basic statistics:
-average number of tokens in report/source
-average number/proportion of filled roles in report/source
-which frames have the least filled roles/most filled roles (maybe top 3 frames)
-"""
-
 import os 
 import sys
 import json
 import argparse
 import numpy as np
-import pandas as pd
 from tqdm import tqdm
 
 
@@ -18,8 +10,17 @@ from tqdm import tqdm
 def token_counts(data: list):
     """
     Counts the average number of tokens in the report/source documents
-    """
 
+    Returns:
+        report tuple
+            - average number of tokens in report
+            - min report size
+            - max report size
+        source tuple
+            - average number of tokens in source
+            - min source size
+            - max source size
+    """
     report_token_counts = []
     source_token_counts = []
     min_report_size = sys.maxsize
@@ -53,8 +54,15 @@ def role_counts(data: list):
     Counts the average number/proportion of filled roles in report/source
 
     Returns:
-        a number (average number of filled roles across all frames) 
-        a dictionary (average number of filled roles per frame)
+        a dictionary with role data: 
+        {
+            frame: {
+                average: average number of filled roles across all documents for the frame
+                counts: {
+                    role: average number of filled roles across all documents for the role
+                }
+            }
+        }
     """
     role_info = {} #has structure {frame: average: int, counts:{role: count}}}
     for doc in tqdm(data):
@@ -91,6 +99,8 @@ def role_counts(data: list):
 def normalize_roles(role_info: dict):
     """
     Normalize averages by number of roles in the frame
+
+    Returns a dict of same structure receieved
     """
     normalized_roles = {}
     for frame in role_info:

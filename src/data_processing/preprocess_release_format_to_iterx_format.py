@@ -4,7 +4,9 @@ import json
 import os
 from tqdm import tqdm
 from typing import Dict
-from data_utils import famusInstance2ModifiedReportwithTrigger
+from data_utils import (famusInstance2ModifiedReportwithTrigger, 
+                        loadJsonl,
+                        exportList2Jsonl)
 
 def _modify_template_spans(frame_name: str,
                             template: Dict,
@@ -230,40 +232,38 @@ def parse_arguments():
 def main():
     args = parse_arguments()
     print("Reading the release format files...")
-    with open(os.path.join(args.input_dir, "train.jsonl")) as f:
-        train = [json.loads(line) for line in f]
-
-    with open(os.path.join(args.input_dir, "dev.jsonl")) as f:
-        dev = [json.loads(line) for line in f]
-
-    with open(os.path.join(args.input_dir, "test.jsonl")) as f:
-        test = [json.loads(line) for line in f]
+    train = loadJsonl(os.path.join(args.input_dir, "train.jsonl"))
+    dev = loadJsonl(os.path.join(args.input_dir, "dev.jsonl"))
+    test = loadJsonl(os.path.join(args.input_dir, "test.jsonl"))
     ####################################################################
     ########## Report Text Data ##########################################
     ####################################################################
     # convert the train, dev, test instances to iterx format
+    #########################
+    ###### Mixed Spans ######
+    # Mixed spans: 
+    #   SpanF + \
+    #   NER Entities from Stanza + \
+    #   Manual Annotated Spans by Workers
+    #########################
     print("Converting to iterx format for report...")
     train_iterx_report = [famusInstance2IterXReportInstance(instance) for instance in tqdm(train)]
     dev_iterx_report = [famusInstance2IterXReportInstance(instance) for instance in tqdm(dev)]
     test_iterx_report = [famusInstance2IterXReportInstance(instance) for instance in tqdm(test)]
 
-    report_export_path = os.path.join(args.output_dir, "report_data")
-    os.makedirs(report_export_path, exist_ok=True)
+    report_export_path_mixed_spans = os.path.join(args.output_dir, 
+                                      "report_data", 
+                                      "mixed_spans")    
+    os.makedirs(report_export_path_mixed_spans, exist_ok=True)
     # Export the iterx format instances
-    with open(os.path.join(report_export_path, "train.jsonl"), "w") as f:
-        for instance in train_iterx_report:
-            f.write(json.dumps(instance) + "\n")
-
-    with open(os.path.join(report_export_path, "dev.jsonl"), "w") as f:
-        for instance in dev_iterx_report:
-            f.write(json.dumps(instance) + "\n")
-
-    with open(os.path.join(report_export_path, "test.jsonl"), "w") as f:
-        for instance in test_iterx_report:
-            f.write(json.dumps(instance) + "\n")
-
-    print(f"Report Data Files exported to: {report_export_path}")
-
+    exportList2Jsonl(train_iterx_report, os.path.join(report_export_path_mixed_spans,
+                                                       "train.jsonl"))
+    exportList2Jsonl(dev_iterx_report, os.path.join(report_export_path_mixed_spans,
+                                                     "dev.jsonl"))
+    exportList2Jsonl(test_iterx_report, os.path.join(report_export_path_mixed_spans, 
+                                                     "test.jsonl")) 
+    print(f"Report Data (mixed spans) Files exported to: {report_export_path_mixed_spans}")
+    
     ####################################################################
     ########## Source Text Data ########################################
     ####################################################################
@@ -273,22 +273,19 @@ def main():
     dev_iterx_source = [famusInstance2IterXSourceInstance(instance) for instance in tqdm(dev)]
     test_iterx_source = [famusInstance2IterXSourceInstance(instance) for instance in tqdm(test)]
 
-    source_export_path = os.path.join(args.output_dir, "source_data")
-    os.makedirs(source_export_path, exist_ok=True)
+    source_export_path_mixed_spans = os.path.join(args.output_dir, 
+                                      "source_data",
+                                      "mixed_spans")
+    os.makedirs(source_export_path_mixed_spans, exist_ok=True)
     # Export the iterx format instances
-    with open(os.path.join(source_export_path, "train.jsonl"), "w") as f:
-        for instance in train_iterx_source:
-            f.write(json.dumps(instance) + "\n")
+    exportList2Jsonl(train_iterx_source, os.path.join(source_export_path_mixed_spans,
+                                                         "train.jsonl"))
+    exportList2Jsonl(dev_iterx_source, os.path.join(source_export_path_mixed_spans,
+                                                         "dev.jsonl"))
+    exportList2Jsonl(test_iterx_source, os.path.join(source_export_path_mixed_spans,
+                                                            "test.jsonl"))
     
-    with open(os.path.join(source_export_path, "dev.jsonl"), "w") as f:
-        for instance in dev_iterx_source:
-            f.write(json.dumps(instance) + "\n")
-
-    with open(os.path.join(source_export_path, "test.jsonl"), "w") as f:
-        for instance in test_iterx_source:
-            f.write(json.dumps(instance) + "\n")
-
-    print(f"Source Data Files exported to: {source_export_path}")
+    print(f"Source Data Files (mixed spans) exported to: {source_export_path_mixed_spans}")
 
 if __name__ == "__main__":
     main()

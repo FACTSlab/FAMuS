@@ -1,4 +1,5 @@
 # Purpose: Utility functions for data processing on FAMuS release format
+import json
 
 def famusInstance2ModifiedReportwithTrigger(instance, trigger_tag='event'):
     """
@@ -83,3 +84,15 @@ def famusInstance2coloredReportText(instance):
             all_tokens.append(token)
             
     return " ".join(all_tokens)
+
+
+def exportList2Jsonl(list_of_dicts, 
+                     output_path):
+    with open(output_path, "w") as f:
+        for instance in list_of_dicts:
+            f.write(json.dumps(instance) + "\n")
+
+def loadJsonl(input_path):
+    with open(input_path) as f:
+        return [json.loads(line) for line in f]
+    

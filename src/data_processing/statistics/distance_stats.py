@@ -128,7 +128,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", type=str, default="data/cross_doc_role_extraction", help="directory of data") 
     parser.add_argument("--dataset", type=str, default="all", help="dataset to analyze") # all, train, dev, test
-    parser.add_argument("--output_dir", type=str, default="src/data_processing/statistics", help="directory to save output")
+    parser.add_argument("--output_dir", type=str, default="src/data_processing/statistics/assets", help="directory to save output")
     parser.add_argument("--verbose", action="store_true", help="print out statistics")
     args = parser.parse_args()
 
@@ -152,19 +152,21 @@ def main():
     print(report_count, source_count)
 
     # plt histogram
-    # plt.hist(report_distances, bins=10)
-    # plt.title("Distance between first and last role in report")
-    # plt.xlabel("Distance")
-    # plt.ylabel("Frequency")
-    # plt.savefig(os.path.join(args.output_dir, "report_distances.png"))
-    # plt.clf()
+    report_fig_name = 'report_distances_' + args.dataset + '.png'
+    source_fig_name = 'source_distances_' + args.dataset + '.png'
+    plt.hist(report_distances, bins=100)
+    plt.title("Distance between first and last role in report")
+    plt.xlabel("Distance")
+    plt.ylabel("Frequency")
+    plt.savefig(os.path.join(args.output_dir, report_fig_name))
+    plt.clf()
 
-    # plt.hist(source_distances, bins=10)
-    # plt.title("Distance between first and last role in source")
-    # plt.xlabel("Distance")
-    # plt.ylabel("Frequency")
-    # plt.savefig(os.path.join(args.output_dir, "source_distances.png"))
-    # plt.clf()
+    plt.hist(source_distances, bins=100)
+    plt.title("Distance between first and last role in source")
+    plt.xlabel("Distance")
+    plt.ylabel("Frequency")
+    plt.savefig(os.path.join(args.output_dir, source_fig_name))
+    plt.clf()
 
     # print statistics
     if args.verbose:

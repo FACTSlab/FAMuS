@@ -162,9 +162,9 @@ Top 10 Frames with least roles (normalized by number of roles in a frame):
 10. `Apply_heat`-> `0.14285714285714285`
 
 ## Distance Statistics
-### Report 
-![Alt text](assets/report_distances.png "Report Distances")
-![Alt text](assets/report_distances_100bucket.png "Report Distances 100 Buckets")
+### All Data
+#### Report 
+![Alt text](assets/report_distances_all.png "Report Distances 100 Buckets")
 
 Mean: `18.857704402515722` \
 Median: `14.0` \
@@ -173,9 +173,8 @@ Min: `0` \
 Standard deviation: `17.569476741474855` \
 Variance: `308.68651296922593` 
 
-### Source
-![Alt text](assets/source_distances.png "Source Distances")
-![Alt text](assets/source_distances_100bucket.png "Source Distances 100 Buckets")
+#### Source
+![Alt text](assets/source_distances_all.png "Source Distances 100 Buckets")
 
 Mean: `203.41981132075472` \
 Median: `64.5` \
@@ -183,3 +182,65 @@ Max: `3311` \
 Min: `0` \
 Standard deviation: `386.984062919` \
 Variance: `149756.66495342352` 
+
+### Train Data
+#### Report
+![Alt text](assets/report_distances_train.png "Source Distances 100 Buckets")
+
+Mean: `17.926701570680628` \
+Median: `13.0` \
+Max: `135` \
+Min: `0` \
+Standard deviation: `17.69993844784599` \
+Variance: `313.2878210575368`
+
+#### Source
+![Alt text](assets/source_distances_train.png "Source Distances 100 Buckets")
+
+Mean: `190.5091623036649` \
+Median: `64.0` \
+Max: `3311` \
+Min: `0` \
+Standard deviation: `361.44022362814894` \
+Variance: `130639.03525636632`
+
+### Dev Data
+#### Report
+![Alt text](assets/report_distances_dev.png "Source Distances 100 Buckets")
+
+Mean: `22.42292490118577` \
+Median: `18.0` \
+Max: `90` \
+Min: `0` \
+Standard deviation: `18.635228128824515` \
+Variance: `347.2717274133325`
+
+#### Source
+![Alt text](assets/source_distances_dev.png "Source Distances 100 Buckets")
+
+Mean: `291.0395256916996` \
+Median: `108.0` \
+Max: `3043` \
+Min: `0` \
+Standard deviation: `508.7967655511856` \
+Variance: `258874.14863534816`
+### Test Data
+#### Report
+![Alt text](assets/report_distances_test.png "Source Distances 100 Buckets")
+
+Mean: `17.32941176470588` \
+Median: `12.0` \
+Max: `86` \
+Min: `0` \
+Standard deviation: `16.268377772238196` \
+Variance: `264.6601153402538`
+
+#### Source
+![Alt text](assets/source_distances_test.png "Source Distances 100 Buckets")
+
+Mean: `154.33333333333334` \
+Median: `40.0` \
+Max: `2254` \
+Min: `0` \
+Standard deviation: `297.6219912459471` \
+Variance: `88578.84967320261`

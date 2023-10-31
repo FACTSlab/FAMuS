@@ -1,0 +1,3338 @@
+[
+    [
+        "Activity_resume",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Activity": 1.0,
+                "Agent": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Activity_start",
+        {
+            "average": 1.0,
+            "counts": {
+                "Agent": 1.0,
+                "Place": 1.0,
+                "Time": 1.0,
+                "Activity": 1.0
+            }
+        }
+    ],
+    [
+        "Attack",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Assailant": 1.0,
+                "Victim": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Being_located",
+        {
+            "average": 1.0,
+            "counts": {
+                "Theme": 1.0,
+                "Place": 1.0,
+                "Location": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Breaking_out_captive",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Theme": 1.0,
+                "Location_of_confinement": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_change_of_strength",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Place": 1.0,
+                "Patient": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_continue",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Place": 1.0,
+                "Cause": 1.0,
+                "Process": 1.0,
+                "State": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_fragment",
+        {
+            "average": 1.0,
+            "counts": {
+                "Place": 1.0,
+                "Cause": 1.0,
+                "Agent": 1.0,
+                "Whole_patient": 1.0,
+                "Pieces": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_make_progress",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Project": 1.0,
+                "Agent": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Change_event_duration",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Event": 1.0,
+                "Cause": 1.0
+            }
+        }
+    ],
+    [
+        "Change_of_consistency",
+        {
+            "average": 1.0,
+            "counts": {
+                "Place": 1.0,
+                "Time": 1.0,
+                "Patient": 1.0
+            }
+        }
+    ],
+    [
+        "Chaos",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Entity": 1.0,
+                "Place": 1.0,
+                "State": 1.0
+            }
+        }
+    ],
+    [
+        "Come_down_with",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Place": 1.0,
+                "Protagonist": 1.0,
+                "Disease": 1.0
+            }
+        }
+    ],
+    [
+        "Coming_to_be",
+        {
+            "average": 1.0,
+            "counts": {
+                "Place": 1.0,
+                "Entity": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Commerce_buy",
+        {
+            "average": 1.0,
+            "counts": {
+                "Goods": 1.0,
+                "Place": 1.0,
+                "Time": 1.0,
+                "Buyer": 1.0
+            }
+        }
+    ],
+    [
+        "Committing_crime",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Perpetrator": 1.0,
+                "Place": 1.0,
+                "Crime": 1.0
+            }
+        }
+    ],
+    [
+        "Confronting_problem",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Issue": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Counterattack",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Assailant": 1.0,
+                "Victim": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Cutting",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Pieces": 1.0,
+                "Item": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Damaging",
+        {
+            "average": 1.0,
+            "counts": {
+                "Cause": 1.0,
+                "Time": 1.0,
+                "Place": 1.0,
+                "Agent": 1.0,
+                "Patient": 1.0
+            }
+        }
+    ],
+    [
+        "Detonate_explosive",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Place": 1.0,
+                "Agent": 1.0,
+                "Explosive": 1.0
+            }
+        }
+    ],
+    [
+        "Dodging",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Bad_entity": 1.0,
+                "Dodger": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Dominate_competitor",
+        {
+            "average": 1.0,
+            "counts": {
+                "Patient": 1.0,
+                "Place": 1.0,
+                "Agent": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Earnings_and_losses",
+        {
+            "average": 1.0,
+            "counts": {
+                "Earner": 1.0,
+                "Earnings": 1.0,
+                "Time": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Emotions_success_or_failure",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Experiencer": 1.0,
+                "Topic": 1.0,
+                "Stimulus": 1.0,
+                "Event": 1.0,
+                "Expressor": 1.0,
+                "State": 1.0
+            }
+        }
+    ],
+    [
+        "Escaping",
+        {
+            "average": 1.0,
+            "counts": {
+                "Place": 1.0,
+                "Time": 1.0,
+                "Escapee": 1.0,
+                "Undesirable_location": 1.0
+            }
+        }
+    ],
+    [
+        "Event",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Event": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Execute_plan",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Place": 1.0,
+                "Medium": 1.0,
+                "Plan": 1.0
+            }
+        }
+    ],
+    [
+        "Experience_bodily_harm",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Experiencer": 1.0,
+                "Body_part": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Fining",
+        {
+            "average": 1.0,
+            "counts": {
+                "Speaker": 1.0,
+                "Time": 1.0,
+                "Reason": 1.0,
+                "Place": 1.0,
+                "Fine": 1.0,
+                "Payer": 1.0
+            }
+        }
+    ],
+    [
+        "Historic_event",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Place": 1.0,
+                "Entity": 1.0,
+                "Event": 1.0
+            }
+        }
+    ],
+    [
+        "Imposing_obligation",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Responsible_party": 1.0,
+                "Duty": 1.0,
+                "Place": 1.0,
+                "Situation": 1.0,
+                "Obligator": 1.0,
+                "Principle": 1.0
+            }
+        }
+    ],
+    [
+        "Imprisonment",
+        {
+            "average": 1.0,
+            "counts": {
+                "Authorities": 1.0,
+                "Prisoner": 1.0,
+                "Prison": 1.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Improvement_or_decline",
+        {
+            "average": 1.0,
+            "counts": {
+                "Place": 1.0,
+                "Time": 1.0,
+                "Entity": 1.0
+            }
+        }
+    ],
+    [
+        "Intentionally_act",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Intercepting",
+        {
+            "average": 1.0,
+            "counts": {
+                "Place": 1.0,
+                "Theme": 1.0,
+                "Interceptor": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Invading",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Invader": 1.0,
+                "Land": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Kidnapping",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Victim": 1.0,
+                "Perpetrator": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Legal_rulings",
+        {
+            "average": 1.0,
+            "counts": {
+                "Place": 1.0,
+                "Defendant": 1.0,
+                "Finding": 1.0,
+                "Time": 1.0,
+                "Case": 1.0,
+                "Authority": 1.0
+            }
+        }
+    ],
+    [
+        "Lending",
+        {
+            "average": 1.0,
+            "counts": {
+                "Theme": 1.0,
+                "Place": 1.0,
+                "Lender": 1.0,
+                "Borrower": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Limiting",
+        {
+            "average": 1.0,
+            "counts": {
+                "Range_of_options": 1.0,
+                "Place": 1.0,
+                "Cause": 1.0,
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Characteristic": 1.0
+            }
+        }
+    ],
+    [
+        "Operating_a_system",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "System": 1.0,
+                "Operator": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Perception_active",
+        {
+            "average": 1.0,
+            "counts": {
+                "Perceiver_agentive": 1.0,
+                "Phenomenon": 1.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Piracy",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Vehicle": 1.0,
+                "Victim": 1.0,
+                "Place": 1.0,
+                "Perpetrator": 1.0
+            }
+        }
+    ],
+    [
+        "Precipitation",
+        {
+            "average": 1.0,
+            "counts": {
+                "Place": 1.0,
+                "Precipitation": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Presence",
+        {
+            "average": 1.0,
+            "counts": {
+                "Entity": 1.0,
+                "Location": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Process_completed_state",
+        {
+            "average": 1.0,
+            "counts": {
+                "Place": 1.0,
+                "Process": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Process_start",
+        {
+            "average": 1.0,
+            "counts": {
+                "Event": 1.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Rape",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Victim": 1.0,
+                "Place": 1.0,
+                "Perpetrator": 1.0
+            }
+        }
+    ],
+    [
+        "Removing",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Source": 1.0,
+                "Cause": 1.0,
+                "Agent": 1.0,
+                "Theme": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Renting_out",
+        {
+            "average": 1.0,
+            "counts": {
+                "Place": 1.0,
+                "Goods": 1.0,
+                "Time": 1.0,
+                "Lessor": 1.0,
+                "Lessee": 1.0
+            }
+        }
+    ],
+    [
+        "Rewards_and_punishments",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Place": 1.0,
+                "Reason": 1.0,
+                "Evaluee": 1.0
+            }
+        }
+    ],
+    [
+        "Rotting",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Place": 1.0,
+                "Patient": 1.0
+            }
+        }
+    ],
+    [
+        "Seeking",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Cognizer_agent": 1.0,
+                "Sought_entity": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Seeking_to_achieve",
+        {
+            "average": 1.0,
+            "counts": {
+                "Agent": 1.0,
+                "State_of_affairs": 1.0,
+                "Sought_entity": 1.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Shoot_projectiles",
+        {
+            "average": 1.0,
+            "counts": {
+                "Agent": 1.0,
+                "Projectile": 1.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "State_of_entity",
+        {
+            "average": 1.0,
+            "counts": {
+                "Entity": 1.0
+            }
+        }
+    ],
+    [
+        "Subsisting",
+        {
+            "average": 1.0,
+            "counts": {
+                "Entity": 1.0,
+                "Support": 1.0
+            }
+        }
+    ],
+    [
+        "Transportation_status",
+        {
+            "average": 1.0,
+            "counts": {
+                "Rider": 1.0
+            }
+        }
+    ],
+    [
+        "Undergoing",
+        {
+            "average": 1.0,
+            "counts": {
+                "Time": 1.0,
+                "Entity": 1.0,
+                "Place": 1.0,
+                "Event": 1.0
+            }
+        }
+    ],
+    [
+        "Vehicle_landing",
+        {
+            "average": 1.0,
+            "counts": {
+                "Goal": 1.0,
+                "Vehicle": 1.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Mass_motion",
+        {
+            "average": 0.875,
+            "counts": {
+                "Direction": 0.0,
+                "Time": 1.0,
+                "Source": 1.0,
+                "Area": 1.0,
+                "Place": 1.0,
+                "Mass_theme": 1.0,
+                "Path": 1.0,
+                "Goal": 1.0
+            }
+        }
+    ],
+    [
+        "Separating",
+        {
+            "average": 0.875,
+            "counts": {
+                "Time": 0.0,
+                "Agent": 1.0,
+                "Cause": 1.0,
+                "Whole": 1.0,
+                "Parts": 1.0,
+                "Part_1": 1.0,
+                "Place": 1.0,
+                "Part_2": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_amalgamate",
+        {
+            "average": 0.8571428571428571,
+            "counts": {
+                "Place": 0.0,
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Part_1": 1.0,
+                "Part_2": 1.0,
+                "Parts": 1.0,
+                "Whole": 1.0
+            }
+        }
+    ],
+    [
+        "Arrest",
+        {
+            "average": 0.8333333333333334,
+            "counts": {
+                "Charges": 0.0,
+                "Place": 1.0,
+                "Offense": 1.0,
+                "Time": 1.0,
+                "Authorities": 1.0,
+                "Suspect": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_be_wet",
+        {
+            "average": 0.8333333333333334,
+            "counts": {
+                "Cause": 0.0,
+                "Agent": 1.0,
+                "Liquid": 1.0,
+                "Patient": 1.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Communication",
+        {
+            "average": 0.8333333333333334,
+            "counts": {
+                "Topic": 0.0,
+                "Place": 1.0,
+                "Time": 1.0,
+                "Medium": 1.0,
+                "Communicator": 1.0,
+                "Message": 1.0
+            }
+        }
+    ],
+    [
+        "Heralding",
+        {
+            "average": 0.8333333333333334,
+            "counts": {
+                "Individual": 0.0,
+                "Time": 1.0,
+                "Place": 1.0,
+                "Communicator": 1.0,
+                "Event": 1.0,
+                "Medium": 1.0
+            }
+        }
+    ],
+    [
+        "Manipulate_into_doing",
+        {
+            "average": 0.8333333333333334,
+            "counts": {
+                "Place": 0.0,
+                "Time": 1.0,
+                "Goods": 1.0,
+                "Manipulator": 1.0,
+                "Victim": 1.0,
+                "Resulting_action": 1.0
+            }
+        }
+    ],
+    [
+        "Rescuing",
+        {
+            "average": 0.8333333333333334,
+            "counts": {
+                "Asset": 0.0,
+                "Time": 1.0,
+                "Patient": 1.0,
+                "Harmful_situation": 1.0,
+                "Place": 1.0,
+                "Agent": 1.0
+            }
+        }
+    ],
+    [
+        "Setting_fire",
+        {
+            "average": 0.8333333333333334,
+            "counts": {
+                "Cause": 0.0,
+                "Flame": 1.0,
+                "Kindler": 1.0,
+                "Flammables": 1.0,
+                "Time": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Supply",
+        {
+            "average": 0.8333333333333334,
+            "counts": {
+                "Imposed_purpose": 0.0,
+                "Time": 1.0,
+                "Recipient": 1.0,
+                "Supplier": 1.0,
+                "Place": 1.0,
+                "Theme": 1.0
+            }
+        }
+    ],
+    [
+        "Theft",
+        {
+            "average": 0.8333333333333334,
+            "counts": {
+                "Perpetrator": 0.0,
+                "Time": 1.0,
+                "Victim": 1.0,
+                "Place": 1.0,
+                "Source": 1.0,
+                "Goods": 1.0
+            }
+        }
+    ],
+    [
+        "Transfer",
+        {
+            "average": 0.8333333333333334,
+            "counts": {
+                "Transferors": 0.0,
+                "Time": 1.0,
+                "Theme": 1.0,
+                "Place": 1.0,
+                "Donor": 1.0,
+                "Recipient": 1.0
+            }
+        }
+    ],
+    [
+        "Adjusting",
+        {
+            "average": 0.8,
+            "counts": {
+                "Time": 0.0,
+                "Place": 1.0,
+                "Part": 1.0,
+                "Feature": 1.0,
+                "Agent": 1.0
+            }
+        }
+    ],
+    [
+        "Agriculture",
+        {
+            "average": 0.8,
+            "counts": {
+                "Food": 0.0,
+                "Time": 1.0,
+                "Agriculturist": 1.0,
+                "Ground": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Arraignment",
+        {
+            "average": 0.8,
+            "counts": {
+                "Judge": 0.0,
+                "Defendant": 1.0,
+                "Time": 1.0,
+                "Place": 1.0,
+                "Charges": 1.0
+            }
+        }
+    ],
+    [
+        "Borrowing",
+        {
+            "average": 0.8,
+            "counts": {
+                "Time": 0.0,
+                "Lender": 1.0,
+                "Place": 1.0,
+                "Borrower": 1.0,
+                "Theme": 1.0
+            }
+        }
+    ],
+    [
+        "Building",
+        {
+            "average": 0.8,
+            "counts": {
+                "Components": 0.0,
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Created_entity": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_emotion",
+        {
+            "average": 0.8,
+            "counts": {
+                "Place": 0.0,
+                "Experiencer": 1.0,
+                "Event": 1.0,
+                "Agent": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_wake",
+        {
+            "average": 0.8,
+            "counts": {
+                "Time": 0.0,
+                "Place": 1.0,
+                "Agent": 1.0,
+                "Sleeper": 1.0,
+                "Cause": 1.0
+            }
+        }
+    ],
+    [
+        "Change_operational_state",
+        {
+            "average": 0.8,
+            "counts": {
+                "Agent": 0.0,
+                "Time": 1.0,
+                "Cause": 1.0,
+                "Device": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Commerce_sell",
+        {
+            "average": 0.8,
+            "counts": {
+                "Buyer": 0.0,
+                "Goods": 1.0,
+                "Place": 1.0,
+                "Time": 1.0,
+                "Seller": 1.0
+            }
+        }
+    ],
+    [
+        "Destroying",
+        {
+            "average": 0.8,
+            "counts": {
+                "Destroyer": 0.0,
+                "Time": 1.0,
+                "Cause": 1.0,
+                "Patient": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Dispersal",
+        {
+            "average": 0.8,
+            "counts": {
+                "Cause": 0.0,
+                "Time": 1.0,
+                "Individuals": 1.0,
+                "Agent": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Downing",
+        {
+            "average": 0.8,
+            "counts": {
+                "Time": 0.0,
+                "Cause": 1.0,
+                "Patient": 1.0,
+                "Place": 1.0,
+                "Agent": 1.0
+            }
+        }
+    ],
+    [
+        "Endangering",
+        {
+            "average": 0.8,
+            "counts": {
+                "Time": 0.0,
+                "Agent": 1.0,
+                "Cause": 1.0,
+                "Place": 1.0,
+                "Valued_entity": 1.0
+            }
+        }
+    ],
+    [
+        "Enforcing",
+        {
+            "average": 0.8,
+            "counts": {
+                "Time": 0.0,
+                "Agent": 1.0,
+                "Place": 1.0,
+                "Medium": 1.0,
+                "Rule": 1.0
+            }
+        }
+    ],
+    [
+        "Grinding",
+        {
+            "average": 0.8,
+            "counts": {
+                "Grinder": 0.0,
+                "Place": 1.0,
+                "Grinding_cause": 1.0,
+                "Time": 1.0,
+                "Patient": 1.0
+            }
+        }
+    ],
+    [
+        "Manufacturing",
+        {
+            "average": 0.8,
+            "counts": {
+                "Factory": 0.0,
+                "Producer": 1.0,
+                "Place": 1.0,
+                "Product": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Pardon",
+        {
+            "average": 0.8,
+            "counts": {
+                "Offense": 0.0,
+                "Time": 1.0,
+                "Authority": 1.0,
+                "Place": 1.0,
+                "Offender": 1.0
+            }
+        }
+    ],
+    [
+        "Rejuvenation",
+        {
+            "average": 0.8,
+            "counts": {
+                "Cause": 0.0,
+                "Agent": 1.0,
+                "Entity": 1.0,
+                "Time": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Sign_agreement",
+        {
+            "average": 0.8,
+            "counts": {
+                "Signature": 0.0,
+                "Agreement": 1.0,
+                "Time": 1.0,
+                "Signatory": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Silencing",
+        {
+            "average": 0.8,
+            "counts": {
+                "Expressor": 0.0,
+                "Time": 1.0,
+                "Place": 1.0,
+                "Agent": 1.0,
+                "Speaker": 1.0
+            }
+        }
+    ],
+    [
+        "Soaking",
+        {
+            "average": 0.8,
+            "counts": {
+                "Agent": 0.0,
+                "Theme": 1.0,
+                "Place": 1.0,
+                "Time": 1.0,
+                "Medium": 1.0
+            }
+        }
+    ],
+    [
+        "Summarizing",
+        {
+            "average": 0.8,
+            "counts": {
+                "Place": 0.0,
+                "State_of_affairs": 1.0,
+                "Communicator": 1.0,
+                "Medium": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Taking",
+        {
+            "average": 0.8,
+            "counts": {
+                "Place": 0.0,
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Source": 1.0,
+                "Theme": 1.0
+            }
+        }
+    ],
+    [
+        "Undergo_change",
+        {
+            "average": 0.8,
+            "counts": {
+                "Time": 0.0,
+                "Place": 1.0,
+                "Initial_category": 1.0,
+                "Entity": 1.0,
+                "Final_category": 1.0
+            }
+        }
+    ],
+    [
+        "Undergo_transformation",
+        {
+            "average": 0.8,
+            "counts": {
+                "Place": 0.0,
+                "Time": 1.0,
+                "Initial_category": 1.0,
+                "Entity": 1.0,
+                "Final_category": 1.0
+            }
+        }
+    ],
+    [
+        "Work",
+        {
+            "average": 0.8,
+            "counts": {
+                "Salient_entity": 0.0,
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Place": 1.0,
+                "Goal": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_fluidic_motion",
+        {
+            "average": 0.7777777777777778,
+            "counts": {
+                "Path": 0.0,
+                "Area": 0.0,
+                "Time": 1.0,
+                "Place": 1.0,
+                "Agent": 1.0,
+                "Cause": 1.0,
+                "Source": 1.0,
+                "Fluid": 1.0,
+                "Goal": 1.0
+            }
+        }
+    ],
+    [
+        "Abandonment",
+        {
+            "average": 0.75,
+            "counts": {
+                "Time": 0.0,
+                "Theme": 1.0,
+                "Place": 1.0,
+                "Agent": 1.0
+            }
+        }
+    ],
+    [
+        "Activity_finish",
+        {
+            "average": 0.75,
+            "counts": {
+                "Time": 0.0,
+                "Agent": 1.0,
+                "Activity": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Activity_pause",
+        {
+            "average": 0.75,
+            "counts": {
+                "Place": 0.0,
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Activity": 1.0
+            }
+        }
+    ],
+    [
+        "Activity_ready_state",
+        {
+            "average": 0.75,
+            "counts": {
+                "Activity": 0.0,
+                "Time": 1.0,
+                "Protagonist": 1.0,
+                "Salient_entity": 1.0
+            }
+        }
+    ],
+    [
+        "Arriving",
+        {
+            "average": 0.75,
+            "counts": {
+                "Time": 0.0,
+                "Theme": 1.0,
+                "Place": 1.0,
+                "Goal": 1.0
+            }
+        }
+    ],
+    [
+        "Attempt",
+        {
+            "average": 0.75,
+            "counts": {
+                "Agent": 0.0,
+                "Time": 1.0,
+                "Goal": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Attending",
+        {
+            "average": 0.75,
+            "counts": {
+                "Place": 0.0,
+                "Agent": 1.0,
+                "Event": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Avoiding",
+        {
+            "average": 0.75,
+            "counts": {
+                "Time": 0.0,
+                "Agent": 1.0,
+                "Undesirable_situation": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_change",
+        {
+            "average": 0.75,
+            "counts": {
+                "Agent": 0.0,
+                "Time": 0.0,
+                "Place": 1.0,
+                "Entity": 1.0,
+                "Initial_category": 1.0,
+                "Initial_value": 1.0,
+                "Final_category": 1.0,
+                "Final_value": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_experience",
+        {
+            "average": 0.75,
+            "counts": {
+                "Time": 0.0,
+                "Agent": 1.0,
+                "Place": 1.0,
+                "Experiencer": 1.0
+            }
+        }
+    ],
+    [
+        "Control",
+        {
+            "average": 0.75,
+            "counts": {
+                "Time": 0.0,
+                "Controlling_entity": 1.0,
+                "Place": 1.0,
+                "Dependent_entity": 1.0
+            }
+        }
+    ],
+    [
+        "Creating",
+        {
+            "average": 0.75,
+            "counts": {
+                "Time": 0.0,
+                "Place": 1.0,
+                "Creator": 1.0,
+                "Created_entity": 1.0
+            }
+        }
+    ],
+    [
+        "Daring",
+        {
+            "average": 0.75,
+            "counts": {
+                "Place": 0.0,
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Action": 1.0
+            }
+        }
+    ],
+    [
+        "Execution",
+        {
+            "average": 0.75,
+            "counts": {
+                "Time": 0.0,
+                "Executed": 1.0,
+                "Place": 1.0,
+                "Executioner": 1.0
+            }
+        }
+    ],
+    [
+        "Ingestion",
+        {
+            "average": 0.75,
+            "counts": {
+                "Time": 0.0,
+                "Place": 1.0,
+                "Ingestibles": 1.0,
+                "Ingestor": 1.0
+            }
+        }
+    ],
+    [
+        "Intentional_traversing",
+        {
+            "average": 0.75,
+            "counts": {
+                "Source": 0.0,
+                "Path_shape": 0.0,
+                "Place": 1.0,
+                "Time": 1.0,
+                "Self_mover": 1.0,
+                "Direction": 1.0,
+                "Path": 1.0,
+                "Goal": 1.0
+            }
+        }
+    ],
+    [
+        "Intentionally_create",
+        {
+            "average": 0.75,
+            "counts": {
+                "Time": 0.0,
+                "Creator": 1.0,
+                "Place": 1.0,
+                "Created_entity": 1.0
+            }
+        }
+    ],
+    [
+        "Predicament",
+        {
+            "average": 0.75,
+            "counts": {
+                "Place": 0.0,
+                "Situation": 1.0,
+                "Time": 1.0,
+                "Experiencer": 1.0
+            }
+        }
+    ],
+    [
+        "Renting",
+        {
+            "average": 0.75,
+            "counts": {
+                "Place": 0.0,
+                "Time": 1.0,
+                "Lessee": 1.0,
+                "Goods": 1.0
+            }
+        }
+    ],
+    [
+        "Setting_out",
+        {
+            "average": 0.75,
+            "counts": {
+                "Source": 0.0,
+                "Time": 1.0,
+                "Self_mover": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Suicide_attack",
+        {
+            "average": 0.75,
+            "counts": {
+                "Assailant": 0.0,
+                "Victim": 1.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Supporting",
+        {
+            "average": 0.75,
+            "counts": {
+                "Place": 0.0,
+                "Time": 1.0,
+                "Supporter": 1.0,
+                "Supported": 1.0
+            }
+        }
+    ],
+    [
+        "Text_creation",
+        {
+            "average": 0.75,
+            "counts": {
+                "Author": 0.0,
+                "Time": 1.0,
+                "Place": 1.0,
+                "Text": 1.0
+            }
+        }
+    ],
+    [
+        "Thriving",
+        {
+            "average": 0.75,
+            "counts": {
+                "Time": 0.0,
+                "Place": 1.0,
+                "Entity": 1.0,
+                "Desirability": 1.0
+            }
+        }
+    ],
+    [
+        "Visiting",
+        {
+            "average": 0.75,
+            "counts": {
+                "Place": 0.0,
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Entity": 1.0
+            }
+        }
+    ],
+    [
+        "Waking_up",
+        {
+            "average": 0.75,
+            "counts": {
+                "Place": 0.0,
+                "Time": 1.0,
+                "Sleeper": 1.0,
+                "Sleep_state": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_impact",
+        {
+            "average": 0.7142857142857143,
+            "counts": {
+                "Impactor": 0.0,
+                "Cause": 0.0,
+                "Time": 1.0,
+                "Place": 1.0,
+                "Impactors": 1.0,
+                "Agent": 1.0,
+                "Impactee": 1.0
+            }
+        }
+    ],
+    [
+        "Smuggling",
+        {
+            "average": 0.7142857142857143,
+            "counts": {
+                "Source": 0.0,
+                "Path": 0.0,
+                "Goods": 1.0,
+                "Time": 1.0,
+                "Goal": 1.0,
+                "Place": 1.0,
+                "Perpetrator": 1.0
+            }
+        }
+    ],
+    [
+        "Suasion",
+        {
+            "average": 0.7142857142857143,
+            "counts": {
+                "Text": 0.0,
+                "Topic": 0.0,
+                "Time": 1.0,
+                "Speaker": 1.0,
+                "Addressee": 1.0,
+                "Place": 1.0,
+                "Content": 1.0
+            }
+        }
+    ],
+    [
+        "Annoyance",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "State": 0.0,
+                "Time": 0.0,
+                "Stimulus": 1.0,
+                "Topic": 1.0,
+                "Experiencer": 1.0,
+                "Expressor": 1.0
+            }
+        }
+    ],
+    [
+        "Assistance",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Focal_entity": 0.0,
+                "Time": 0.0,
+                "Benefited_party": 1.0,
+                "Place": 1.0,
+                "Helper": 1.0,
+                "Goal": 1.0
+            }
+        }
+    ],
+    [
+        "Attention",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Expressor": 0.0,
+                "Figure": 1.0,
+                "Perceiver": 1.0
+            }
+        }
+    ],
+    [
+        "Becoming_visible",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Time": 0.0,
+                "Entity": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Being_born",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Time": 0.0,
+                "Child": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_harm",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Cause": 0.0,
+                "Time": 0.0,
+                "Place": 1.0,
+                "Agent": 1.0,
+                "Victim": 1.0,
+                "Body_part": 1.0
+            }
+        }
+    ],
+    [
+        "Coincidence",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Time": 0.0,
+                "Place": 1.0,
+                "State_of_affairs": 1.0
+            }
+        }
+    ],
+    [
+        "Collaboration",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Partners": 0.0,
+                "Time": 0.0,
+                "Partner_1": 1.0,
+                "Undertaking": 1.0,
+                "Place": 1.0,
+                "Partner_2": 1.0
+            }
+        }
+    ],
+    [
+        "Come_together",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Party_1": 0.0,
+                "Party_2": 0.0,
+                "Configuration": 1.0,
+                "Time": 1.0,
+                "Individuals": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Death",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Time": 0.0,
+                "Protagonist": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Emotions_of_mental_activity",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Time": 0.0,
+                "Experiencer": 1.0,
+                "Stimulus": 1.0
+            }
+        }
+    ],
+    [
+        "Explosion",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Time": 0.0,
+                "Explosive": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Firing",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Task": 0.0,
+                "Place": 0.0,
+                "Employee": 1.0,
+                "Employer": 1.0,
+                "Position": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Get_a_job",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Task": 0.0,
+                "Place": 0.0,
+                "Time": 1.0,
+                "Employee": 1.0,
+                "Position": 1.0,
+                "Employer": 1.0
+            }
+        }
+    ],
+    [
+        "Motion",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Source": 0.0,
+                "Goal": 0.0,
+                "Distance": 0.0,
+                "Theme": 1.0,
+                "Time": 1.0,
+                "Area": 1.0,
+                "Place": 1.0,
+                "Path": 1.0,
+                "Direction": 1.0
+            }
+        }
+    ],
+    [
+        "Placing",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Agent": 0.0,
+                "Cause": 0.0,
+                "Time": 1.0,
+                "Theme": 1.0,
+                "Goal": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Process_continue",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Time": 0.0,
+                "Place": 1.0,
+                "Event": 1.0
+            }
+        }
+    ],
+    [
+        "Process_end",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Place": 0.0,
+                "Process": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Process_stop",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Time": 0.0,
+                "Process": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Quitting",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Field": 0.0,
+                "Place": 0.0,
+                "Employee": 1.0,
+                "Time": 1.0,
+                "Employer": 1.0,
+                "Position": 1.0
+            }
+        }
+    ],
+    [
+        "Reshaping",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Cause": 1.0,
+                "Patient": 1.0,
+                "Deformer": 1.0,
+                "Configuration": 1.0
+            }
+        }
+    ],
+    [
+        "Using",
+        {
+            "average": 0.6666666666666666,
+            "counts": {
+                "Agent": 0.0,
+                "Place": 0.0,
+                "Purpose": 1.0,
+                "Role": 1.0,
+                "Instrument": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Attempt_suasion",
+        {
+            "average": 0.625,
+            "counts": {
+                "Salient_entity": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Addressee": 1.0,
+                "Speaker": 1.0,
+                "Medium": 1.0,
+                "Content": 1.0,
+                "Topic": 1.0
+            }
+        }
+    ],
+    [
+        "Exchange",
+        {
+            "average": 0.625,
+            "counts": {
+                "Exchangers": 0.0,
+                "Themes": 0.0,
+                "Place": 0.0,
+                "Exchanger_1": 1.0,
+                "Theme_1": 1.0,
+                "Time": 1.0,
+                "Exchanger_2": 1.0,
+                "Theme_2": 1.0
+            }
+        }
+    ],
+    [
+        "Bail_decision",
+        {
+            "average": 0.6,
+            "counts": {
+                "Judge": 0.0,
+                "Place": 0.0,
+                "Time": 1.0,
+                "Accused": 1.0,
+                "Status": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_make_noise",
+        {
+            "average": 0.6,
+            "counts": {
+                "Cause": 0.0,
+                "Place": 0.0,
+                "Sound_maker": 1.0,
+                "Agent": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Change_accessibility",
+        {
+            "average": 0.6,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Agent": 1.0,
+                "Portal": 1.0,
+                "Useful_location": 1.0
+            }
+        }
+    ],
+    [
+        "Change_event_time",
+        {
+            "average": 0.6,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Agent": 1.0,
+                "Event": 1.0,
+                "Cause": 1.0
+            }
+        }
+    ],
+    [
+        "Change_position_on_a_scale",
+        {
+            "average": 0.6,
+            "counts": {
+                "Difference": 0.0,
+                "Final_value": 0.0,
+                "Initial_value": 0.0,
+                "Value_range": 0.0,
+                "Initial_state": 1.0,
+                "Place": 1.0,
+                "Time": 1.0,
+                "Item": 1.0,
+                "Attribute": 1.0,
+                "Final_state": 1.0
+            }
+        }
+    ],
+    [
+        "Choosing",
+        {
+            "average": 0.6,
+            "counts": {
+                "Chosen": 0.0,
+                "Time": 0.0,
+                "Place": 1.0,
+                "Cognizer": 1.0,
+                "Possibilities": 1.0
+            }
+        }
+    ],
+    [
+        "Clemency",
+        {
+            "average": 0.6,
+            "counts": {
+                "Executive_authority": 0.0,
+                "Place": 0.0,
+                "Time": 1.0,
+                "Offender": 1.0,
+                "Crime": 1.0
+            }
+        }
+    ],
+    [
+        "Destiny",
+        {
+            "average": 0.6,
+            "counts": {
+                "Role": 0.0,
+                "Place": 0.0,
+                "Time": 1.0,
+                "Protagonist": 1.0,
+                "State_of_affairs": 1.0
+            }
+        }
+    ],
+    [
+        "Forming_relationships",
+        {
+            "average": 0.6,
+            "counts": {
+                "Partners": 0.0,
+                "Place": 0.0,
+                "Partner_1": 1.0,
+                "Partner_2": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Gathering_up",
+        {
+            "average": 0.6,
+            "counts": {
+                "Aggregate": 0.0,
+                "Time": 0.0,
+                "Place": 1.0,
+                "Agent": 1.0,
+                "Individuals": 1.0
+            }
+        }
+    ],
+    [
+        "Grooming",
+        {
+            "average": 0.6,
+            "counts": {
+                "Body_part": 0.0,
+                "Time": 0.0,
+                "Agent": 1.0,
+                "Patient": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Interrupt_process",
+        {
+            "average": 0.6,
+            "counts": {
+                "Cause": 0.0,
+                "Place": 0.0,
+                "Time": 1.0,
+                "Actor": 1.0,
+                "Process": 1.0
+            }
+        }
+    ],
+    [
+        "Making_arrangements",
+        {
+            "average": 0.6,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Agent": 1.0,
+                "Event": 1.0,
+                "Scheduled_time": 1.0
+            }
+        }
+    ],
+    [
+        "Manipulation",
+        {
+            "average": 0.6,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Agent": 1.0,
+                "Entity": 1.0,
+                "Bodypart_of_agent": 1.0
+            }
+        }
+    ],
+    [
+        "Preserving",
+        {
+            "average": 0.6,
+            "counts": {
+                "Agent": 0.0,
+                "Medium": 0.0,
+                "Patient": 1.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Reassuring",
+        {
+            "average": 0.6,
+            "counts": {
+                "Situation": 0.0,
+                "Time": 0.0,
+                "Message": 1.0,
+                "Speaker": 1.0,
+                "Experiencer": 1.0
+            }
+        }
+    ],
+    [
+        "Surrendering_possession",
+        {
+            "average": 0.6,
+            "counts": {
+                "Surrenderer": 0.0,
+                "Place": 0.0,
+                "Theme": 1.0,
+                "Recipient": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Working_a_post",
+        {
+            "average": 0.6,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Post": 1.0,
+                "Agent": 1.0,
+                "Salient_entity": 1.0
+            }
+        }
+    ],
+    [
+        "Appointing",
+        {
+            "average": 0.5714285714285714,
+            "counts": {
+                "Selector": 0.0,
+                "Function": 0.0,
+                "Body": 0.0,
+                "Time": 1.0,
+                "Official": 1.0,
+                "Role": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Attaching",
+        {
+            "average": 0.5714285714285714,
+            "counts": {
+                "Items": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Item": 1.0,
+                "Connector": 1.0,
+                "Goal": 1.0,
+                "Agent": 1.0
+            }
+        }
+    ],
+    [
+        "Being_in_control",
+        {
+            "average": 0.5714285714285714,
+            "counts": {
+                "Dependent_variable": 0.0,
+                "Degree": 0.0,
+                "Time": 0.0,
+                "Place": 1.0,
+                "Dependent_entity": 1.0,
+                "Controlling_entity": 1.0,
+                "Dependent_situation": 1.0
+            }
+        }
+    ],
+    [
+        "Commerce_pay",
+        {
+            "average": 0.5714285714285714,
+            "counts": {
+                "Money": 0.0,
+                "Rate": 0.0,
+                "Place": 0.0,
+                "Buyer": 1.0,
+                "Time": 1.0,
+                "Seller": 1.0,
+                "Goods": 1.0
+            }
+        }
+    ],
+    [
+        "Communication_response",
+        {
+            "average": 0.5714285714285714,
+            "counts": {
+                "Message": 0.0,
+                "Topic": 0.0,
+                "Time": 0.0,
+                "Speaker": 1.0,
+                "Trigger": 1.0,
+                "Place": 1.0,
+                "Addressee": 1.0
+            }
+        }
+    ],
+    [
+        "Fleeing",
+        {
+            "average": 0.5714285714285714,
+            "counts": {
+                "Path": 0.0,
+                "Goal": 0.0,
+                "Direction": 0.0,
+                "Self_mover": 1.0,
+                "Time": 1.0,
+                "Source": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Hiring",
+        {
+            "average": 0.5714285714285714,
+            "counts": {
+                "Task": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Employer": 1.0,
+                "Employee": 1.0,
+                "Field": 1.0,
+                "Position": 1.0
+            }
+        }
+    ],
+    [
+        "Achieving_first",
+        {
+            "average": 0.5,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "New_idea": 1.0,
+                "Cognizer": 1.0
+            }
+        }
+    ],
+    [
+        "Arranging",
+        {
+            "average": 0.5,
+            "counts": {
+                "Agent": 0.0,
+                "Time": 0.0,
+                "Theme": 1.0,
+                "Configuration": 1.0
+            }
+        }
+    ],
+    [
+        "Bearing_arms",
+        {
+            "average": 0.5,
+            "counts": {
+                "Weapon": 0.0,
+                "Time": 0.0,
+                "Protagonist": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Becoming_a_member",
+        {
+            "average": 0.5,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "New_member": 1.0,
+                "Group": 1.0
+            }
+        }
+    ],
+    [
+        "Being_attached",
+        {
+            "average": 0.5,
+            "counts": {
+                "Connector": 0.0,
+                "Items": 0.0,
+                "Item": 1.0,
+                "Goal": 1.0
+            }
+        }
+    ],
+    [
+        "Burying",
+        {
+            "average": 0.5,
+            "counts": {
+                "Goal": 0.0,
+                "Cause": 0.0,
+                "Place": 0.0,
+                "Agent": 1.0,
+                "Theme": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Causation",
+        {
+            "average": 0.5,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Affected": 1.0,
+                "Actor": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_change_of_position_on_a_scale",
+        {
+            "average": 0.5,
+            "counts": {
+                "Item": 0.0,
+                "Cause": 0.0,
+                "Place": 0.0,
+                "Agent": 1.0,
+                "Attribute": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_end",
+        {
+            "average": 0.5,
+            "counts": {
+                "State": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Cause": 1.0,
+                "Agent": 1.0,
+                "Process": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_move_in_place",
+        {
+            "average": 0.5,
+            "counts": {
+                "Bodypart_of_agent": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Agent": 1.0,
+                "Cause": 1.0,
+                "Theme": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_resume",
+        {
+            "average": 0.5,
+            "counts": {
+                "Hiatus": 0.0,
+                "Cause": 0.0,
+                "Place": 0.0,
+                "Time": 1.0,
+                "Agent": 1.0,
+                "Process": 1.0
+            }
+        }
+    ],
+    [
+        "Change_of_temperature",
+        {
+            "average": 0.5,
+            "counts": {
+                "Temperature": 0.0,
+                "Time": 0.0,
+                "Place": 1.0,
+                "Item": 1.0
+            }
+        }
+    ],
+    [
+        "Change_posture",
+        {
+            "average": 0.5,
+            "counts": {
+                "Time": 0.0,
+                "Protagonist": 1.0
+            }
+        }
+    ],
+    [
+        "Communication_noise",
+        {
+            "average": 0.5,
+            "counts": {
+                "Message": 0.0,
+                "Topic": 0.0,
+                "Voice": 0.0,
+                "Speaker": 1.0,
+                "Time": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Cooking_creation",
+        {
+            "average": 0.5,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Cook": 1.0,
+                "Produced_food": 1.0
+            }
+        }
+    ],
+    [
+        "Cure",
+        {
+            "average": 0.5,
+            "counts": {
+                "Medication": 0.0,
+                "Body_part": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Healer": 1.0,
+                "Treatment": 1.0,
+                "Patient": 1.0,
+                "Affliction": 1.0
+            }
+        }
+    ],
+    [
+        "Extradition",
+        {
+            "average": 0.5,
+            "counts": {
+                "Authorities": 0.0,
+                "Current_jurisdiction": 0.0,
+                "Place": 0.0,
+                "Suspect": 1.0,
+                "Crime_jurisdiction": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Fear",
+        {
+            "average": 0.5,
+            "counts": {
+                "Topic": 0.0,
+                "Expressor": 0.0,
+                "Time": 0.0,
+                "Stimulus": 1.0,
+                "Experiencer": 1.0,
+                "State": 1.0
+            }
+        }
+    ],
+    [
+        "Filling",
+        {
+            "average": 0.5,
+            "counts": {
+                "Agent": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Cause": 1.0,
+                "Theme": 1.0,
+                "Goal": 1.0
+            }
+        }
+    ],
+    [
+        "Getting",
+        {
+            "average": 0.5,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Theme": 1.0,
+                "Recipient": 1.0
+            }
+        }
+    ],
+    [
+        "Go_into_shape",
+        {
+            "average": 0.5,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Theme": 1.0,
+                "Resultant_configuration": 1.0
+            }
+        }
+    ],
+    [
+        "Just_found_out",
+        {
+            "average": 0.5,
+            "counts": {
+                "Topic": 0.0,
+                "Expressor": 0.0,
+                "State": 0.0,
+                "Experiencer": 1.0,
+                "Stimulus": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Operate_vehicle",
+        {
+            "average": 0.5,
+            "counts": {
+                "Source": 0.0,
+                "Path": 0.0,
+                "Area": 0.0,
+                "Place": 0.0,
+                "Driver": 1.0,
+                "Goal": 1.0,
+                "Vehicle": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Others_situation_as_stimulus",
+        {
+            "average": 0.5,
+            "counts": {
+                "Situation": 0.0,
+                "Time": 0.0,
+                "Experiencer": 1.0,
+                "Other": 1.0
+            }
+        }
+    ],
+    [
+        "Posing_as",
+        {
+            "average": 0.5,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Agent": 1.0,
+                "Simulated_entity": 1.0
+            }
+        }
+    ],
+    [
+        "Quitting_a_place",
+        {
+            "average": 0.5,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Self_mover": 1.0,
+                "Source": 1.0
+            }
+        }
+    ],
+    [
+        "Response",
+        {
+            "average": 0.5,
+            "counts": {
+                "Response": 0.0,
+                "Responding_entity": 0.0,
+                "Trigger": 0.0,
+                "Agent": 1.0,
+                "Time": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Self_motion",
+        {
+            "average": 0.5,
+            "counts": {
+                "Source": 0.0,
+                "Goal": 0.0,
+                "Area": 0.0,
+                "Direction": 0.0,
+                "Time": 1.0,
+                "Self_mover": 1.0,
+                "Path": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Shopping",
+        {
+            "average": 0.5,
+            "counts": {
+                "Shopper": 0.0,
+                "Goods": 0.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Talking_into",
+        {
+            "average": 0.5,
+            "counts": {
+                "Addressee": 0.0,
+                "Place": 0.0,
+                "Speaker": 1.0,
+                "Content": 1.0
+            }
+        }
+    ],
+    [
+        "Temporary_stay",
+        {
+            "average": 0.5,
+            "counts": {
+                "Location": 0.0,
+                "Duration": 0.0,
+                "Host": 0.0,
+                "Time": 1.0,
+                "Guest": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Transition_to_a_quality",
+        {
+            "average": 0.5,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Entity": 1.0,
+                "Final_quality": 1.0
+            }
+        }
+    ],
+    [
+        "Traversing",
+        {
+            "average": 0.5,
+            "counts": {
+                "Source": 0.0,
+                "Distance": 0.0,
+                "Area": 0.0,
+                "Direction": 0.0,
+                "Place": 0.0,
+                "Theme": 1.0,
+                "Path_shape": 1.0,
+                "Path": 1.0,
+                "Time": 1.0,
+                "Goal": 1.0
+            }
+        }
+    ],
+    [
+        "Use_firearm",
+        {
+            "average": 0.5,
+            "counts": {
+                "Agent": 0.0,
+                "Firearm": 0.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Objective_influence",
+        {
+            "average": 0.4444444444444444,
+            "counts": {
+                "Influencing_variable": 0.0,
+                "Dependent_situation": 0.0,
+                "Dependent_variable": 0.0,
+                "Influencing_situation": 0.0,
+                "Time": 0.0,
+                "Influencing_entity": 1.0,
+                "Degree": 1.0,
+                "Dependent_entity": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Contacting",
+        {
+            "average": 0.42857142857142855,
+            "counts": {
+                "Address": 0.0,
+                "Communication": 0.0,
+                "Topic": 0.0,
+                "Place": 0.0,
+                "Addressee": 1.0,
+                "Communicator": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Emotions_by_stimulus",
+        {
+            "average": 0.42857142857142855,
+            "counts": {
+                "Expressor": 0.0,
+                "State": 0.0,
+                "Event": 0.0,
+                "Time": 0.0,
+                "Experiencer": 1.0,
+                "Topic": 1.0,
+                "Stimulus": 1.0
+            }
+        }
+    ],
+    [
+        "Gesture",
+        {
+            "average": 0.42857142857142855,
+            "counts": {
+                "Communicator": 0.0,
+                "Message": 0.0,
+                "Indicated_entity": 0.0,
+                "Time": 0.0,
+                "Addressee": 1.0,
+                "Place": 1.0,
+                "Body_part": 1.0
+            }
+        }
+    ],
+    [
+        "Hostile_encounter",
+        {
+            "average": 0.42857142857142855,
+            "counts": {
+                "Sides": 0.0,
+                "Issue": 0.0,
+                "Purpose": 0.0,
+                "Time": 0.0,
+                "Side_1": 1.0,
+                "Side_2": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Revenge",
+        {
+            "average": 0.42857142857142855,
+            "counts": {
+                "Offender": 0.0,
+                "Punishment": 0.0,
+                "Injured_party": 0.0,
+                "Time": 0.0,
+                "Avenger": 1.0,
+                "Injury": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Atonement",
+        {
+            "average": 0.4,
+            "counts": {
+                "Agent": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Wrong": 1.0,
+                "Amends": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_be_sharp",
+        {
+            "average": 0.4,
+            "counts": {
+                "Agent": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Cause": 1.0,
+                "Patient": 1.0
+            }
+        }
+    ],
+    [
+        "Corporal_punishment",
+        {
+            "average": 0.4,
+            "counts": {
+                "Agent": 0.0,
+                "Evaluee": 0.0,
+                "Reason": 0.0,
+                "Place": 1.0,
+                "Time": 1.0
+            }
+        }
+    ],
+    [
+        "Corroding_caused",
+        {
+            "average": 0.4,
+            "counts": {
+                "Agent": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Cause": 1.0,
+                "Patient": 1.0
+            }
+        }
+    ],
+    [
+        "Ingest_substance",
+        {
+            "average": 0.4,
+            "counts": {
+                "Ingestor": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Delivery_device": 1.0,
+                "Substance": 1.0
+            }
+        }
+    ],
+    [
+        "Practice",
+        {
+            "average": 0.4,
+            "counts": {
+                "Agent": 0.0,
+                "Occasion": 0.0,
+                "Time": 0.0,
+                "Place": 1.0,
+                "Action": 1.0
+            }
+        }
+    ],
+    [
+        "Receiving",
+        {
+            "average": 0.4,
+            "counts": {
+                "Donor": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Theme": 1.0,
+                "Recipient": 1.0
+            }
+        }
+    ],
+    [
+        "Render_nonfunctional",
+        {
+            "average": 0.4,
+            "counts": {
+                "Cause": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Agent": 1.0,
+                "Artifact": 1.0
+            }
+        }
+    ],
+    [
+        "Replacing",
+        {
+            "average": 0.4,
+            "counts": {
+                "Agent": 0.0,
+                "New": 0.0,
+                "Time": 0.0,
+                "Old": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Resolve_problem",
+        {
+            "average": 0.4,
+            "counts": {
+                "Cause": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Problem": 1.0,
+                "Agent": 1.0
+            }
+        }
+    ],
+    [
+        "Submitting_documents",
+        {
+            "average": 0.4,
+            "counts": {
+                "Submittor": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Authority": 1.0,
+                "Documents": 1.0
+            }
+        }
+    ],
+    [
+        "Motion_directional",
+        {
+            "average": 0.375,
+            "counts": {
+                "Area": 0.0,
+                "Path": 0.0,
+                "Source": 0.0,
+                "Direction": 0.0,
+                "Time": 0.0,
+                "Goal": 1.0,
+                "Place": 1.0,
+                "Theme": 1.0
+            }
+        }
+    ],
+    [
+        "Activity_stop",
+        {
+            "average": 0.3333333333333333,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Agent": 1.0
+            }
+        }
+    ],
+    [
+        "Becoming",
+        {
+            "average": 0.3333333333333333,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Entity": 1.0
+            }
+        }
+    ],
+    [
+        "Becoming_dry",
+        {
+            "average": 0.3333333333333333,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Entity": 1.0
+            }
+        }
+    ],
+    [
+        "Being_in_operation",
+        {
+            "average": 0.3333333333333333,
+            "counts": {
+                "Time": 0.0,
+                "Place": 0.0,
+                "Device": 1.0
+            }
+        }
+    ],
+    [
+        "Change_of_leadership",
+        {
+            "average": 0.3333333333333333,
+            "counts": {
+                "New_leader": 0.0,
+                "Role": 0.0,
+                "Old_order": 0.0,
+                "Function": 0.0,
+                "Body": 0.0,
+                "Place": 0.0,
+                "Old_leader": 1.0,
+                "Time": 1.0,
+                "Selector": 1.0
+            }
+        }
+    ],
+    [
+        "Dead_or_alive",
+        {
+            "average": 0.3333333333333333,
+            "counts": {
+                "Figure": 0.0,
+                "Time": 0.0,
+                "Protagonist": 1.0
+            }
+        }
+    ],
+    [
+        "Detaching",
+        {
+            "average": 0.3333333333333333,
+            "counts": {
+                "Agent": 0.0,
+                "Items": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Item": 1.0,
+                "Source": 1.0
+            }
+        }
+    ],
+    [
+        "Military_operation",
+        {
+            "average": 0.3333333333333333,
+            "counts": {
+                "Area": 0.0,
+                "Opponent": 0.0,
+                "Goal": 0.0,
+                "Time": 0.0,
+                "Force": 1.0,
+                "Place": 1.0
+            }
+        }
+    ],
+    [
+        "Education_teaching",
+        {
+            "average": 0.3076923076923077,
+            "counts": {
+                "Teacher": 0.0,
+                "Qualification": 0.0,
+                "Skill": 0.0,
+                "Precept": 0.0,
+                "Fact": 0.0,
+                "Material": 0.0,
+                "Role": 0.0,
+                "Course": 0.0,
+                "Place": 0.0,
+                "Institution": 1.0,
+                "Time": 1.0,
+                "Student": 1.0,
+                "Subject": 1.0
+            }
+        }
+    ],
+    [
+        "Apply_heat",
+        {
+            "average": 0.2857142857142857,
+            "counts": {
+                "Cook": 0.0,
+                "Heating_instrument": 0.0,
+                "Container": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Food": 1.0,
+                "Temperature_setting": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_be_included",
+        {
+            "average": 0.2857142857142857,
+            "counts": {
+                "Agent": 0.0,
+                "Existing_member": 0.0,
+                "Cause": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "New_member": 1.0,
+                "Group": 1.0
+            }
+        }
+    ],
+    [
+        "Examination",
+        {
+            "average": 0.2857142857142857,
+            "counts": {
+                "Examiner": 0.0,
+                "Examinee": 0.0,
+                "Qualification": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Examination": 1.0,
+                "Knowledge": 1.0
+            }
+        }
+    ],
+    [
+        "Abusing",
+        {
+            "average": 0.25,
+            "counts": {
+                "Abuser": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Victim": 1.0
+            }
+        }
+    ],
+    [
+        "Besieging",
+        {
+            "average": 0.25,
+            "counts": {
+                "Assailant": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Victim": 1.0
+            }
+        }
+    ],
+    [
+        "Create_physical_artwork",
+        {
+            "average": 0.25,
+            "counts": {
+                "Representation": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Creator": 1.0
+            }
+        }
+    ],
+    [
+        "Hit_target",
+        {
+            "average": 0.25,
+            "counts": {
+                "Agent": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Target": 1.0
+            }
+        }
+    ],
+    [
+        "Translating",
+        {
+            "average": 0.25,
+            "counts": {
+                "Cognizer": 0.0,
+                "Source_symbol": 0.0,
+                "Target_symbol": 0.0,
+                "Content": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Target_representation": 1.0,
+                "Source_representation": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_to_be_dry",
+        {
+            "average": 0.2,
+            "counts": {
+                "Agent": 0.0,
+                "Cause": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Dryee": 1.0
+            }
+        }
+    ],
+    [
+        "Forging",
+        {
+            "average": 0.2,
+            "counts": {
+                "Agent": 0.0,
+                "Standard": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Forgery": 1.0
+            }
+        }
+    ],
+    [
+        "Cause_motion",
+        {
+            "average": 0.18181818181818182,
+            "counts": {
+                "Agent": 0.0,
+                "Source": 0.0,
+                "Path": 0.0,
+                "Goal": 0.0,
+                "Cause": 0.0,
+                "Result": 0.0,
+                "Initial_state": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Theme": 1.0,
+                "Area": 1.0
+            }
+        }
+    ],
+    [
+        "Inhibit_movement",
+        {
+            "average": 0.16666666666666666,
+            "counts": {
+                "Holding_location": 0.0,
+                "Agent": 0.0,
+                "Cause": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Theme": 1.0
+            }
+        }
+    ],
+    [
+        "Proliferating_in_number",
+        {
+            "average": 0.125,
+            "counts": {
+                "Difference": 0.0,
+                "Final_number": 0.0,
+                "Initial_number": 0.0,
+                "Initial_state": 0.0,
+                "Final_state": 0.0,
+                "Time": 0.0,
+                "Place": 0.0,
+                "Set": 1.0
+            }
+        }
+    ],
+    [
+        "Exercising",
+        {
+            "average": 0.0,
+            "counts": {
+                "Agent": 0.0,
+                "Time": 0.0,
+                "Place": 0.0
+            }
+        }
+    ],
+    [
+        "Killing",
+        {
+            "average": 0.0,
+            "counts": {
+                "Killer": 0.0,
+                "Victim": 0.0,
+                "Cause": 0.0,
+                "Means": 0.0,
+                "Instrument": 0.0,
+                "Time": 0.0,
+                "Place": 0.0
+            }
+        }
+    ]
+]

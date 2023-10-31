@@ -49,7 +49,7 @@ def token_counts(data: list):
     return (np.mean(report_token_counts), min_report_size, max_report_size), \
             (np.mean(source_token_counts), min_source_size, max_source_size)
 
-def role_counts(data: list):
+def role_counts(data: list, num_docs=5):
     """
     Counts the average number/proportion of filled roles in report/source
 
@@ -90,9 +90,9 @@ def role_counts(data: list):
 
     # divide each count by 5 (the number of docs) to get the average 
     for frame in role_info:
-        role_info[frame]['average'] = role_info[frame]['total'] / 5
+        role_info[frame]['average'] = role_info[frame]['total'] / num_docs
         for role in role_info[frame]['counts']:
-            role_info[frame]['counts'][role] = role_info[frame]['counts'][role] / 5
+            role_info[frame]['counts'][role] = role_info[frame]['counts'][role] / num_docs
     
     return role_info
 
@@ -145,7 +145,15 @@ def main():
         print("Max Source Tokens: {}".format(source_data[2]))
 
     # get average number/proportion of filled roles in report/source
-    role_info = role_counts(data)
+    num_docs = 5
+    if args.dataset == "train": 
+        num_docs = 3
+    elif args.dataset == "dev":
+        num_docs = 1
+    elif args.dataset == "test":
+        num_docs = 1
+
+    role_info = role_counts(data, num_docs=num_docs)
 
     if args.verbose:
         all_doc_average = 0
@@ -178,7 +186,8 @@ def main():
             print(frame[0], frame[1]['average'])
 
     # write sorted norm roles to a json file
-    with open(os.path.join(args.output_dir, "sorted_norm_roles.json"), "w") as f:
+    json_name = "sorted_norm_roles" + "_" + args.dataset + ".json"
+    with open(os.path.join(args.output_dir, json_name), "w") as f:
         json.dump(sorted_norm_roles, f, indent=4)
 
 

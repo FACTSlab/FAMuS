@@ -27,7 +27,11 @@ for frame in norm_roles:
 
 print("Total number of filled roles: {} out of {}".format(filled_role_total, total_roles))
 
+# sort missing roles by length of missing role list, greatest to least
+frames_missing_roles = sorted(frames_missing_roles.items(), key=lambda x: len(x[1]), reverse=True)
+
+
 # print(json.dumps(frames_missing_roles, indent=4))
 with open('/home/amartin/famus/FAMuS/src/data_processing/statistics/frames_missing_roles.json', 'w') as f:
     json.dump(frames_missing_roles, f, indent=4)
-    
+

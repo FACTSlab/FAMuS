@@ -1,0 +1,236 @@
+{
+    "Undergo_transformation": [
+        "Place"
+    ],
+    "Others_situation_as_stimulus": [
+        "Time"
+    ],
+    "Talking_into": [
+        "Place"
+    ],
+    "Arraignment": [
+        "Judge"
+    ],
+    "Transfer": [
+        "Transferors"
+    ],
+    "Commerce_pay": [
+        "Rate"
+    ],
+    "Arriving": [
+        "Time"
+    ],
+    "Cause_to_amalgamate": [
+        "Place"
+    ],
+    "Cause_to_resume": [
+        "Hiatus"
+    ],
+    "Firing": [
+        "Task"
+    ],
+    "Process_continue": [
+        "Time"
+    ],
+    "Summarizing": [
+        "Place"
+    ],
+    "Transition_to_a_quality": [
+        "Place"
+    ],
+    "Hiring": [
+        "Place"
+    ],
+    "Cause_harm": [
+        "Cause"
+    ],
+    "Temporary_stay": [
+        "Host"
+    ],
+    "Sign_agreement": [
+        "Signature"
+    ],
+    "Achieving_first": [
+        "Place"
+    ],
+    "Exchange": [
+        "Exchangers",
+        "Themes",
+        "Place"
+    ],
+    "Cause_change": [
+        "Cause"
+    ],
+    "Annoyance": [
+        "State"
+    ],
+    "Quitting": [
+        "Field",
+        "Place"
+    ],
+    "Preserving": [
+        "Medium"
+    ],
+    "Rape": [
+        "Event"
+    ],
+    "Soaking": [
+        "Agent"
+    ],
+    "Appointing": [
+        "Function"
+    ],
+    "Contacting": [
+        "Address"
+    ],
+    "Emotions_by_stimulus": [
+        "Expressor"
+    ],
+    "Cause_fluidic_motion": [
+        "Path",
+        "Area"
+    ],
+    "Objective_influence": [
+        "Dependent_variable"
+    ],
+    "Being_attached": [
+        "Items"
+    ],
+    "Communication": [
+        "Topic"
+    ],
+    "Daring": [
+        "Place"
+    ],
+    "Get_a_job": [
+        "Place"
+    ],
+    "Response": [
+        "Responding_entity"
+    ],
+    "Rewards_and_punishments": [
+        "Response_action"
+    ],
+    "Shopping": [
+        "Goods"
+    ],
+    "Hostile_encounter": [
+        "Sides"
+    ],
+    "Forming_relationships": [
+        "Partners",
+        "Place"
+    ],
+    "Manufacturing": [
+        "Factory"
+    ],
+    "Silencing": [
+        "Expressor"
+    ],
+    "Traversing": [
+        "Distance"
+    ],
+    "Being_in_control": [
+        "Dependent_variable",
+        "Degree"
+    ],
+    "Gesture": [
+        "Indicated_entity"
+    ],
+    "Motion_directional": [
+        "Direction",
+        "Time"
+    ],
+    "Ingest_substance": [
+        "Time"
+    ],
+    "Undergo_change": [
+        "Final_quality"
+    ],
+    "Burying": [
+        "Cause",
+        "Place"
+    ],
+    "Extradition": [
+        "Place"
+    ],
+    "Just_found_out": [
+        "Expressor",
+        "State"
+    ],
+    "Fleeing": [
+        "Direction"
+    ],
+    "Translating": [
+        "Place"
+    ],
+    "Control": [
+        "Controlling_variable",
+        "Dependent_variable",
+        "Controlling_situation"
+    ],
+    "Corroding_caused": [
+        "Time"
+    ],
+    "Forging": [
+        "Place"
+    ],
+    "Manipulation": [
+        "Time",
+        "Place"
+    ],
+    "Render_nonfunctional": [
+        "Place"
+    ],
+    "Self_motion": [
+        "Area",
+        "Direction"
+    ],
+    "Killing": [
+        "Cause",
+        "Instrument"
+    ],
+    "Change_position_on_a_scale": [
+        "Initial_value",
+        "Value_range"
+    ],
+    "Cause_to_be_sharp": [
+        "Place"
+    ],
+    "Motion": [
+        "Distance"
+    ],
+    "Cure": [
+        "Time",
+        "Place"
+    ],
+    "Change_of_leadership": [
+        "Function",
+        "Body"
+    ],
+    "Proliferating_in_number": [
+        "Difference",
+        "Final_number",
+        "Initial_number",
+        "Initial_state",
+        "Final_state"
+    ],
+    "Cause_motion": [
+        "Cause",
+        "Initial_state",
+        "Place"
+    ],
+    "Apply_heat": [
+        "Cook",
+        "Heating_instrument",
+        "Place"
+    ],
+    "Education_teaching": [
+        "Qualification",
+        "Skill",
+        "Fact",
+        "Material",
+        "Role",
+        "Course"
+    ]
+}

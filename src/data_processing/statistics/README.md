@@ -25,9 +25,9 @@ Average Roles Across Frames:
 - Source: `3.4799999999999973`
 
 Average Arguments Across Frames: 
-- Combined: `14.074509803921568`
-- Report: `15.07843137254902`
-- Source: `17.4`
+- Combined: `29.474509803921567`
+- Report: `15.48235294117647`
+- Source: `18.623529411764707`
 
 
 Top 10 Frames with most roles (combined):
@@ -72,9 +72,9 @@ Average Roles Across Frames:
 - Source: `3.4300653594771213`
 
 Average Arguments Across Frames: 
-- Combined: `8.282352941176471`
-- Report: `8.831372549019608`
-- Source: `10.290196078431373`
+- Combined: `17.372549019607842`
+- Report: `9.101960784313725`
+- Source: `11.023529411764706`
 
 
 Top 10 Frames with most roles (normalized by number of roles in a frame):
@@ -120,9 +120,9 @@ Average Roles Across Frames:
 - Source: `3.819607843137255`
 
 Average Arguments Across Frames: 
-- Combined: `3.215686274509804`
-- Report: `3.392156862745098`
-- Source: `3.819607843137255`
+- Combined: `6.788235294117647`
+- Report: `3.466666666666667`
+- Source: `4.172549019607843`
 
 Top 10 Frames with most roles (normalized by number of roles in a frame):
 1. `Activity_start`-> `1.0`
@@ -167,9 +167,9 @@ Average Roles Across Frames:
 - Source: `3.2901960784313724`
 
 Average Arguments Across Frames: 
-- Combined: `2.5764705882352943`
-- Report: `2.854901960784314`
-- Source: `3.2901960784313724`
+- Combined: `5.313725490196078`
+- Report: `2.9137254901960783`
+- Source: `3.4274509803921567`
 
 Top 10 Frames with most roles (normalized by number of roles in a frame):
 1. `Cause_to_make_progress`-> `1.0`

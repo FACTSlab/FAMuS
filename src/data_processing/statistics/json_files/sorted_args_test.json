@@ -1,8 +1,70 @@
 [
     [
+        "Atonement",
+        {
+            "combined-total": 16,
+            "role-total": 8,
+            "source-total": 8,
+            "counts": {
+                "report": {
+                    "Place": 0,
+                    "Agent": 1,
+                    "Wrong": 5,
+                    "Amends": 1,
+                    "Time": 1
+                },
+                "source": {
+                    "Place": 0,
+                    "Amends": 1,
+                    "Time": 1,
+                    "Wrong": 5,
+                    "Agent": 1
+                },
+                "combined": {
+                    "Place": 0,
+                    "Agent": 2,
+                    "Wrong": 10,
+                    "Amends": 2,
+                    "Time": 2
+                }
+            }
+        }
+    ],
+    [
+        "Receiving",
+        {
+            "combined-total": 16,
+            "role-total": 7,
+            "source-total": 9,
+            "counts": {
+                "report": {
+                    "Place": 0,
+                    "Time": 1,
+                    "Recipient": 3,
+                    "Theme": 1,
+                    "Donor": 2
+                },
+                "source": {
+                    "Place": 0,
+                    "Recipient": 5,
+                    "Theme": 1,
+                    "Donor": 2,
+                    "Time": 1
+                },
+                "combined": {
+                    "Place": 0,
+                    "Time": 2,
+                    "Recipient": 8,
+                    "Theme": 2,
+                    "Donor": 4
+                }
+            }
+        }
+    ],
+    [
         "Cause_change",
         {
-            "combined-total": 7,
+            "combined-total": 14,
             "role-total": 9,
             "source-total": 8,
             "counts": {
@@ -32,15 +94,15 @@
                 },
                 "combined": {
                     "Cause": 0,
-                    "Entity": 1,
-                    "Attribute": 1,
+                    "Entity": 2,
+                    "Attribute": 2,
                     "Initial_category": 0,
-                    "Final_category": 1,
-                    "Initial_value": 1,
-                    "Time": 1,
+                    "Final_category": 2,
+                    "Initial_value": 2,
+                    "Time": 2,
                     "Final_value": 0,
-                    "Agent": 1,
-                    "Place": 1
+                    "Agent": 2,
+                    "Place": 2
                 }
             }
         }
@@ -48,7 +110,7 @@
     [
         "Revenge",
         {
-            "combined-total": 6,
+            "combined-total": 12,
             "role-total": 6,
             "source-total": 7,
             "counts": {
@@ -72,12 +134,12 @@
                 },
                 "combined": {
                     "Offender": 0,
-                    "Injury": 1,
-                    "Time": 1,
-                    "Punishment": 1,
-                    "Avenger": 1,
-                    "Injured_party": 1,
-                    "Place": 1
+                    "Injury": 2,
+                    "Time": 2,
+                    "Punishment": 2,
+                    "Avenger": 2,
+                    "Injured_party": 2,
+                    "Place": 2
                 }
             }
         }
@@ -85,7 +147,7 @@
     [
         "Cause_to_end",
         {
-            "combined-total": 5,
+            "combined-total": 10,
             "role-total": 5,
             "source-total": 5,
             "counts": {
@@ -107,11 +169,11 @@
                 },
                 "combined": {
                     "Process": 0,
-                    "Place": 1,
-                    "Time": 1,
-                    "State": 1,
-                    "Agent": 1,
-                    "Cause": 1
+                    "Place": 2,
+                    "Time": 2,
+                    "State": 2,
+                    "Agent": 2,
+                    "Cause": 2
                 }
             }
         }
@@ -119,7 +181,7 @@
     [
         "Communication_response",
         {
-            "combined-total": 5,
+            "combined-total": 10,
             "role-total": 5,
             "source-total": 5,
             "counts": {
@@ -144,11 +206,11 @@
                 "combined": {
                     "Addressee": 0,
                     "Trigger": 0,
-                    "Speaker": 1,
-                    "Topic": 1,
-                    "Time": 1,
-                    "Place": 1,
-                    "Message": 1
+                    "Speaker": 2,
+                    "Topic": 2,
+                    "Time": 2,
+                    "Place": 2,
+                    "Message": 2
                 }
             }
         }
@@ -156,7 +218,7 @@
     [
         "Control",
         {
-            "combined-total": 5,
+            "combined-total": 10,
             "role-total": 5,
             "source-total": 7,
             "counts": {
@@ -187,11 +249,11 @@
                     "Dependent_variable": 0,
                     "Controlling_situation": 0,
                     "Time": 0,
-                    "Degree": 1,
-                    "Controlling_entity": 1,
-                    "Dependent_situation": 1,
-                    "Place": 1,
-                    "Dependent_entity": 1
+                    "Degree": 2,
+                    "Controlling_entity": 2,
+                    "Dependent_situation": 2,
+                    "Place": 2,
+                    "Dependent_entity": 2
                 }
             }
         }
@@ -199,7 +261,7 @@
     [
         "Examination",
         {
-            "combined-total": 5,
+            "combined-total": 10,
             "role-total": 5,
             "source-total": 6,
             "counts": {
@@ -224,11 +286,51 @@
                 "combined": {
                     "Examiner": 0,
                     "Place": 0,
-                    "Examination": 1,
-                    "Qualification": 1,
+                    "Examination": 2,
+                    "Qualification": 2,
+                    "Time": 2,
+                    "Knowledge": 2,
+                    "Examinee": 2
+                }
+            }
+        }
+    ],
+    [
+        "Exchange",
+        {
+            "combined-total": 10,
+            "role-total": 5,
+            "source-total": 7,
+            "counts": {
+                "report": {
+                    "Exchangers": 0,
+                    "Themes": 0,
+                    "Time": 0,
+                    "Place": 0,
+                    "Theme_1": 2,
+                    "Theme_2": 1,
+                    "Exchanger_1": 1,
+                    "Exchanger_2": 1
+                },
+                "source": {
+                    "Themes": 0,
+                    "Place": 0,
+                    "Theme_1": 2,
+                    "Exchanger_2": 1,
+                    "Exchanger_1": 1,
                     "Time": 1,
-                    "Knowledge": 1,
-                    "Examinee": 1
+                    "Theme_2": 1,
+                    "Exchangers": 1
+                },
+                "combined": {
+                    "Exchangers": 0,
+                    "Themes": 0,
+                    "Time": 0,
+                    "Place": 0,
+                    "Theme_1": 4,
+                    "Theme_2": 2,
+                    "Exchanger_1": 2,
+                    "Exchanger_2": 2
                 }
             }
         }
@@ -236,7 +338,7 @@
     [
         "Objective_influence",
         {
-            "combined-total": 5,
+            "combined-total": 10,
             "role-total": 5,
             "source-total": 6,
             "counts": {
@@ -267,11 +369,11 @@
                     "Dependent_situation": 0,
                     "Dependent_variable": 0,
                     "Degree": 0,
-                    "Place": 1,
-                    "Influencing_situation": 1,
-                    "Time": 1,
-                    "Influencing_variable": 1,
-                    "Dependent_entity": 1
+                    "Place": 2,
+                    "Influencing_situation": 2,
+                    "Time": 2,
+                    "Influencing_variable": 2,
+                    "Dependent_entity": 2
                 }
             }
         }
@@ -279,7 +381,7 @@
     [
         "Undergo_change",
         {
-            "combined-total": 5,
+            "combined-total": 10,
             "role-total": 5,
             "source-total": 5,
             "counts": {
@@ -316,11 +418,141 @@
                     "Final_situation": 0,
                     "Initial_situation": 0,
                     "Time": 0,
+                    "Place": 2,
+                    "Entity": 2,
+                    "Value_range": 2,
+                    "Initial_category": 2,
+                    "Final_category": 2
+                }
+            }
+        }
+    ],
+    [
+        "Abusing",
+        {
+            "combined-total": 9,
+            "role-total": 3,
+            "source-total": 9,
+            "counts": {
+                "report": {
+                    "Place": 0,
+                    "Victim": 1,
+                    "Abuser": 1,
+                    "Time": 1
+                },
+                "source": {
+                    "Abuser": 1,
+                    "Victim": 2,
+                    "Time": 3,
+                    "Place": 3
+                },
+                "combined": {
+                    "Place": 0,
+                    "Victim": 3,
+                    "Abuser": 2,
+                    "Time": 4
+                }
+            }
+        }
+    ],
+    [
+        "Creating",
+        {
+            "combined-total": 9,
+            "role-total": 5,
+            "source-total": 4,
+            "counts": {
+                "report": {
+                    "Creator": 0,
                     "Place": 1,
-                    "Entity": 1,
-                    "Value_range": 1,
-                    "Initial_category": 1,
-                    "Final_category": 1
+                    "Cause": 1,
+                    "Time": 1,
+                    "Created_entity": 2
+                },
+                "source": {
+                    "Creator": 0,
+                    "Cause": 1,
+                    "Place": 1,
+                    "Time": 1,
+                    "Created_entity": 1
+                },
+                "combined": {
+                    "Creator": 0,
+                    "Place": 2,
+                    "Cause": 2,
+                    "Time": 2,
+                    "Created_entity": 3
+                }
+            }
+        }
+    ],
+    [
+        "Gesture",
+        {
+            "combined-total": 9,
+            "role-total": 5,
+            "source-total": 6,
+            "counts": {
+                "report": {
+                    "Body_part": 0,
+                    "Indicated_entity": 0,
+                    "Place": 1,
+                    "Communicator": 1,
+                    "Addressee": 1,
+                    "Message": 1,
+                    "Time": 1
+                },
+                "source": {
+                    "Message": 0,
+                    "Body_part": 0,
+                    "Communicator": 1,
+                    "Indicated_entity": 1,
+                    "Place": 2,
+                    "Time": 1,
+                    "Addressee": 1
+                },
+                "combined": {
+                    "Body_part": 0,
+                    "Indicated_entity": 0,
+                    "Place": 3,
+                    "Communicator": 2,
+                    "Addressee": 2,
+                    "Message": 0,
+                    "Time": 2
+                }
+            }
+        }
+    ],
+    [
+        "Inhibit_movement",
+        {
+            "combined-total": 9,
+            "role-total": 4,
+            "source-total": 5,
+            "counts": {
+                "report": {
+                    "Cause": 0,
+                    "Time": 0,
+                    "Place": 1,
+                    "Agent": 1,
+                    "Theme": 1,
+                    "Holding_location": 1
+                },
+                "source": {
+                    "Cause": 0,
+                    "Time": 0,
+                    "Agent": 1,
+                    "Place": 1,
+                    "Theme": 1,
+                    "Holding_location": 2
+                },
+                "combined": {
+                    "Cause": 0,
+                    "Time": 0,
+                    "Place": 2,
+                    "Agent": 2,
+                    "Theme": 2,
+                    "Holding_location": 3
                 }
             }
         }
@@ -328,7 +560,7 @@
     [
         "Arraignment",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -348,10 +580,10 @@
                 },
                 "combined": {
                     "Judge": 0,
-                    "Time": 1,
-                    "Defendant": 1,
-                    "Place": 1,
-                    "Charges": 1
+                    "Time": 2,
+                    "Defendant": 2,
+                    "Place": 2,
+                    "Charges": 2
                 }
             }
         }
@@ -359,7 +591,7 @@
     [
         "Assistance",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -382,41 +614,10 @@
                 "combined": {
                     "Goal": 0,
                     "Place": 0,
-                    "Helper": 1,
-                    "Benefited_party": 1,
-                    "Focal_entity": 1,
-                    "Time": 1
-                }
-            }
-        }
-    ],
-    [
-        "Atonement",
-        {
-            "combined-total": 4,
-            "role-total": 4,
-            "source-total": 4,
-            "counts": {
-                "report": {
-                    "Place": 0,
-                    "Agent": 1,
-                    "Wrong": 1,
-                    "Amends": 1,
-                    "Time": 1
-                },
-                "source": {
-                    "Place": 0,
-                    "Amends": 1,
-                    "Time": 1,
-                    "Wrong": 1,
-                    "Agent": 1
-                },
-                "combined": {
-                    "Place": 0,
-                    "Agent": 1,
-                    "Wrong": 1,
-                    "Amends": 1,
-                    "Time": 1
+                    "Helper": 2,
+                    "Benefited_party": 2,
+                    "Focal_entity": 2,
+                    "Time": 2
                 }
             }
         }
@@ -424,7 +625,7 @@
     [
         "Attaching",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 5,
             "counts": {
@@ -450,10 +651,10 @@
                     "Agent": 0,
                     "Connector": 0,
                     "Items": 0,
-                    "Time": 1,
-                    "Place": 1,
-                    "Item": 1,
-                    "Goal": 1
+                    "Time": 2,
+                    "Place": 2,
+                    "Item": 2,
+                    "Goal": 2
                 }
             }
         }
@@ -461,7 +662,7 @@
     [
         "Attempt_suasion",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 7,
             "counts": {
@@ -490,10 +691,10 @@
                     "Salient_entity": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Topic": 1,
-                    "Speaker": 1,
-                    "Content": 1,
-                    "Medium": 1
+                    "Topic": 2,
+                    "Speaker": 2,
+                    "Content": 2,
+                    "Medium": 2
                 }
             }
         }
@@ -501,7 +702,7 @@
     [
         "Becoming",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 5,
             "source-total": 4,
             "counts": {
@@ -520,11 +721,11 @@
                     "Time": 1
                 },
                 "combined": {
-                    "Entity": 1,
+                    "Entity": 2,
                     "Final_category": 0,
-                    "Final_quality": 1,
-                    "Time": 1,
-                    "Place": 1
+                    "Final_quality": 2,
+                    "Time": 2,
+                    "Place": 2
                 }
             }
         }
@@ -532,7 +733,7 @@
     [
         "Cause_change_of_position_on_a_scale",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 5,
             "counts": {
@@ -555,10 +756,10 @@
                 "combined": {
                     "Agent": 0,
                     "Place": 0,
-                    "Cause": 1,
-                    "Time": 1,
-                    "Attribute": 1,
-                    "Item": 1
+                    "Cause": 2,
+                    "Time": 2,
+                    "Attribute": 2,
+                    "Item": 2
                 }
             }
         }
@@ -566,7 +767,7 @@
     [
         "Cause_fluidic_motion",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 7,
             "counts": {
@@ -598,10 +799,10 @@
                     "Path": 0,
                     "Area": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Time": 1,
-                    "Fluid": 1,
-                    "Goal": 1
+                    "Agent": 2,
+                    "Time": 2,
+                    "Fluid": 2,
+                    "Goal": 2
                 }
             }
         }
@@ -609,7 +810,7 @@
     [
         "Cause_impact",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -635,10 +836,10 @@
                     "Impactor": 0,
                     "Impactors": 0,
                     "Place": 0,
-                    "Time": 1,
-                    "Agent": 1,
-                    "Impactee": 1,
-                    "Cause": 1
+                    "Time": 2,
+                    "Agent": 2,
+                    "Impactee": 2,
+                    "Cause": 2
                 }
             }
         }
@@ -646,7 +847,7 @@
     [
         "Cause_motion",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 5,
             "counts": {
@@ -684,10 +885,10 @@
                     "Initial_state": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Theme": 1,
-                    "Area": 1,
-                    "Result": 1
+                    "Agent": 2,
+                    "Theme": 2,
+                    "Area": 2,
+                    "Result": 2
                 }
             }
         }
@@ -695,7 +896,7 @@
     [
         "Cause_to_fragment",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -718,10 +919,10 @@
                 "combined": {
                     "Pieces": 0,
                     "Cause": 0,
-                    "Time": 1,
-                    "Place": 1,
-                    "Agent": 1,
-                    "Whole_patient": 1
+                    "Time": 2,
+                    "Place": 2,
+                    "Agent": 2,
+                    "Whole_patient": 2
                 }
             }
         }
@@ -729,7 +930,7 @@
     [
         "Cause_to_make_progress",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -746,10 +947,10 @@
                     "Time": 1
                 },
                 "combined": {
-                    "Time": 1,
-                    "Agent": 1,
-                    "Project": 1,
-                    "Place": 1
+                    "Time": 2,
+                    "Agent": 2,
+                    "Project": 2,
+                    "Place": 2
                 }
             }
         }
@@ -757,7 +958,7 @@
     [
         "Commerce_pay",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 5,
             "source-total": 4,
             "counts": {
@@ -783,10 +984,10 @@
                     "Rate": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Buyer": 1,
-                    "Money": 1,
-                    "Seller": 1,
-                    "Goods": 1
+                    "Buyer": 2,
+                    "Money": 2,
+                    "Seller": 2,
+                    "Goods": 2
                 }
             }
         }
@@ -794,7 +995,7 @@
     [
         "Contacting",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 5,
             "source-total": 4,
             "counts": {
@@ -820,41 +1021,10 @@
                     "Address": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Communicator": 1,
-                    "Addressee": 1,
-                    "Communication": 1,
-                    "Topic": 1
-                }
-            }
-        }
-    ],
-    [
-        "Creating",
-        {
-            "combined-total": 4,
-            "role-total": 4,
-            "source-total": 4,
-            "counts": {
-                "report": {
-                    "Creator": 0,
-                    "Place": 1,
-                    "Cause": 1,
-                    "Time": 1,
-                    "Created_entity": 1
-                },
-                "source": {
-                    "Creator": 0,
-                    "Cause": 1,
-                    "Place": 1,
-                    "Time": 1,
-                    "Created_entity": 1
-                },
-                "combined": {
-                    "Creator": 0,
-                    "Place": 1,
-                    "Cause": 1,
-                    "Time": 1,
-                    "Created_entity": 1
+                    "Communicator": 2,
+                    "Addressee": 2,
+                    "Communication": 2,
+                    "Topic": 2
                 }
             }
         }
@@ -862,7 +1032,7 @@
     [
         "Detaching",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -885,10 +1055,10 @@
                 "combined": {
                     "Agent": 0,
                     "Time": 0,
-                    "Item": 1,
-                    "Items": 1,
-                    "Source": 1,
-                    "Place": 1
+                    "Item": 2,
+                    "Items": 2,
+                    "Source": 2,
+                    "Place": 2
                 }
             }
         }
@@ -896,7 +1066,7 @@
     [
         "Escaping",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -913,50 +1083,10 @@
                     "Place": 1
                 },
                 "combined": {
-                    "Undesirable_location": 1,
-                    "Time": 1,
-                    "Escapee": 1,
-                    "Place": 1
-                }
-            }
-        }
-    ],
-    [
-        "Exchange",
-        {
-            "combined-total": 4,
-            "role-total": 4,
-            "source-total": 6,
-            "counts": {
-                "report": {
-                    "Exchangers": 0,
-                    "Themes": 0,
-                    "Time": 0,
-                    "Place": 0,
-                    "Theme_1": 1,
-                    "Theme_2": 1,
-                    "Exchanger_1": 1,
-                    "Exchanger_2": 1
-                },
-                "source": {
-                    "Themes": 0,
-                    "Place": 0,
-                    "Theme_1": 1,
-                    "Exchanger_2": 1,
-                    "Exchanger_1": 1,
-                    "Time": 1,
-                    "Theme_2": 1,
-                    "Exchangers": 1
-                },
-                "combined": {
-                    "Exchangers": 0,
-                    "Themes": 0,
-                    "Time": 0,
-                    "Place": 0,
-                    "Theme_1": 1,
-                    "Theme_2": 1,
-                    "Exchanger_1": 1,
-                    "Exchanger_2": 1
+                    "Undesirable_location": 2,
+                    "Time": 2,
+                    "Escapee": 2,
+                    "Place": 2
                 }
             }
         }
@@ -964,9 +1094,9 @@
     [
         "Fear",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
-            "source-total": 6,
+            "source-total": 8,
             "counts": {
                 "report": {
                     "Experiencer": 0,
@@ -979,7 +1109,7 @@
                 "source": {
                     "Topic": 1,
                     "Stimulus": 1,
-                    "Experiencer": 1,
+                    "Experiencer": 3,
                     "Expressor": 1,
                     "State": 1,
                     "Time": 1
@@ -987,10 +1117,10 @@
                 "combined": {
                     "Experiencer": 0,
                     "Expressor": 0,
-                    "State": 1,
-                    "Topic": 1,
-                    "Time": 1,
-                    "Stimulus": 1
+                    "State": 2,
+                    "Topic": 2,
+                    "Time": 2,
+                    "Stimulus": 2
                 }
             }
         }
@@ -998,7 +1128,7 @@
     [
         "Fining",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 5,
             "source-total": 4,
             "counts": {
@@ -1020,10 +1150,10 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Payer": 1,
-                    "Reason": 1,
-                    "Time": 1,
-                    "Speaker": 1,
+                    "Payer": 2,
+                    "Reason": 2,
+                    "Time": 2,
+                    "Speaker": 2,
                     "Fine": 0
                 }
             }
@@ -1032,7 +1162,7 @@
     [
         "Firing",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -1055,81 +1185,47 @@
                 "combined": {
                     "Task": 0,
                     "Place": 0,
-                    "Employee": 1,
-                    "Employer": 1,
-                    "Position": 1,
-                    "Time": 1
+                    "Employee": 2,
+                    "Employer": 2,
+                    "Position": 2,
+                    "Time": 2
                 }
             }
         }
     ],
     [
-        "Gesture",
+        "Hostile_encounter",
         {
-            "combined-total": 4,
-            "role-total": 5,
-            "source-total": 5,
+            "combined-total": 8,
+            "role-total": 3,
+            "source-total": 8,
             "counts": {
                 "report": {
-                    "Body_part": 0,
-                    "Indicated_entity": 0,
-                    "Place": 1,
-                    "Communicator": 1,
-                    "Addressee": 1,
-                    "Message": 1,
-                    "Time": 1
-                },
-                "source": {
-                    "Message": 0,
-                    "Body_part": 0,
-                    "Communicator": 1,
-                    "Indicated_entity": 1,
-                    "Place": 1,
+                    "Side_2": 0,
+                    "Sides": 0,
+                    "Purpose": 0,
+                    "Place": 0,
+                    "Issue": 1,
                     "Time": 1,
-                    "Addressee": 1
-                },
-                "combined": {
-                    "Body_part": 0,
-                    "Indicated_entity": 0,
-                    "Place": 1,
-                    "Communicator": 1,
-                    "Addressee": 1,
-                    "Message": 0,
-                    "Time": 1
-                }
-            }
-        }
-    ],
-    [
-        "Inhibit_movement",
-        {
-            "combined-total": 4,
-            "role-total": 4,
-            "source-total": 4,
-            "counts": {
-                "report": {
-                    "Cause": 0,
-                    "Time": 0,
-                    "Place": 1,
-                    "Agent": 1,
-                    "Theme": 1,
-                    "Holding_location": 1
+                    "Side_1": 1
                 },
                 "source": {
-                    "Cause": 0,
-                    "Time": 0,
-                    "Agent": 1,
+                    "Purpose": 0,
                     "Place": 1,
-                    "Theme": 1,
-                    "Holding_location": 1
+                    "Side_1": 2,
+                    "Side_2": 1,
+                    "Sides": 1,
+                    "Time": 2,
+                    "Issue": 1
                 },
                 "combined": {
-                    "Cause": 0,
-                    "Time": 0,
-                    "Place": 1,
-                    "Agent": 1,
-                    "Theme": 1,
-                    "Holding_location": 1
+                    "Side_2": 0,
+                    "Sides": 0,
+                    "Purpose": 0,
+                    "Place": 0,
+                    "Issue": 2,
+                    "Time": 3,
+                    "Side_1": 3
                 }
             }
         }
@@ -1137,7 +1233,7 @@
     [
         "Intentional_traversing",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -1166,10 +1262,10 @@
                     "Path_shape": 0,
                     "Direction": 0,
                     "Place": 0,
-                    "Self_mover": 1,
-                    "Goal": 1,
-                    "Path": 1,
-                    "Time": 1
+                    "Self_mover": 2,
+                    "Goal": 2,
+                    "Path": 2,
+                    "Time": 2
                 }
             }
         }
@@ -1177,7 +1273,7 @@
     [
         "Manipulate_into_doing",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -1200,10 +1296,10 @@
                 "combined": {
                     "Goods": 0,
                     "Time": 0,
-                    "Manipulator": 1,
-                    "Place": 1,
-                    "Victim": 1,
-                    "Resulting_action": 1
+                    "Manipulator": 2,
+                    "Place": 2,
+                    "Victim": 2,
+                    "Resulting_action": 2
                 }
             }
         }
@@ -1211,7 +1307,7 @@
     [
         "Mass_motion",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 5,
             "counts": {
@@ -1240,10 +1336,10 @@
                     "Path": 0,
                     "Direction": 0,
                     "Place": 0,
-                    "Mass_theme": 1,
-                    "Source": 1,
-                    "Goal": 1,
-                    "Time": 1
+                    "Mass_theme": 2,
+                    "Source": 2,
+                    "Goal": 2,
+                    "Time": 2
                 }
             }
         }
@@ -1251,7 +1347,7 @@
     [
         "Motion_directional",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 6,
             "counts": {
@@ -1280,10 +1376,10 @@
                     "Direction": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Theme": 1,
-                    "Path": 1,
-                    "Source": 1,
-                    "Goal": 1
+                    "Theme": 2,
+                    "Path": 2,
+                    "Source": 2,
+                    "Goal": 2
                 }
             }
         }
@@ -1291,7 +1387,7 @@
     [
         "Operate_vehicle",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -1320,10 +1416,10 @@
                     "Path": 0,
                     "Goal": 0,
                     "Area": 0,
-                    "Time": 1,
-                    "Place": 1,
-                    "Driver": 1,
-                    "Vehicle": 1
+                    "Time": 2,
+                    "Place": 2,
+                    "Driver": 2,
+                    "Vehicle": 2
                 }
             }
         }
@@ -1331,7 +1427,7 @@
     [
         "Operating_a_system",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -1348,41 +1444,10 @@
                     "Place": 1
                 },
                 "combined": {
-                    "Operator": 1,
-                    "System": 1,
-                    "Place": 1,
-                    "Time": 1
-                }
-            }
-        }
-    ],
-    [
-        "Receiving",
-        {
-            "combined-total": 4,
-            "role-total": 4,
-            "source-total": 4,
-            "counts": {
-                "report": {
-                    "Place": 0,
-                    "Time": 1,
-                    "Recipient": 1,
-                    "Theme": 1,
-                    "Donor": 1
-                },
-                "source": {
-                    "Place": 0,
-                    "Recipient": 1,
-                    "Theme": 1,
-                    "Donor": 1,
-                    "Time": 1
-                },
-                "combined": {
-                    "Place": 0,
-                    "Time": 1,
-                    "Recipient": 1,
-                    "Theme": 1,
-                    "Donor": 1
+                    "Operator": 2,
+                    "System": 2,
+                    "Place": 2,
+                    "Time": 2
                 }
             }
         }
@@ -1390,7 +1455,7 @@
     [
         "Removing",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 6,
             "counts": {
@@ -1413,10 +1478,10 @@
                 "combined": {
                     "Agent": 0,
                     "Time": 0,
-                    "Theme": 1,
-                    "Place": 1,
-                    "Source": 1,
-                    "Cause": 1
+                    "Theme": 2,
+                    "Place": 2,
+                    "Source": 2,
+                    "Cause": 2
                 }
             }
         }
@@ -1424,7 +1489,7 @@
     [
         "Replacing",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -1444,10 +1509,38 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Place": 1,
-                    "Agent": 1,
-                    "Old": 1,
-                    "New": 1
+                    "Place": 2,
+                    "Agent": 2,
+                    "Old": 2,
+                    "New": 2
+                }
+            }
+        }
+    ],
+    [
+        "Thriving",
+        {
+            "combined-total": 8,
+            "role-total": 3,
+            "source-total": 7,
+            "counts": {
+                "report": {
+                    "Time": 0,
+                    "Place": 0,
+                    "Entity": 1,
+                    "Desirability": 2
+                },
+                "source": {
+                    "Time": 1,
+                    "Entity": 1,
+                    "Desirability": 4,
+                    "Place": 1
+                },
+                "combined": {
+                    "Time": 0,
+                    "Place": 0,
+                    "Entity": 2,
+                    "Desirability": 6
                 }
             }
         }
@@ -1455,7 +1548,7 @@
     [
         "Traversing",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 5,
             "source-total": 6,
             "counts": {
@@ -1489,11 +1582,11 @@
                     "Distance": 0,
                     "Path_shape": 0,
                     "Direction": 0,
-                    "Time": 1,
-                    "Theme": 1,
-                    "Source": 1,
+                    "Time": 2,
+                    "Theme": 2,
+                    "Source": 2,
                     "Area": 0,
-                    "Place": 1
+                    "Place": 2
                 }
             }
         }
@@ -1501,7 +1594,7 @@
     [
         "Undergo_transformation",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -1521,10 +1614,10 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Time": 1,
-                    "Entity": 1,
-                    "Initial_category": 1,
-                    "Final_category": 1
+                    "Time": 2,
+                    "Entity": 2,
+                    "Initial_category": 2,
+                    "Final_category": 2
                 }
             }
         }
@@ -1532,7 +1625,7 @@
     [
         "Vehicle_landing",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -1549,10 +1642,10 @@
                     "Time": 1
                 },
                 "combined": {
-                    "Time": 1,
-                    "Vehicle": 1,
-                    "Goal": 1,
-                    "Place": 1
+                    "Time": 2,
+                    "Vehicle": 2,
+                    "Goal": 2,
+                    "Place": 2
                 }
             }
         }
@@ -1560,7 +1653,7 @@
     [
         "Visiting",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -1577,10 +1670,10 @@
                     "Place": 1
                 },
                 "combined": {
-                    "Agent": 1,
-                    "Time": 1,
-                    "Entity": 1,
-                    "Place": 1
+                    "Agent": 2,
+                    "Time": 2,
+                    "Entity": 2,
+                    "Place": 2
                 }
             }
         }
@@ -1588,7 +1681,7 @@
     [
         "Work",
         {
-            "combined-total": 4,
+            "combined-total": 8,
             "role-total": 4,
             "source-total": 5,
             "counts": {
@@ -1608,38 +1701,106 @@
                 },
                 "combined": {
                     "Goal": 0,
-                    "Agent": 1,
-                    "Place": 1,
-                    "Time": 1,
-                    "Salient_entity": 1
+                    "Agent": 2,
+                    "Place": 2,
+                    "Time": 2,
+                    "Salient_entity": 2
                 }
             }
         }
     ],
     [
-        "Abusing",
+        "Breaking_out_captive",
         {
-            "combined-total": 3,
+            "combined-total": 7,
             "role-total": 3,
-            "source-total": 4,
+            "source-total": 6,
             "counts": {
                 "report": {
+                    "Location_of_confinement": 0,
                     "Place": 0,
-                    "Victim": 1,
-                    "Abuser": 1,
+                    "Time": 1,
+                    "Agent": 1,
+                    "Theme": 1
+                },
+                "source": {
+                    "Agent": 2,
+                    "Place": 1,
+                    "Location_of_confinement": 1,
+                    "Theme": 1,
+                    "Time": 1
+                },
+                "combined": {
+                    "Location_of_confinement": 0,
+                    "Place": 0,
+                    "Time": 2,
+                    "Agent": 3,
+                    "Theme": 2
+                }
+            }
+        }
+    ],
+    [
+        "Filling",
+        {
+            "combined-total": 7,
+            "role-total": 3,
+            "source-total": 7,
+            "counts": {
+                "report": {
+                    "Agent": 0,
+                    "Cause": 0,
+                    "Place": 0,
+                    "Goal": 1,
+                    "Theme": 1,
                     "Time": 1
                 },
                 "source": {
-                    "Abuser": 1,
-                    "Victim": 1,
-                    "Time": 1,
-                    "Place": 1
+                    "Theme": 1,
+                    "Time": 2,
+                    "Goal": 1,
+                    "Agent": 1,
+                    "Place": 1,
+                    "Cause": 1
                 },
                 "combined": {
+                    "Agent": 0,
+                    "Cause": 0,
                     "Place": 0,
-                    "Victim": 1,
-                    "Abuser": 1,
+                    "Goal": 2,
+                    "Theme": 2,
+                    "Time": 3
+                }
+            }
+        }
+    ],
+    [
+        "Gathering_up",
+        {
+            "combined-total": 7,
+            "role-total": 5,
+            "source-total": 3,
+            "counts": {
+                "report": {
+                    "Aggregate": 0,
+                    "Time": 2,
+                    "Place": 1,
+                    "Agent": 1,
+                    "Individuals": 1
+                },
+                "source": {
+                    "Aggregate": 0,
+                    "Agent": 0,
+                    "Place": 1,
+                    "Individuals": 1,
                     "Time": 1
+                },
+                "combined": {
+                    "Aggregate": 0,
+                    "Time": 3,
+                    "Place": 2,
+                    "Agent": 0,
+                    "Individuals": 2
                 }
             }
         }
@@ -1647,7 +1808,7 @@
     [
         "Activity_finish",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -1665,9 +1826,9 @@
                 },
                 "combined": {
                     "Agent": 0,
-                    "Activity": 1,
-                    "Time": 1,
-                    "Place": 1
+                    "Activity": 2,
+                    "Time": 2,
+                    "Place": 2
                 }
             }
         }
@@ -1675,7 +1836,7 @@
     [
         "Activity_pause",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -1693,9 +1854,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Time": 1,
-                    "Activity": 1,
-                    "Agent": 1
+                    "Time": 2,
+                    "Activity": 2,
+                    "Agent": 2
                 }
             }
         }
@@ -1703,7 +1864,7 @@
     [
         "Activity_ready_state",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -1721,9 +1882,9 @@
                 },
                 "combined": {
                     "Salient_entity": 0,
-                    "Protagonist": 1,
-                    "Activity": 1,
-                    "Time": 1
+                    "Protagonist": 2,
+                    "Activity": 2,
+                    "Time": 2
                 }
             }
         }
@@ -1731,7 +1892,7 @@
     [
         "Activity_stop",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -1749,9 +1910,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Agent": 1,
-                    "Activity": 1,
-                    "Time": 1
+                    "Agent": 2,
+                    "Activity": 2,
+                    "Time": 2
                 }
             }
         }
@@ -1759,7 +1920,7 @@
     [
         "Annoyance",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -1783,9 +1944,9 @@
                     "Topic": 0,
                     "Expressor": 0,
                     "State": 0,
-                    "Time": 1,
-                    "Experiencer": 1,
-                    "Stimulus": 1
+                    "Time": 2,
+                    "Experiencer": 2,
+                    "Stimulus": 2
                 }
             }
         }
@@ -1793,7 +1954,7 @@
     [
         "Arranging",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -1811,9 +1972,9 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Agent": 1,
-                    "Configuration": 1,
-                    "Theme": 1
+                    "Agent": 2,
+                    "Configuration": 2,
+                    "Theme": 2
                 }
             }
         }
@@ -1821,7 +1982,7 @@
     [
         "Attending",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 3,
             "counts": {
@@ -1839,9 +2000,9 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Agent": 1,
-                    "Event": 1,
-                    "Place": 1
+                    "Agent": 2,
+                    "Event": 2,
+                    "Place": 2
                 }
             }
         }
@@ -1849,7 +2010,7 @@
     [
         "Becoming_a_member",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -1867,9 +2028,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "New_member": 1,
-                    "Time": 1,
-                    "Group": 1
+                    "New_member": 2,
+                    "Time": 2,
+                    "Group": 2
                 }
             }
         }
@@ -1877,7 +2038,7 @@
     [
         "Being_located",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -1895,9 +2056,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Theme": 1,
-                    "Location": 1,
-                    "Time": 1
+                    "Theme": 2,
+                    "Location": 2,
+                    "Time": 2
                 }
             }
         }
@@ -1905,7 +2066,7 @@
     [
         "Besieging",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -1923,40 +2084,9 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Assailant": 1,
-                    "Victim": 1,
-                    "Place": 1
-                }
-            }
-        }
-    ],
-    [
-        "Breaking_out_captive",
-        {
-            "combined-total": 3,
-            "role-total": 3,
-            "source-total": 5,
-            "counts": {
-                "report": {
-                    "Location_of_confinement": 0,
-                    "Place": 0,
-                    "Time": 1,
-                    "Agent": 1,
-                    "Theme": 1
-                },
-                "source": {
-                    "Agent": 1,
-                    "Place": 1,
-                    "Location_of_confinement": 1,
-                    "Theme": 1,
-                    "Time": 1
-                },
-                "combined": {
-                    "Location_of_confinement": 0,
-                    "Place": 0,
-                    "Time": 1,
-                    "Agent": 1,
-                    "Theme": 1
+                    "Assailant": 2,
+                    "Victim": 2,
+                    "Place": 2
                 }
             }
         }
@@ -1964,7 +2094,7 @@
     [
         "Causation",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -1982,9 +2112,9 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Actor": 1,
-                    "Place": 1,
-                    "Affected": 1
+                    "Actor": 2,
+                    "Place": 2,
+                    "Affected": 2
                 }
             }
         }
@@ -1992,7 +2122,7 @@
     [
         "Cause_change_of_strength",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 3,
             "counts": {
@@ -2009,10 +2139,10 @@
                     "Agent": 1
                 },
                 "combined": {
-                    "Place": 1,
+                    "Place": 2,
                     "Time": 0,
-                    "Agent": 1,
-                    "Patient": 1
+                    "Agent": 2,
+                    "Patient": 2
                 }
             }
         }
@@ -2020,7 +2150,7 @@
     [
         "Cause_emotion",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 5,
             "counts": {
@@ -2041,9 +2171,9 @@
                 "combined": {
                     "Event": 0,
                     "Time": 0,
-                    "Agent": 1,
-                    "Place": 1,
-                    "Experiencer": 1
+                    "Agent": 2,
+                    "Place": 2,
+                    "Experiencer": 2
                 }
             }
         }
@@ -2051,9 +2181,9 @@
     [
         "Cause_harm",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
-            "source-total": 5,
+            "source-total": 7,
             "counts": {
                 "report": {
                     "Body_part": 0,
@@ -2065,7 +2195,7 @@
                 },
                 "source": {
                     "Cause": 0,
-                    "Body_part": 1,
+                    "Body_part": 3,
                     "Place": 1,
                     "Time": 1,
                     "Agent": 1,
@@ -2075,9 +2205,9 @@
                     "Body_part": 0,
                     "Cause": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Victim": 1,
-                    "Time": 1
+                    "Agent": 2,
+                    "Victim": 2,
+                    "Time": 2
                 }
             }
         }
@@ -2085,7 +2215,7 @@
     [
         "Cause_to_continue",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2109,9 +2239,9 @@
                     "Agent": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Cause": 1,
-                    "Process": 1,
-                    "State": 1
+                    "Cause": 2,
+                    "Process": 2,
+                    "State": 2
                 }
             }
         }
@@ -2119,7 +2249,7 @@
     [
         "Cause_to_experience",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2137,9 +2267,9 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Place": 1,
-                    "Experiencer": 1,
-                    "Agent": 1
+                    "Place": 2,
+                    "Experiencer": 2,
+                    "Agent": 2
                 }
             }
         }
@@ -2147,7 +2277,7 @@
     [
         "Cause_to_make_noise",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2168,9 +2298,9 @@
                 "combined": {
                     "Cause": 0,
                     "Time": 0,
-                    "Agent": 1,
-                    "Sound_maker": 1,
-                    "Place": 1
+                    "Agent": 2,
+                    "Sound_maker": 2,
+                    "Place": 2
                 }
             }
         }
@@ -2178,7 +2308,7 @@
     [
         "Cause_to_move_in_place",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2202,9 +2332,9 @@
                     "Cause": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Theme": 1,
-                    "Bodypart_of_agent": 1,
-                    "Agent": 1
+                    "Theme": 2,
+                    "Bodypart_of_agent": 2,
+                    "Agent": 2
                 }
             }
         }
@@ -2212,7 +2342,7 @@
     [
         "Cause_to_resume",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -2236,9 +2366,9 @@
                     "Hiatus": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Process": 1,
-                    "Cause": 1
+                    "Agent": 2,
+                    "Process": 2,
+                    "Cause": 2
                 }
             }
         }
@@ -2246,7 +2376,7 @@
     [
         "Cause_to_wake",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2267,9 +2397,9 @@
                 "combined": {
                     "Agent": 0,
                     "Place": 0,
-                    "Cause": 1,
-                    "Sleeper": 1,
-                    "Time": 1
+                    "Cause": 2,
+                    "Sleeper": 2,
+                    "Time": 2
                 }
             }
         }
@@ -2277,7 +2407,7 @@
     [
         "Change_accessibility",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 3,
             "counts": {
@@ -2297,10 +2427,10 @@
                 },
                 "combined": {
                     "Portal": 0,
-                    "Agent": 1,
+                    "Agent": 2,
                     "Time": 0,
-                    "Useful_location": 1,
-                    "Place": 1
+                    "Useful_location": 2,
+                    "Place": 2
                 }
             }
         }
@@ -2308,7 +2438,7 @@
     [
         "Change_event_time",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2329,9 +2459,9 @@
                 "combined": {
                     "Agent": 0,
                     "Place": 0,
-                    "Event": 1,
-                    "Time": 1,
-                    "Cause": 1
+                    "Event": 2,
+                    "Time": 2,
+                    "Cause": 2
                 }
             }
         }
@@ -2339,7 +2469,7 @@
     [
         "Change_of_leadership",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -2372,9 +2502,9 @@
                     "Body": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Selector": 1,
-                    "New_leader": 1,
-                    "Role": 1
+                    "Selector": 2,
+                    "New_leader": 2,
+                    "Role": 2
                 }
             }
         }
@@ -2382,7 +2512,7 @@
     [
         "Change_of_temperature",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2400,9 +2530,9 @@
                 },
                 "combined": {
                     "Temperature": 0,
-                    "Item": 1,
-                    "Time": 1,
-                    "Place": 1
+                    "Item": 2,
+                    "Time": 2,
+                    "Place": 2
                 }
             }
         }
@@ -2410,7 +2540,7 @@
     [
         "Change_operational_state",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -2431,9 +2561,9 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Cause": 1,
-                    "Device": 1
+                    "Agent": 2,
+                    "Cause": 2,
+                    "Device": 2
                 }
             }
         }
@@ -2441,7 +2571,7 @@
     [
         "Change_position_on_a_scale",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 5,
             "counts": {
@@ -2477,9 +2607,9 @@
                     "Initial_state": 0,
                     "Final_state": 0,
                     "Place": 0,
-                    "Item": 1,
-                    "Time": 1,
-                    "Attribute": 1
+                    "Item": 2,
+                    "Time": 2,
+                    "Attribute": 2
                 }
             }
         }
@@ -2487,7 +2617,7 @@
     [
         "Chaos",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 3,
             "counts": {
@@ -2504,10 +2634,10 @@
                     "State": 1
                 },
                 "combined": {
-                    "Entity": 1,
-                    "Place": 1,
+                    "Entity": 2,
+                    "Place": 2,
                     "Time": 0,
-                    "State": 1
+                    "State": 2
                 }
             }
         }
@@ -2515,7 +2645,7 @@
     [
         "Choosing",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2536,9 +2666,9 @@
                 "combined": {
                     "Possibilities": 0,
                     "Place": 0,
-                    "Chosen": 1,
-                    "Cognizer": 1,
-                    "Time": 1
+                    "Chosen": 2,
+                    "Cognizer": 2,
+                    "Time": 2
                 }
             }
         }
@@ -2546,7 +2676,7 @@
     [
         "Collaboration",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2570,9 +2700,9 @@
                     "Partner_1": 0,
                     "Partner_2": 0,
                     "Place": 0,
-                    "Partners": 1,
-                    "Undertaking": 1,
-                    "Time": 1
+                    "Partners": 2,
+                    "Undertaking": 2,
+                    "Time": 2
                 }
             }
         }
@@ -2580,7 +2710,7 @@
     [
         "Come_together",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2604,9 +2734,40 @@
                     "Configuration": 0,
                     "Party_1": 0,
                     "Party_2": 0,
-                    "Time": 1,
-                    "Individuals": 1,
-                    "Place": 1
+                    "Time": 2,
+                    "Individuals": 2,
+                    "Place": 2
+                }
+            }
+        }
+    ],
+    [
+        "Commerce_sell",
+        {
+            "combined-total": 6,
+            "role-total": 4,
+            "source-total": 5,
+            "counts": {
+                "report": {
+                    "Buyer": 0,
+                    "Place": 0,
+                    "Goods": 1,
+                    "Seller": 1,
+                    "Time": 2
+                },
+                "source": {
+                    "Buyer": 0,
+                    "Time": 0,
+                    "Seller": 1,
+                    "Place": 1,
+                    "Goods": 3
+                },
+                "combined": {
+                    "Buyer": 0,
+                    "Place": 0,
+                    "Goods": 4,
+                    "Seller": 2,
+                    "Time": 0
                 }
             }
         }
@@ -2614,7 +2775,7 @@
     [
         "Communication",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2638,9 +2799,9 @@
                     "Topic": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Medium": 1,
-                    "Communicator": 1,
-                    "Message": 1
+                    "Medium": 2,
+                    "Communicator": 2,
+                    "Message": 2
                 }
             }
         }
@@ -2648,7 +2809,7 @@
     [
         "Confronting_problem",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2666,9 +2827,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Issue": 1,
-                    "Agent": 1,
-                    "Time": 1
+                    "Issue": 2,
+                    "Agent": 2,
+                    "Time": 2
                 }
             }
         }
@@ -2676,7 +2837,7 @@
     [
         "Cooking_creation",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 3,
             "counts": {
@@ -2694,9 +2855,9 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Cook": 1,
-                    "Place": 1,
-                    "Produced_food": 1
+                    "Cook": 2,
+                    "Place": 2,
+                    "Produced_food": 2
                 }
             }
         }
@@ -2704,7 +2865,7 @@
     [
         "Destiny",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2725,9 +2886,9 @@
                 "combined": {
                     "Role": 0,
                     "Time": 0,
-                    "Protagonist": 1,
-                    "State_of_affairs": 1,
-                    "Place": 1
+                    "Protagonist": 2,
+                    "State_of_affairs": 2,
+                    "Place": 2
                 }
             }
         }
@@ -2735,7 +2896,7 @@
     [
         "Destroying",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -2756,9 +2917,9 @@
                 "combined": {
                     "Destroyer": 0,
                     "Place": 0,
-                    "Time": 1,
-                    "Patient": 1,
-                    "Cause": 1
+                    "Time": 2,
+                    "Patient": 2,
+                    "Cause": 2
                 }
             }
         }
@@ -2766,7 +2927,7 @@
     [
         "Emotions_by_stimulus",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2793,9 +2954,9 @@
                     "State": 0,
                     "Event": 0,
                     "Time": 0,
-                    "Experiencer": 1,
-                    "Topic": 1,
-                    "Stimulus": 1
+                    "Experiencer": 2,
+                    "Topic": 2,
+                    "Stimulus": 2
                 }
             }
         }
@@ -2803,7 +2964,7 @@
     [
         "Endangering",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 3,
             "counts": {
@@ -2824,74 +2985,9 @@
                 "combined": {
                     "Place": 0,
                     "Time": 0,
-                    "Cause": 1,
-                    "Agent": 1,
-                    "Valued_entity": 1
-                }
-            }
-        }
-    ],
-    [
-        "Filling",
-        {
-            "combined-total": 3,
-            "role-total": 3,
-            "source-total": 6,
-            "counts": {
-                "report": {
-                    "Agent": 0,
-                    "Cause": 0,
-                    "Place": 0,
-                    "Goal": 1,
-                    "Theme": 1,
-                    "Time": 1
-                },
-                "source": {
-                    "Theme": 1,
-                    "Time": 1,
-                    "Goal": 1,
-                    "Agent": 1,
-                    "Place": 1,
-                    "Cause": 1
-                },
-                "combined": {
-                    "Agent": 0,
-                    "Cause": 0,
-                    "Place": 0,
-                    "Goal": 1,
-                    "Theme": 1,
-                    "Time": 1
-                }
-            }
-        }
-    ],
-    [
-        "Gathering_up",
-        {
-            "combined-total": 3,
-            "role-total": 4,
-            "source-total": 3,
-            "counts": {
-                "report": {
-                    "Aggregate": 0,
-                    "Time": 1,
-                    "Place": 1,
-                    "Agent": 1,
-                    "Individuals": 1
-                },
-                "source": {
-                    "Aggregate": 0,
-                    "Agent": 0,
-                    "Place": 1,
-                    "Individuals": 1,
-                    "Time": 1
-                },
-                "combined": {
-                    "Aggregate": 0,
-                    "Time": 1,
-                    "Place": 1,
-                    "Agent": 0,
-                    "Individuals": 1
+                    "Cause": 2,
+                    "Agent": 2,
+                    "Valued_entity": 2
                 }
             }
         }
@@ -2899,7 +2995,7 @@
     [
         "Getting",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -2917,9 +3013,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Time": 1,
-                    "Recipient": 1,
-                    "Theme": 1
+                    "Time": 2,
+                    "Recipient": 2,
+                    "Theme": 2
                 }
             }
         }
@@ -2927,7 +3023,7 @@
     [
         "Hiring",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 5,
             "counts": {
@@ -2954,46 +3050,9 @@
                     "Field": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Position": 1,
-                    "Task": 1,
-                    "Employee": 1
-                }
-            }
-        }
-    ],
-    [
-        "Hostile_encounter",
-        {
-            "combined-total": 3,
-            "role-total": 3,
-            "source-total": 6,
-            "counts": {
-                "report": {
-                    "Side_2": 0,
-                    "Sides": 0,
-                    "Purpose": 0,
-                    "Place": 0,
-                    "Issue": 1,
-                    "Time": 1,
-                    "Side_1": 1
-                },
-                "source": {
-                    "Purpose": 0,
-                    "Place": 1,
-                    "Side_1": 1,
-                    "Side_2": 1,
-                    "Sides": 1,
-                    "Time": 1,
-                    "Issue": 1
-                },
-                "combined": {
-                    "Side_2": 0,
-                    "Sides": 0,
-                    "Purpose": 0,
-                    "Place": 0,
-                    "Issue": 1,
-                    "Time": 1,
-                    "Side_1": 1
+                    "Position": 2,
+                    "Task": 2,
+                    "Employee": 2
                 }
             }
         }
@@ -3001,7 +3060,7 @@
     [
         "Imposing_obligation",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 5,
             "counts": {
@@ -3028,9 +3087,9 @@
                     "Situation": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Principle": 1,
-                    "Responsible_party": 1,
-                    "Duty": 1
+                    "Principle": 2,
+                    "Responsible_party": 2,
+                    "Duty": 2
                 }
             }
         }
@@ -3038,7 +3097,7 @@
     [
         "Ingestion",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 3,
             "counts": {
@@ -3056,9 +3115,9 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Ingestor": 1,
-                    "Place": 1,
-                    "Ingestibles": 1
+                    "Ingestor": 2,
+                    "Place": 2,
+                    "Ingestibles": 2
                 }
             }
         }
@@ -3066,7 +3125,7 @@
     [
         "Intentionally_create",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3084,9 +3143,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Time": 1,
-                    "Creator": 1,
-                    "Created_entity": 1
+                    "Time": 2,
+                    "Creator": 2,
+                    "Created_entity": 2
                 }
             }
         }
@@ -3094,7 +3153,7 @@
     [
         "Interrupt_process",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -3115,9 +3174,9 @@
                 "combined": {
                     "Cause": 0,
                     "Time": 0,
-                    "Place": 1,
-                    "Process": 1,
-                    "Actor": 1
+                    "Place": 2,
+                    "Process": 2,
+                    "Actor": 2
                 }
             }
         }
@@ -3125,7 +3184,7 @@
     [
         "Invading",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3143,9 +3202,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Land": 1,
-                    "Time": 1,
-                    "Invader": 1
+                    "Land": 2,
+                    "Time": 2,
+                    "Invader": 2
                 }
             }
         }
@@ -3153,7 +3212,7 @@
     [
         "Killing",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -3179,10 +3238,10 @@
                     "Killer": 0,
                     "Cause": 0,
                     "Instrument": 0,
-                    "Place": 1,
-                    "Victim": 1,
+                    "Place": 2,
+                    "Victim": 2,
                     "Means": 0,
-                    "Time": 1
+                    "Time": 2
                 }
             }
         }
@@ -3190,7 +3249,7 @@
     [
         "Legal_rulings",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3214,9 +3273,9 @@
                     "Finding": 0,
                     "Case": 0,
                     "Time": 0,
-                    "Authority": 1,
-                    "Defendant": 1,
-                    "Place": 1
+                    "Authority": 2,
+                    "Defendant": 2,
+                    "Place": 2
                 }
             }
         }
@@ -3224,7 +3283,7 @@
     [
         "Making_arrangements",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3245,9 +3304,9 @@
                 "combined": {
                     "Scheduled_time": 0,
                     "Time": 0,
-                    "Event": 1,
-                    "Place": 1,
-                    "Agent": 1
+                    "Event": 2,
+                    "Place": 2,
+                    "Agent": 2
                 }
             }
         }
@@ -3255,7 +3314,7 @@
     [
         "Practice",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3276,9 +3335,9 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Action": 1,
-                    "Occasion": 1,
-                    "Agent": 1
+                    "Action": 2,
+                    "Occasion": 2,
+                    "Agent": 2
                 }
             }
         }
@@ -3286,7 +3345,7 @@
     [
         "Presence",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3301,9 +3360,9 @@
                     "Time": 1
                 },
                 "combined": {
-                    "Time": 1,
-                    "Location": 1,
-                    "Entity": 1
+                    "Time": 2,
+                    "Location": 2,
+                    "Entity": 2
                 }
             }
         }
@@ -3311,7 +3370,7 @@
     [
         "Reassuring",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 5,
             "source-total": 3,
             "counts": {
@@ -3330,11 +3389,11 @@
                     "Message": 1
                 },
                 "combined": {
-                    "Experiencer": 1,
+                    "Experiencer": 2,
                     "Situation": 0,
-                    "Speaker": 1,
+                    "Speaker": 2,
                     "Time": 0,
-                    "Message": 1
+                    "Message": 2
                 }
             }
         }
@@ -3342,7 +3401,7 @@
     [
         "Renting_out",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -3363,9 +3422,43 @@
                 "combined": {
                     "Lessee": 0,
                     "Time": 0,
+                    "Place": 2,
+                    "Lessor": 2,
+                    "Goods": 2
+                }
+            }
+        }
+    ],
+    [
+        "Rescuing",
+        {
+            "combined-total": 6,
+            "role-total": 3,
+            "source-total": 6,
+            "counts": {
+                "report": {
+                    "Agent": 0,
+                    "Asset": 0,
+                    "Time": 0,
+                    "Place": 0,
+                    "Patient": 2,
+                    "Harmful_situation": 1
+                },
+                "source": {
+                    "Asset": 0,
+                    "Time": 1,
+                    "Harmful_situation": 1,
                     "Place": 1,
-                    "Lessor": 1,
-                    "Goods": 1
+                    "Patient": 2,
+                    "Agent": 1
+                },
+                "combined": {
+                    "Agent": 0,
+                    "Asset": 0,
+                    "Time": 0,
+                    "Place": 0,
+                    "Patient": 4,
+                    "Harmful_situation": 2
                 }
             }
         }
@@ -3373,7 +3466,7 @@
     [
         "Seeking_to_achieve",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3394,9 +3487,9 @@
                 "combined": {
                     "State_of_affairs": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Sought_entity": 1,
-                    "Time": 1
+                    "Agent": 2,
+                    "Sought_entity": 2,
+                    "Time": 2
                 }
             }
         }
@@ -3404,7 +3497,7 @@
     [
         "Self_motion",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 5,
             "counts": {
@@ -3434,9 +3527,9 @@
                     "Area": 0,
                     "Direction": 0,
                     "Place": 0,
-                    "Self_mover": 1,
-                    "Time": 1,
-                    "Goal": 1
+                    "Self_mover": 2,
+                    "Time": 2,
+                    "Goal": 2
                 }
             }
         }
@@ -3444,7 +3537,7 @@
     [
         "Separating",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -3474,9 +3567,9 @@
                     "Agent": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Cause": 1,
-                    "Part_1": 1,
-                    "Part_2": 1
+                    "Cause": 2,
+                    "Part_1": 2,
+                    "Part_2": 2
                 }
             }
         }
@@ -3484,7 +3577,7 @@
     [
         "Setting_out",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3502,9 +3595,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Self_mover": 1,
-                    "Source": 1,
-                    "Time": 1
+                    "Self_mover": 2,
+                    "Source": 2,
+                    "Time": 2
                 }
             }
         }
@@ -3512,7 +3605,7 @@
     [
         "Shoot_projectiles",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -3530,9 +3623,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Time": 1,
-                    "Agent": 1,
-                    "Projectile": 1
+                    "Time": 2,
+                    "Agent": 2,
+                    "Projectile": 2
                 }
             }
         }
@@ -3540,7 +3633,7 @@
     [
         "Suasion",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -3566,9 +3659,9 @@
                     "Speaker": 0,
                     "Text": 0,
                     "Place": 0,
-                    "Time": 1,
-                    "Addressee": 1,
-                    "Content": 1,
+                    "Time": 2,
+                    "Addressee": 2,
+                    "Content": 2,
                     "Topic": 0
                 }
             }
@@ -3577,7 +3670,7 @@
     [
         "Supply",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3601,9 +3694,9 @@
                     "Imposed_purpose": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Supplier": 1,
-                    "Theme": 1,
-                    "Recipient": 1
+                    "Supplier": 2,
+                    "Theme": 2,
+                    "Recipient": 2
                 }
             }
         }
@@ -3611,7 +3704,7 @@
     [
         "Supporting",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 3,
             "counts": {
@@ -3628,9 +3721,9 @@
                     "Supported": 1
                 },
                 "combined": {
-                    "Supported": 1,
-                    "Time": 1,
-                    "Place": 1,
+                    "Supported": 2,
+                    "Time": 2,
+                    "Place": 2,
                     "Supporter": 0
                 }
             }
@@ -3639,7 +3732,7 @@
     [
         "Surrendering_possession",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 4,
             "source-total": 4,
             "counts": {
@@ -3660,9 +3753,9 @@
                 "combined": {
                     "Place": 0,
                     "Time": 0,
-                    "Surrenderer": 1,
-                    "Theme": 1,
-                    "Recipient": 1
+                    "Surrenderer": 2,
+                    "Theme": 2,
+                    "Recipient": 2
                 }
             }
         }
@@ -3670,7 +3763,7 @@
     [
         "Talking_into",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3688,9 +3781,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Speaker": 1,
-                    "Addressee": 1,
-                    "Content": 1
+                    "Speaker": 2,
+                    "Addressee": 2,
+                    "Content": 2
                 }
             }
         }
@@ -3698,7 +3791,7 @@
     [
         "Temporary_stay",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -3722,9 +3815,9 @@
                     "Host": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Duration": 1,
-                    "Location": 1,
-                    "Guest": 1
+                    "Duration": 2,
+                    "Location": 2,
+                    "Guest": 2
                 }
             }
         }
@@ -3732,7 +3825,7 @@
     [
         "Transfer",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -3756,9 +3849,9 @@
                     "Donor": 0,
                     "Transferors": 0,
                     "Place": 0,
-                    "Time": 1,
-                    "Theme": 1,
-                    "Recipient": 1
+                    "Time": 2,
+                    "Theme": 2,
+                    "Recipient": 2
                 }
             }
         }
@@ -3766,7 +3859,7 @@
     [
         "Translating",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -3796,9 +3889,9 @@
                     "Target_representation": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Source_symbol": 1,
-                    "Target_symbol": 1,
-                    "Content": 1
+                    "Source_symbol": 2,
+                    "Target_symbol": 2,
+                    "Content": 2
                 }
             }
         }
@@ -3806,7 +3899,7 @@
     [
         "Undergoing",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3821,9 +3914,9 @@
                     "Time": 1
                 },
                 "combined": {
-                    "Entity": 1,
-                    "Time": 1,
-                    "Place": 1
+                    "Entity": 2,
+                    "Time": 2,
+                    "Place": 2
                 }
             }
         }
@@ -3831,7 +3924,7 @@
     [
         "Use_firearm",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3849,9 +3942,9 @@
                 },
                 "combined": {
                     "Firearm": 0,
-                    "Agent": 1,
-                    "Place": 1,
-                    "Time": 1
+                    "Agent": 2,
+                    "Place": 2,
+                    "Time": 2
                 }
             }
         }
@@ -3859,7 +3952,7 @@
     [
         "Using",
         {
-            "combined-total": 3,
+            "combined-total": 6,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -3883,9 +3976,77 @@
                     "Purpose": 0,
                     "Role": 0,
                     "Place": 0,
+                    "Time": 2,
+                    "Agent": 2,
+                    "Instrument": 2
+                }
+            }
+        }
+    ],
+    [
+        "Working_a_post",
+        {
+            "combined-total": 6,
+            "role-total": 4,
+            "source-total": 5,
+            "counts": {
+                "report": {
+                    "Salient_entity": 0,
+                    "Time": 0,
+                    "Place": 0,
+                    "Post": 1,
+                    "Agent": 3
+                },
+                "source": {
+                    "Place": 1,
                     "Time": 1,
                     "Agent": 1,
-                    "Instrument": 1
+                    "Post": 1,
+                    "Salient_entity": 1
+                },
+                "combined": {
+                    "Salient_entity": 0,
+                    "Time": 0,
+                    "Place": 0,
+                    "Post": 2,
+                    "Agent": 4
+                }
+            }
+        }
+    ],
+    [
+        "Cause_to_amalgamate",
+        {
+            "combined-total": 5,
+            "role-total": 2,
+            "source-total": 7,
+            "counts": {
+                "report": {
+                    "Agent": 0,
+                    "Whole": 0,
+                    "Parts": 0,
+                    "Time": 0,
+                    "Place": 0,
+                    "Part_1": 1,
+                    "Part_2": 1
+                },
+                "source": {
+                    "Parts": 0,
+                    "Time": 1,
+                    "Place": 1,
+                    "Part_2": 2,
+                    "Part_1": 1,
+                    "Whole": 1,
+                    "Agent": 1
+                },
+                "combined": {
+                    "Agent": 0,
+                    "Whole": 0,
+                    "Parts": 0,
+                    "Time": 0,
+                    "Place": 0,
+                    "Part_1": 2,
+                    "Part_2": 3
                 }
             }
         }
@@ -3893,7 +4054,7 @@
     [
         "Abandonment",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -3912,8 +4073,8 @@
                 "combined": {
                     "Agent": 0,
                     "Place": 0,
-                    "Theme": 1,
-                    "Time": 1
+                    "Theme": 2,
+                    "Time": 2
                 }
             }
         }
@@ -3921,7 +4082,7 @@
     [
         "Achieving_first",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -3940,8 +4101,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Cognizer": 1,
-                    "New_idea": 1
+                    "Cognizer": 2,
+                    "New_idea": 2
                 }
             }
         }
@@ -3949,7 +4110,7 @@
     [
         "Activity_resume",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -3968,8 +4129,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Activity": 1
+                    "Agent": 2,
+                    "Activity": 2
                 }
             }
         }
@@ -3977,7 +4138,7 @@
     [
         "Adjusting",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -3999,8 +4160,8 @@
                     "Agent": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Part": 1,
-                    "Feature": 1
+                    "Part": 2,
+                    "Feature": 2
                 }
             }
         }
@@ -4008,7 +4169,7 @@
     [
         "Appointing",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 4,
             "source-total": 3,
             "counts": {
@@ -4034,8 +4195,8 @@
                     "Selector": 0,
                     "Function": 0,
                     "Body": 0,
-                    "Official": 1,
-                    "Role": 1,
+                    "Official": 2,
+                    "Role": 2,
                     "Place": 0,
                     "Time": 0
                 }
@@ -4045,7 +4206,7 @@
     [
         "Arriving",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4064,8 +4225,8 @@
                 "combined": {
                     "Goal": 0,
                     "Time": 0,
-                    "Theme": 1,
-                    "Place": 1
+                    "Theme": 2,
+                    "Place": 2
                 }
             }
         }
@@ -4073,7 +4234,7 @@
     [
         "Attack",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -4092,8 +4253,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Victim": 1,
-                    "Assailant": 1
+                    "Victim": 2,
+                    "Assailant": 2
                 }
             }
         }
@@ -4101,9 +4262,9 @@
     [
         "Attempt",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
-            "source-total": 4,
+            "source-total": 5,
             "counts": {
                 "report": {
                     "Agent": 0,
@@ -4112,7 +4273,7 @@
                     "Goal": 1
                 },
                 "source": {
-                    "Agent": 1,
+                    "Agent": 2,
                     "Time": 1,
                     "Goal": 1,
                     "Place": 1
@@ -4120,8 +4281,8 @@
                 "combined": {
                     "Agent": 0,
                     "Time": 0,
-                    "Place": 1,
-                    "Goal": 1
+                    "Place": 2,
+                    "Goal": 2
                 }
             }
         }
@@ -4129,7 +4290,7 @@
     [
         "Attention",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4145,8 +4306,8 @@
                 },
                 "combined": {
                     "Expressor": 0,
-                    "Perceiver": 1,
-                    "Figure": 1
+                    "Perceiver": 2,
+                    "Figure": 2
                 }
             }
         }
@@ -4154,7 +4315,7 @@
     [
         "Avoiding",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4173,8 +4334,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Undesirable_situation": 1
+                    "Agent": 2,
+                    "Undesirable_situation": 2
                 }
             }
         }
@@ -4182,7 +4343,7 @@
     [
         "Bail_decision",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 4,
             "source-total": 2,
             "counts": {
@@ -4202,8 +4363,8 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Time": 1,
-                    "Accused": 1,
+                    "Time": 2,
+                    "Accused": 2,
                     "Status": 0,
                     "Judge": 0
                 }
@@ -4213,7 +4374,7 @@
     [
         "Becoming_dry",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4229,8 +4390,8 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Entity": 1,
-                    "Place": 1
+                    "Entity": 2,
+                    "Place": 2
                 }
             }
         }
@@ -4238,7 +4399,7 @@
     [
         "Becoming_visible",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4254,8 +4415,8 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Entity": 1,
-                    "Place": 1
+                    "Entity": 2,
+                    "Place": 2
                 }
             }
         }
@@ -4263,7 +4424,7 @@
     [
         "Being_attached",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4282,8 +4443,8 @@
                 "combined": {
                     "Connector": 0,
                     "Items": 0,
-                    "Item": 1,
-                    "Goal": 1
+                    "Item": 2,
+                    "Goal": 2
                 }
             }
         }
@@ -4291,7 +4452,7 @@
     [
         "Being_born",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -4307,8 +4468,8 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Child": 1,
-                    "Time": 1
+                    "Child": 2,
+                    "Time": 2
                 }
             }
         }
@@ -4316,7 +4477,7 @@
     [
         "Being_in_control",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -4344,8 +4505,8 @@
                     "Degree": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Controlling_entity": 1,
-                    "Dependent_entity": 1
+                    "Controlling_entity": 2,
+                    "Dependent_entity": 2
                 }
             }
         }
@@ -4353,7 +4514,7 @@
     [
         "Being_in_operation",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4369,8 +4530,8 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Device": 1,
-                    "Time": 1
+                    "Device": 2,
+                    "Time": 2
                 }
             }
         }
@@ -4378,7 +4539,7 @@
     [
         "Borrowing",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -4400,8 +4561,8 @@
                     "Lender": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Borrower": 1,
-                    "Theme": 1
+                    "Borrower": 2,
+                    "Theme": 2
                 }
             }
         }
@@ -4409,7 +4570,7 @@
     [
         "Building",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -4431,8 +4592,8 @@
                     "Agent": 0,
                     "Components": 0,
                     "Time": 0,
-                    "Created_entity": 1,
-                    "Place": 1
+                    "Created_entity": 2,
+                    "Place": 2
                 }
             }
         }
@@ -4440,7 +4601,7 @@
     [
         "Burying",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4465,45 +4626,8 @@
                     "Cause": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Theme": 1,
-                    "Goal": 1
-                }
-            }
-        }
-    ],
-    [
-        "Cause_to_amalgamate",
-        {
-            "combined-total": 2,
-            "role-total": 2,
-            "source-total": 6,
-            "counts": {
-                "report": {
-                    "Agent": 0,
-                    "Whole": 0,
-                    "Parts": 0,
-                    "Time": 0,
-                    "Place": 0,
-                    "Part_1": 1,
-                    "Part_2": 1
-                },
-                "source": {
-                    "Parts": 0,
-                    "Time": 1,
-                    "Place": 1,
-                    "Part_2": 1,
-                    "Part_1": 1,
-                    "Whole": 1,
-                    "Agent": 1
-                },
-                "combined": {
-                    "Agent": 0,
-                    "Whole": 0,
-                    "Parts": 0,
-                    "Time": 0,
-                    "Place": 0,
-                    "Part_1": 1,
-                    "Part_2": 1
+                    "Theme": 2,
+                    "Goal": 2
                 }
             }
         }
@@ -4511,7 +4635,7 @@
     [
         "Cause_to_be_dry",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -4533,8 +4657,8 @@
                     "Cause": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Dryee": 1,
-                    "Agent": 1
+                    "Dryee": 2,
+                    "Agent": 2
                 }
             }
         }
@@ -4542,7 +4666,7 @@
     [
         "Cause_to_be_sharp",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4564,8 +4688,8 @@
                     "Cause": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Patient": 1
+                    "Agent": 2,
+                    "Patient": 2
                 }
             }
         }
@@ -4573,7 +4697,7 @@
     [
         "Cause_to_be_wet",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -4597,9 +4721,9 @@
                     "Liquid": 0,
                     "Cause": 0,
                     "Time": 0,
-                    "Place": 1,
+                    "Place": 2,
                     "Agent": 0,
-                    "Patient": 1
+                    "Patient": 2
                 }
             }
         }
@@ -4607,7 +4731,7 @@
     [
         "Change_event_duration",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -4626,8 +4750,8 @@
                 "combined": {
                     "Cause": 0,
                     "Time": 0,
-                    "Agent": 1,
-                    "Event": 1
+                    "Agent": 2,
+                    "Event": 2
                 }
             }
         }
@@ -4635,7 +4759,7 @@
     [
         "Clemency",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -4657,8 +4781,8 @@
                     "Crime": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Offender": 1,
-                    "Executive_authority": 1
+                    "Offender": 2,
+                    "Executive_authority": 2
                 }
             }
         }
@@ -4666,7 +4790,7 @@
     [
         "Coincidence",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4682,8 +4806,8 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "State_of_affairs": 1,
-                    "Time": 1
+                    "State_of_affairs": 2,
+                    "Time": 2
                 }
             }
         }
@@ -4691,7 +4815,7 @@
     [
         "Come_down_with",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -4710,8 +4834,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Disease": 1,
-                    "Protagonist": 1
+                    "Disease": 2,
+                    "Protagonist": 2
                 }
             }
         }
@@ -4719,7 +4843,7 @@
     [
         "Coming_to_be",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4735,8 +4859,8 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Place": 1,
-                    "Entity": 1
+                    "Place": 2,
+                    "Entity": 2
                 }
             }
         }
@@ -4744,7 +4868,7 @@
     [
         "Commerce_buy",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -4763,39 +4887,8 @@
                 "combined": {
                     "Goods": 0,
                     "Time": 0,
-                    "Buyer": 1,
-                    "Place": 1
-                }
-            }
-        }
-    ],
-    [
-        "Commerce_sell",
-        {
-            "combined-total": 2,
-            "role-total": 3,
-            "source-total": 3,
-            "counts": {
-                "report": {
-                    "Buyer": 0,
-                    "Place": 0,
-                    "Goods": 1,
-                    "Seller": 1,
-                    "Time": 1
-                },
-                "source": {
-                    "Buyer": 0,
-                    "Time": 0,
-                    "Seller": 1,
-                    "Place": 1,
-                    "Goods": 1
-                },
-                "combined": {
-                    "Buyer": 0,
-                    "Place": 0,
-                    "Goods": 1,
-                    "Seller": 1,
-                    "Time": 0
+                    "Buyer": 2,
+                    "Place": 2
                 }
             }
         }
@@ -4803,7 +4896,7 @@
     [
         "Communication_noise",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -4828,8 +4921,8 @@
                     "Voice": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Speaker": 1,
-                    "Message": 1
+                    "Speaker": 2,
+                    "Message": 2
                 }
             }
         }
@@ -4837,7 +4930,7 @@
     [
         "Corporal_punishment",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -4859,8 +4952,8 @@
                     "Agent": 0,
                     "Evaluee": 0,
                     "Time": 0,
-                    "Place": 1,
-                    "Reason": 1
+                    "Place": 2,
+                    "Reason": 2
                 }
             }
         }
@@ -4868,7 +4961,7 @@
     [
         "Corroding_caused",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4890,8 +4983,8 @@
                     "Cause": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Patient": 1
+                    "Agent": 2,
+                    "Patient": 2
                 }
             }
         }
@@ -4899,7 +4992,7 @@
     [
         "Create_physical_artwork",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -4918,8 +5011,8 @@
                 "combined": {
                     "Place": 0,
                     "Time": 0,
-                    "Creator": 1,
-                    "Representation": 1
+                    "Creator": 2,
+                    "Representation": 2
                 }
             }
         }
@@ -4927,7 +5020,7 @@
     [
         "Cure",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -4958,8 +5051,8 @@
                     "Body_part": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Medication": 1,
-                    "Affliction": 1
+                    "Medication": 2,
+                    "Affliction": 2
                 }
             }
         }
@@ -4967,7 +5060,7 @@
     [
         "Cutting",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -4989,8 +5082,8 @@
                     "Pieces": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Item": 1,
-                    "Agent": 1
+                    "Item": 2,
+                    "Agent": 2
                 }
             }
         }
@@ -4998,7 +5091,7 @@
     [
         "Damaging",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -5020,8 +5113,8 @@
                     "Cause": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Patient": 1
+                    "Agent": 2,
+                    "Patient": 2
                 }
             }
         }
@@ -5029,7 +5122,7 @@
     [
         "Daring",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -5048,8 +5141,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Action": 1
+                    "Agent": 2,
+                    "Action": 2
                 }
             }
         }
@@ -5057,7 +5150,7 @@
     [
         "Dead_or_alive",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -5073,8 +5166,8 @@
                 },
                 "combined": {
                     "Figure": 0,
-                    "Protagonist": 1,
-                    "Time": 1
+                    "Protagonist": 2,
+                    "Time": 2
                 }
             }
         }
@@ -5082,7 +5175,7 @@
     [
         "Detonate_explosive",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -5100,9 +5193,9 @@
                 },
                 "combined": {
                     "Agent": 0,
-                    "Time": 1,
+                    "Time": 2,
                     "Explosive": 0,
-                    "Place": 1
+                    "Place": 2
                 }
             }
         }
@@ -5110,7 +5203,7 @@
     [
         "Dispersal",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -5132,8 +5225,8 @@
                     "Agent": 0,
                     "Cause": 0,
                     "Time": 0,
-                    "Place": 1,
-                    "Individuals": 1
+                    "Place": 2,
+                    "Individuals": 2
                 }
             }
         }
@@ -5141,7 +5234,7 @@
     [
         "Dodging",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 4,
             "source-total": 2,
             "counts": {
@@ -5158,10 +5251,10 @@
                     "Bad_entity": 1
                 },
                 "combined": {
-                    "Dodger": 1,
+                    "Dodger": 2,
                     "Place": 0,
                     "Time": 0,
-                    "Bad_entity": 1
+                    "Bad_entity": 2
                 }
             }
         }
@@ -5169,7 +5262,7 @@
     [
         "Dominate_competitor",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -5188,8 +5281,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Patient": 1
+                    "Agent": 2,
+                    "Patient": 2
                 }
             }
         }
@@ -5197,7 +5290,7 @@
     [
         "Downing",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -5219,8 +5312,8 @@
                     "Cause": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Patient": 1
+                    "Agent": 2,
+                    "Patient": 2
                 }
             }
         }
@@ -5228,7 +5321,7 @@
     [
         "Earnings_and_losses",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -5246,9 +5339,9 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Earner": 1,
+                    "Earner": 2,
                     "Place": 0,
-                    "Earnings": 1
+                    "Earnings": 2
                 }
             }
         }
@@ -5256,7 +5349,7 @@
     [
         "Education_teaching",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -5302,8 +5395,8 @@
                     "Role": 0,
                     "Course": 0,
                     "Time": 0,
-                    "Place": 1,
-                    "Student": 1
+                    "Place": 2,
+                    "Student": 2
                 }
             }
         }
@@ -5311,7 +5404,7 @@
     [
         "Emotions_of_mental_activity",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -5327,8 +5420,8 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Experiencer": 1,
-                    "Stimulus": 1
+                    "Experiencer": 2,
+                    "Stimulus": 2
                 }
             }
         }
@@ -5336,7 +5429,7 @@
     [
         "Emotions_success_or_failure",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -5364,8 +5457,8 @@
                     "State": 0,
                     "Event": 0,
                     "Time": 0,
-                    "Stimulus": 1,
-                    "Experiencer": 1
+                    "Stimulus": 2,
+                    "Experiencer": 2
                 }
             }
         }
@@ -5373,7 +5466,7 @@
     [
         "Enforcing",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 5,
             "counts": {
@@ -5395,8 +5488,8 @@
                     "Medium": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Rule": 1
+                    "Agent": 2,
+                    "Rule": 2
                 }
             }
         }
@@ -5404,7 +5497,7 @@
     [
         "Event",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -5419,9 +5512,9 @@
                     "Place": 1
                 },
                 "combined": {
-                    "Place": 1,
+                    "Place": 2,
                     "Time": 0,
-                    "Event": 1
+                    "Event": 2
                 }
             }
         }
@@ -5429,7 +5522,7 @@
     [
         "Execute_plan",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -5451,8 +5544,8 @@
                     "Agent": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Plan": 1,
-                    "Medium": 1
+                    "Plan": 2,
+                    "Medium": 2
                 }
             }
         }
@@ -5460,7 +5553,7 @@
     [
         "Execution",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -5479,8 +5572,8 @@
                 "combined": {
                     "Executioner": 0,
                     "Place": 0,
-                    "Time": 1,
-                    "Executed": 1
+                    "Time": 2,
+                    "Executed": 2
                 }
             }
         }
@@ -5488,7 +5581,7 @@
     [
         "Exercising",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -5504,8 +5597,8 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Time": 1,
-                    "Agent": 1
+                    "Time": 2,
+                    "Agent": 2
                 }
             }
         }
@@ -5513,7 +5606,7 @@
     [
         "Extradition",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -5538,8 +5631,8 @@
                     "Current_jurisdiction": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Crime_jurisdiction": 1,
-                    "Suspect": 1
+                    "Crime_jurisdiction": 2,
+                    "Suspect": 2
                 }
             }
         }
@@ -5547,7 +5640,7 @@
     [
         "Fleeing",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -5575,8 +5668,8 @@
                     "Direction": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Self_mover": 1,
-                    "Goal": 1
+                    "Self_mover": 2,
+                    "Goal": 2
                 }
             }
         }
@@ -5584,7 +5677,7 @@
     [
         "Forming_relationships",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -5606,8 +5699,8 @@
                     "Partners": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Partner_1": 1,
-                    "Partner_2": 1
+                    "Partner_1": 2,
+                    "Partner_2": 2
                 }
             }
         }
@@ -5615,7 +5708,7 @@
     [
         "Get_a_job",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -5640,8 +5733,8 @@
                     "Position": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Employee": 1,
-                    "Task": 1
+                    "Employee": 2,
+                    "Task": 2
                 }
             }
         }
@@ -5649,7 +5742,7 @@
     [
         "Go_into_shape",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -5668,8 +5761,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Theme": 1,
-                    "Resultant_configuration": 1
+                    "Theme": 2,
+                    "Resultant_configuration": 2
                 }
             }
         }
@@ -5677,7 +5770,7 @@
     [
         "Grooming",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -5699,8 +5792,8 @@
                     "Agent": 0,
                     "Patient": 0,
                     "Time": 0,
-                    "Place": 1,
-                    "Body_part": 1
+                    "Place": 2,
+                    "Body_part": 2
                 }
             }
         }
@@ -5708,9 +5801,9 @@
     [
         "Heralding",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
-            "source-total": 4,
+            "source-total": 5,
             "counts": {
                 "report": {
                     "Communicator": 0,
@@ -5726,15 +5819,15 @@
                     "Event": 1,
                     "Place": 1,
                     "Time": 1,
-                    "Communicator": 1
+                    "Communicator": 2
                 },
                 "combined": {
                     "Communicator": 0,
                     "Individual": 0,
                     "Medium": 0,
                     "Place": 0,
-                    "Event": 1,
-                    "Time": 1
+                    "Event": 2,
+                    "Time": 2
                 }
             }
         }
@@ -5742,7 +5835,7 @@
     [
         "Historic_event",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -5761,8 +5854,8 @@
                 "combined": {
                     "Event": 0,
                     "Time": 0,
-                    "Entity": 1,
-                    "Place": 1
+                    "Entity": 2,
+                    "Place": 2
                 }
             }
         }
@@ -5770,7 +5863,7 @@
     [
         "Imprisonment",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -5792,8 +5885,8 @@
                     "Prison": 0,
                     "Authorities": 0,
                     "Place": 0,
-                    "Time": 1,
-                    "Prisoner": 1
+                    "Time": 2,
+                    "Prisoner": 2
                 }
             }
         }
@@ -5801,7 +5894,7 @@
     [
         "Improvement_or_decline",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -5817,8 +5910,8 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Time": 1,
-                    "Entity": 1
+                    "Time": 2,
+                    "Entity": 2
                 }
             }
         }
@@ -5826,7 +5919,7 @@
     [
         "Ingest_substance",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -5848,8 +5941,8 @@
                     "Delivery_device": 0,
                     "Substance": 0,
                     "Time": 0,
-                    "Ingestor": 1,
-                    "Place": 1
+                    "Ingestor": 2,
+                    "Place": 2
                 }
             }
         }
@@ -5857,7 +5950,7 @@
     [
         "Intentionally_act",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -5876,8 +5969,8 @@
                 "combined": {
                     "Place": 0,
                     "Time": 0,
-                    "Agent": 1,
-                    "Act": 1
+                    "Agent": 2,
+                    "Act": 2
                 }
             }
         }
@@ -5885,7 +5978,7 @@
     [
         "Intercepting",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -5904,8 +5997,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Interceptor": 1,
-                    "Theme": 1
+                    "Interceptor": 2,
+                    "Theme": 2
                 }
             }
         }
@@ -5913,7 +6006,7 @@
     [
         "Just_found_out",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -5938,8 +6031,8 @@
                     "Expressor": 0,
                     "State": 0,
                     "Time": 0,
-                    "Experiencer": 1,
-                    "Stimulus": 1
+                    "Experiencer": 2,
+                    "Stimulus": 2
                 }
             }
         }
@@ -5947,7 +6040,7 @@
     [
         "Kidnapping",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -5966,8 +6059,8 @@
                 "combined": {
                     "Victim": 0,
                     "Time": 0,
-                    "Perpetrator": 1,
-                    "Place": 1
+                    "Perpetrator": 2,
+                    "Place": 2
                 }
             }
         }
@@ -5975,7 +6068,7 @@
     [
         "Lending",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -5996,9 +6089,9 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Lender": 1,
+                    "Lender": 2,
                     "Theme": 0,
-                    "Borrower": 1
+                    "Borrower": 2
                 }
             }
         }
@@ -6006,7 +6099,7 @@
     [
         "Limiting",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 4,
             "source-total": 2,
             "counts": {
@@ -6030,9 +6123,9 @@
                     "Range_of_options": 0,
                     "Time": 0,
                     "Agent": 0,
-                    "Place": 1,
+                    "Place": 2,
                     "Characteristic": 0,
-                    "Cause": 1
+                    "Cause": 2
                 }
             }
         }
@@ -6040,7 +6133,7 @@
     [
         "Manufacturing",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -6062,8 +6155,8 @@
                     "Factory": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Product": 1,
-                    "Producer": 1
+                    "Product": 2,
+                    "Producer": 2
                 }
             }
         }
@@ -6071,7 +6164,7 @@
     [
         "Military_operation",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 6,
             "counts": {
@@ -6096,8 +6189,8 @@
                     "Goal": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Force": 1,
-                    "Opponent": 1
+                    "Force": 2,
+                    "Opponent": 2
                 }
             }
         }
@@ -6105,7 +6198,7 @@
     [
         "Motion",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -6139,8 +6232,8 @@
                     "Direction": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Theme": 1,
-                    "Goal": 1
+                    "Theme": 2,
+                    "Goal": 2
                 }
             }
         }
@@ -6148,7 +6241,7 @@
     [
         "Others_situation_as_stimulus",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -6166,9 +6259,9 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Other": 1,
+                    "Other": 2,
                     "Experiencer": 0,
-                    "Situation": 1
+                    "Situation": 2
                 }
             }
         }
@@ -6176,7 +6269,7 @@
     [
         "Pardon",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 4,
             "counts": {
@@ -6198,8 +6291,8 @@
                     "Offense": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Authority": 1,
-                    "Offender": 1
+                    "Authority": 2,
+                    "Offender": 2
                 }
             }
         }
@@ -6207,7 +6300,7 @@
     [
         "Piracy",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 5,
             "counts": {
@@ -6229,8 +6322,8 @@
                     "Perpetrator": 0,
                     "Vehicle": 0,
                     "Victim": 0,
-                    "Place": 1,
-                    "Time": 1
+                    "Place": 2,
+                    "Time": 2
                 }
             }
         }
@@ -6238,7 +6331,7 @@
     [
         "Placing",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -6263,8 +6356,8 @@
                     "Cause": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Theme": 1,
-                    "Goal": 1
+                    "Theme": 2,
+                    "Goal": 2
                 }
             }
         }
@@ -6272,7 +6365,7 @@
     [
         "Precipitation",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -6288,8 +6381,8 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Time": 1,
-                    "Precipitation": 1
+                    "Time": 2,
+                    "Precipitation": 2
                 }
             }
         }
@@ -6297,7 +6390,7 @@
     [
         "Predicament",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -6316,8 +6409,8 @@
                 "combined": {
                     "Experiencer": 0,
                     "Time": 0,
-                    "Place": 1,
-                    "Situation": 1
+                    "Place": 2,
+                    "Situation": 2
                 }
             }
         }
@@ -6325,7 +6418,7 @@
     [
         "Preserving",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -6347,8 +6440,8 @@
                     "Agent": 0,
                     "Medium": 0,
                     "Place": 0,
-                    "Patient": 1,
-                    "Time": 1
+                    "Patient": 2,
+                    "Time": 2
                 }
             }
         }
@@ -6356,7 +6449,7 @@
     [
         "Process_continue",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -6372,8 +6465,8 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Place": 1,
-                    "Event": 1
+                    "Place": 2,
+                    "Event": 2
                 }
             }
         }
@@ -6381,7 +6474,7 @@
     [
         "Process_start",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -6397,8 +6490,8 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Time": 1,
-                    "Event": 1
+                    "Time": 2,
+                    "Event": 2
                 }
             }
         }
@@ -6406,7 +6499,7 @@
     [
         "Process_stop",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -6422,8 +6515,8 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Place": 1,
-                    "Process": 1
+                    "Place": 2,
+                    "Process": 2
                 }
             }
         }
@@ -6431,7 +6524,7 @@
     [
         "Proliferating_in_number",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -6462,8 +6555,8 @@
                     "Initial_state": 0,
                     "Final_state": 0,
                     "Time": 0,
-                    "Place": 1,
-                    "Set": 1
+                    "Place": 2,
+                    "Set": 2
                 }
             }
         }
@@ -6471,7 +6564,7 @@
     [
         "Quitting",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -6496,8 +6589,8 @@
                     "Field": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Employee": 1,
-                    "Position": 1
+                    "Employee": 2,
+                    "Position": 2
                 }
             }
         }
@@ -6505,7 +6598,7 @@
     [
         "Quitting_a_place",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -6524,8 +6617,8 @@
                 "combined": {
                     "Source": 0,
                     "Time": 0,
-                    "Place": 1,
-                    "Self_mover": 1
+                    "Place": 2,
+                    "Self_mover": 2
                 }
             }
         }
@@ -6533,7 +6626,7 @@
     [
         "Rape",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -6555,8 +6648,8 @@
                     "Event": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Victim": 1,
-                    "Perpetrator": 1
+                    "Victim": 2,
+                    "Perpetrator": 2
                 }
             }
         }
@@ -6564,7 +6657,7 @@
     [
         "Rejuvenation",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 5,
             "counts": {
@@ -6586,8 +6679,8 @@
                     "Agent": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Cause": 1,
-                    "Entity": 1
+                    "Cause": 2,
+                    "Entity": 2
                 }
             }
         }
@@ -6595,7 +6688,7 @@
     [
         "Renting",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -6613,43 +6706,9 @@
                 },
                 "combined": {
                     "Place": 0,
-                    "Goods": 1,
-                    "Lessee": 1,
+                    "Goods": 2,
+                    "Lessee": 2,
                     "Time": 0
-                }
-            }
-        }
-    ],
-    [
-        "Rescuing",
-        {
-            "combined-total": 2,
-            "role-total": 2,
-            "source-total": 5,
-            "counts": {
-                "report": {
-                    "Agent": 0,
-                    "Asset": 0,
-                    "Time": 0,
-                    "Place": 0,
-                    "Patient": 1,
-                    "Harmful_situation": 1
-                },
-                "source": {
-                    "Asset": 0,
-                    "Time": 1,
-                    "Harmful_situation": 1,
-                    "Place": 1,
-                    "Patient": 1,
-                    "Agent": 1
-                },
-                "combined": {
-                    "Agent": 0,
-                    "Asset": 0,
-                    "Time": 0,
-                    "Place": 0,
-                    "Patient": 1,
-                    "Harmful_situation": 1
                 }
             }
         }
@@ -6657,7 +6716,7 @@
     [
         "Reshaping",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 5,
             "counts": {
@@ -6682,8 +6741,8 @@
                     "Configuration": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Cause": 1,
-                    "Patient": 1
+                    "Cause": 2,
+                    "Patient": 2
                 }
             }
         }
@@ -6691,7 +6750,7 @@
     [
         "Resolve_problem",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -6712,8 +6771,8 @@
                 "combined": {
                     "Cause": 0,
                     "Time": 0,
-                    "Agent": 1,
-                    "Place": 1,
+                    "Agent": 2,
+                    "Place": 2,
                     "Problem": 0
                 }
             }
@@ -6722,7 +6781,7 @@
     [
         "Response",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 4,
             "source-total": 2,
             "counts": {
@@ -6745,8 +6804,8 @@
                 "combined": {
                     "Responding_entity": 0,
                     "Place": 0,
-                    "Trigger": 1,
-                    "Response": 1,
+                    "Trigger": 2,
+                    "Response": 2,
                     "Agent": 0,
                     "Time": 0
                 }
@@ -6756,7 +6815,7 @@
     [
         "Rewards_and_punishments",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -6781,8 +6840,8 @@
                     "Agent": 0,
                     "Response_action": 0,
                     "Time": 0,
-                    "Place": 1,
-                    "Reason": 1
+                    "Place": 2,
+                    "Reason": 2
                 }
             }
         }
@@ -6790,7 +6849,7 @@
     [
         "Seeking",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -6809,8 +6868,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Cognizer_agent": 1,
-                    "Sought_entity": 1
+                    "Cognizer_agent": 2,
+                    "Sought_entity": 2
                 }
             }
         }
@@ -6818,7 +6877,7 @@
     [
         "Setting_fire",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -6843,8 +6902,8 @@
                     "Cause": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Kindler": 1,
-                    "Flame": 1
+                    "Kindler": 2,
+                    "Flame": 2
                 }
             }
         }
@@ -6852,7 +6911,7 @@
     [
         "Shopping",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -6871,8 +6930,8 @@
                 "combined": {
                     "Shopper": 0,
                     "Goods": 0,
-                    "Place": 1,
-                    "Time": 1
+                    "Place": 2,
+                    "Time": 2
                 }
             }
         }
@@ -6880,7 +6939,7 @@
     [
         "Sign_agreement",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -6902,8 +6961,8 @@
                     "Signature": 0,
                     "Agreement": 0,
                     "Signatory": 0,
-                    "Time": 1,
-                    "Place": 1
+                    "Time": 2,
+                    "Place": 2
                 }
             }
         }
@@ -6911,7 +6970,7 @@
     [
         "Silencing",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -6933,8 +6992,8 @@
                     "Expressor": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Speaker": 1,
-                    "Agent": 1
+                    "Speaker": 2,
+                    "Agent": 2
                 }
             }
         }
@@ -6942,7 +7001,7 @@
     [
         "Smuggling",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -6970,8 +7029,8 @@
                     "Path": 0,
                     "Goal": 0,
                     "Time": 0,
-                    "Perpetrator": 1,
-                    "Place": 1
+                    "Perpetrator": 2,
+                    "Place": 2
                 }
             }
         }
@@ -6979,7 +7038,7 @@
     [
         "Soaking",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -7001,8 +7060,8 @@
                     "Agent": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Theme": 1,
-                    "Medium": 1
+                    "Theme": 2,
+                    "Medium": 2
                 }
             }
         }
@@ -7010,7 +7069,7 @@
     [
         "State_of_entity",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -7023,8 +7082,8 @@
                     "State": 1
                 },
                 "combined": {
-                    "Entity": 1,
-                    "State": 1
+                    "Entity": 2,
+                    "State": 2
                 }
             }
         }
@@ -7032,7 +7091,7 @@
     [
         "Subsisting",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -7045,8 +7104,8 @@
                     "Support": 1
                 },
                 "combined": {
-                    "Entity": 1,
-                    "Support": 1
+                    "Entity": 2,
+                    "Support": 2
                 }
             }
         }
@@ -7054,7 +7113,7 @@
     [
         "Suicide_attack",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -7073,8 +7132,8 @@
                 "combined": {
                     "Victim": 0,
                     "Place": 0,
-                    "Time": 1,
-                    "Assailant": 1
+                    "Time": 2,
+                    "Assailant": 2
                 }
             }
         }
@@ -7082,7 +7141,7 @@
     [
         "Summarizing",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 4,
             "counts": {
@@ -7104,8 +7163,8 @@
                     "Medium": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Communicator": 1,
-                    "State_of_affairs": 1
+                    "Communicator": 2,
+                    "State_of_affairs": 2
                 }
             }
         }
@@ -7113,7 +7172,7 @@
     [
         "Taking",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -7135,8 +7194,8 @@
                     "Source": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Agent": 1,
-                    "Theme": 1
+                    "Agent": 2,
+                    "Theme": 2
                 }
             }
         }
@@ -7144,7 +7203,7 @@
     [
         "Text_creation",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -7163,36 +7222,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Author": 1,
-                    "Text": 1
-                }
-            }
-        }
-    ],
-    [
-        "Thriving",
-        {
-            "combined-total": 2,
-            "role-total": 2,
-            "source-total": 4,
-            "counts": {
-                "report": {
-                    "Time": 0,
-                    "Place": 0,
-                    "Entity": 1,
-                    "Desirability": 1
-                },
-                "source": {
-                    "Time": 1,
-                    "Entity": 1,
-                    "Desirability": 1,
-                    "Place": 1
-                },
-                "combined": {
-                    "Time": 0,
-                    "Place": 0,
-                    "Entity": 1,
-                    "Desirability": 1
+                    "Author": 2,
+                    "Text": 2
                 }
             }
         }
@@ -7200,7 +7231,7 @@
     [
         "Transition_to_a_quality",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -7219,8 +7250,8 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Entity": 1,
-                    "Final_quality": 1
+                    "Entity": 2,
+                    "Final_quality": 2
                 }
             }
         }
@@ -7228,7 +7259,7 @@
     [
         "Waking_up",
         {
-            "combined-total": 2,
+            "combined-total": 4,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -7247,39 +7278,33 @@
                 "combined": {
                     "Sleep_state": 0,
                     "Time": 0,
-                    "Sleeper": 1,
-                    "Place": 1
+                    "Sleeper": 2,
+                    "Place": 2
                 }
             }
         }
     ],
     [
-        "Working_a_post",
+        "Death",
         {
-            "combined-total": 2,
+            "combined-total": 3,
             "role-total": 2,
-            "source-total": 5,
+            "source-total": 3,
             "counts": {
                 "report": {
-                    "Salient_entity": 0,
-                    "Time": 0,
                     "Place": 0,
-                    "Post": 1,
-                    "Agent": 1
+                    "Time": 1,
+                    "Protagonist": 1
                 },
                 "source": {
+                    "Time": 0,
                     "Place": 1,
-                    "Time": 1,
-                    "Agent": 1,
-                    "Post": 1,
-                    "Salient_entity": 1
+                    "Protagonist": 2
                 },
                 "combined": {
-                    "Salient_entity": 0,
-                    "Time": 0,
                     "Place": 0,
-                    "Post": 1,
-                    "Agent": 1
+                    "Time": 0,
+                    "Protagonist": 3
                 }
             }
         }
@@ -7287,7 +7312,7 @@
     [
         "Activity_start",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 3,
             "source-total": 2,
             "counts": {
@@ -7307,7 +7332,7 @@
                     "Place": 0,
                     "Time": 0,
                     "Activity": 0,
-                    "Agent": 1
+                    "Agent": 2
                 }
             }
         }
@@ -7315,7 +7340,7 @@
     [
         "Agriculture",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 2,
             "counts": {
@@ -7338,7 +7363,7 @@
                     "Ground": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Agriculturist": 1
+                    "Agriculturist": 2
                 }
             }
         }
@@ -7346,7 +7371,7 @@
     [
         "Apply_heat",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 1,
             "counts": {
@@ -7375,7 +7400,7 @@
                     "Container": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Food": 1
+                    "Food": 2
                 }
             }
         }
@@ -7383,7 +7408,7 @@
     [
         "Arrest",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 3,
             "counts": {
@@ -7409,7 +7434,7 @@
                     "Offense": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Suspect": 1
+                    "Suspect": 2
                 }
             }
         }
@@ -7417,7 +7442,7 @@
     [
         "Bearing_arms",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -7437,7 +7462,7 @@
                     "Weapon": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Protagonist": 1
+                    "Protagonist": 2
                 }
             }
         }
@@ -7445,7 +7470,7 @@
     [
         "Cause_to_be_included",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -7472,7 +7497,7 @@
                     "Existing_member": 0,
                     "Group": 0,
                     "Place": 0,
-                    "New_member": 1,
+                    "New_member": 2,
                     "Cause": 0,
                     "Time": 0
                 }
@@ -7482,7 +7507,7 @@
     [
         "Change_of_consistency",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 1,
             "counts": {
@@ -7499,7 +7524,7 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Patient": 1
+                    "Patient": 2
                 }
             }
         }
@@ -7507,7 +7532,7 @@
     [
         "Change_posture",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 1,
             "counts": {
@@ -7521,7 +7546,7 @@
                 },
                 "combined": {
                     "Time": 0,
-                    "Protagonist": 1
+                    "Protagonist": 2
                 }
             }
         }
@@ -7529,7 +7554,7 @@
     [
         "Committing_crime",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 4,
             "counts": {
@@ -7549,7 +7574,7 @@
                     "Crime": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Perpetrator": 1
+                    "Perpetrator": 2
                 }
             }
         }
@@ -7557,7 +7582,7 @@
     [
         "Counterattack",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 2,
             "counts": {
@@ -7577,32 +7602,7 @@
                     "Assailant": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Victim": 1
-                }
-            }
-        }
-    ],
-    [
-        "Death",
-        {
-            "combined-total": 1,
-            "role-total": 2,
-            "source-total": 2,
-            "counts": {
-                "report": {
-                    "Place": 0,
-                    "Time": 1,
-                    "Protagonist": 1
-                },
-                "source": {
-                    "Time": 0,
-                    "Place": 1,
-                    "Protagonist": 1
-                },
-                "combined": {
-                    "Place": 0,
-                    "Time": 0,
-                    "Protagonist": 1
+                    "Victim": 2
                 }
             }
         }
@@ -7610,7 +7610,7 @@
     [
         "Experience_bodily_harm",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 3,
             "counts": {
@@ -7630,7 +7630,7 @@
                     "Body_part": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Experiencer": 1
+                    "Experiencer": 2
                 }
             }
         }
@@ -7638,7 +7638,7 @@
     [
         "Explosion",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 2,
             "counts": {
@@ -7655,7 +7655,7 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Explosive": 1
+                    "Explosive": 2
                 }
             }
         }
@@ -7663,7 +7663,7 @@
     [
         "Forging",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 2,
             "source-total": 2,
             "counts": {
@@ -7686,7 +7686,7 @@
                     "Standard": 0,
                     "Place": 0,
                     "Time": 0,
-                    "Forgery": 1
+                    "Forgery": 2
                 }
             }
         }
@@ -7694,7 +7694,7 @@
     [
         "Grinding",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 3,
             "counts": {
@@ -7717,7 +7717,7 @@
                     "Grinder": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Patient": 1
+                    "Patient": 2
                 }
             }
         }
@@ -7725,7 +7725,7 @@
     [
         "Hit_target",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 4,
             "counts": {
@@ -7745,7 +7745,7 @@
                     "Agent": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Target": 1
+                    "Target": 2
                 }
             }
         }
@@ -7753,7 +7753,7 @@
     [
         "Manipulation",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 1,
             "counts": {
@@ -7776,7 +7776,7 @@
                     "Bodypart_of_agent": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Entity": 1
+                    "Entity": 2
                 }
             }
         }
@@ -7784,7 +7784,7 @@
     [
         "Perception_active",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 3,
             "source-total": 1,
             "counts": {
@@ -7803,7 +7803,7 @@
                 "combined": {
                     "Perceiver_agentive": 0,
                     "Time": 0,
-                    "Phenomenon": 1,
+                    "Phenomenon": 2,
                     "Place": 0
                 }
             }
@@ -7812,7 +7812,7 @@
     [
         "Posing_as",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 2,
             "source-total": 3,
             "counts": {
@@ -7832,7 +7832,7 @@
                     "Agent": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Simulated_entity": 1
+                    "Simulated_entity": 2
                 }
             }
         }
@@ -7840,7 +7840,7 @@
     [
         "Process_completed_state",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 1,
             "counts": {
@@ -7857,7 +7857,7 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Process": 1
+                    "Process": 2
                 }
             }
         }
@@ -7865,7 +7865,7 @@
     [
         "Process_end",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 2,
             "counts": {
@@ -7882,7 +7882,7 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Process": 1
+                    "Process": 2
                 }
             }
         }
@@ -7890,7 +7890,7 @@
     [
         "Render_nonfunctional",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 2,
             "counts": {
@@ -7913,7 +7913,7 @@
                     "Cause": 0,
                     "Time": 0,
                     "Place": 0,
-                    "Artifact": 1
+                    "Artifact": 2
                 }
             }
         }
@@ -7921,7 +7921,7 @@
     [
         "Rotting",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 1,
             "counts": {
@@ -7938,7 +7938,7 @@
                 "combined": {
                     "Time": 0,
                     "Place": 0,
-                    "Patient": 1
+                    "Patient": 2
                 }
             }
         }
@@ -7946,7 +7946,7 @@
     [
         "Submitting_documents",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 3,
             "source-total": 3,
             "counts": {
@@ -7967,7 +7967,7 @@
                 "combined": {
                     "Submittor": 0,
                     "Authority": 0,
-                    "Documents": 1,
+                    "Documents": 2,
                     "Place": 0,
                     "Time": 0
                 }
@@ -7977,7 +7977,7 @@
     [
         "Theft",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 3,
             "source-total": 1,
             "counts": {
@@ -8003,7 +8003,7 @@
                     "Time": 0,
                     "Place": 0,
                     "Goods": 0,
-                    "Perpetrator": 1
+                    "Perpetrator": 2
                 }
             }
         }
@@ -8011,7 +8011,7 @@
     [
         "Transportation_status",
         {
-            "combined-total": 1,
+            "combined-total": 2,
             "role-total": 1,
             "source-total": 1,
             "counts": {
@@ -8022,7 +8022,7 @@
                     "Rider": 1
                 },
                 "combined": {
-                    "Rider": 1
+                    "Rider": 2
                 }
             }
         }

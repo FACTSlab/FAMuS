@@ -175,7 +175,7 @@ def argument_counts(data: list):
             if role == 'role-spans-indices-in-all-spans':
                 continue
             if doc['report_dict']['role_annotations'][role] != []:
-                filled_report_roles[role] = 1
+                filled_report_roles[role] = len(doc['report_dict']['role_annotations'][role])
             else:
                 filled_report_roles[role] = 0
 
@@ -183,14 +183,14 @@ def argument_counts(data: list):
             if role == 'role-spans-indices-in-all-spans':
                 continue
             if doc['source_dict']['role_annotations'][role] != []:
-                filled_source_roles[role] = 1
+                filled_source_roles[role] = len(doc['source_dict']['role_annotations'][role])
             else:
                 filled_source_roles[role] = 0
 
         # get number of filled roles for combined report and source
         for role in filled_report_roles:
-            if filled_report_roles[role] == 1 and filled_source_roles[role] == 1:
-                filled_roles_combined[role] = 1
+            if filled_report_roles[role] > 0 and filled_source_roles[role] > 0:
+                filled_roles_combined[role] = filled_report_roles[role] + filled_source_roles[role]
             else:
                 filled_roles_combined[role] = 0
 

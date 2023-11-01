@@ -10,9 +10,9 @@ from tqdm import tqdm
 from fastcoref import FCoref
 from src.metrics.cross_doc_role_metrics import (
                               tp_fp_fn_tn_role_agreement_multiple_gold,
-                              tp_fp_fn_tn_role_exact_match_multiple_gold,
                               tp_fp_fn_tn_role_agreement_single_gold,
-                              tp_fp_fn_tn_role_exact_match_single_gold)
+                              agreement_score,
+                              exact_match_score)
 
 class ListDataset(Dataset):
     def __init__(self, original_list):
@@ -57,10 +57,27 @@ def compute_metrics(dataset,
                     unique_id_to_source_coref_clusters,
                     report_or_source="report",
                     eval_metric_fn=tp_fp_fn_tn_role_agreement_multiple_gold,
+                    exact_match = False
                     ):
     """
     Given a dataset and results, compute the metrics
+
+    Args:
+        dataset: a dataset object
+        results: a list of dictionaries with keys: id, answer, score
+        unique_id_to_source_coref_clusters: a dictionary mapping from
+                                            famus_id to coref clusters
+        report_or_source: whether to use the report or source coref clusters
+        eval_metric_fn: a function that takes in a gold answer and a predicted
+                        answer and returns the tp, fp, fn, tn scores
+        exact_match: whether to use exact match or agreement score in the
+                        eval_metric_fn
     """
+    if exact_match:
+        agreement_fn = exact_match_score
+    else:
+        agreement_fn = agreement_score
+
     results_based_on_threshold = [result['answer'] for result in results]
     tps, fps, fns, tns = 0, 0, 0, 0
     for idx, prediction in tqdm(enumerate(results_based_on_threshold)):
@@ -72,7 +89,8 @@ def compute_metrics(dataset,
             gold_answer = gold_cluster
 
         c_tp, c_fp, c_fn, c_tn = eval_metric_fn(gold_answer, 
-                                                prediction)
+                                                prediction,
+                                                agreement_fn=agreement_fn)
 
         tps += c_tp
         fps += c_fp
@@ -183,14 +201,16 @@ def main():
                     results_from_file,
                     unique_id_to_source_coref_clusters,
                     report_or_source=report_or_source,
-                    eval_metric_fn=tp_fp_fn_tn_role_exact_match_single_gold,
+                    eval_metric_fn=tp_fp_fn_tn_role_agreement_single_gold,
+                    exact_match=True
                     )
     metrics_file_string += "\n\nExact match with Coref\n"
     metrics_file_string += compute_metrics(dataset,
                     results_from_file,
                     unique_id_to_source_coref_clusters,
                     report_or_source=report_or_source,
-                    eval_metric_fn=tp_fp_fn_tn_role_exact_match_multiple_gold,
+                    eval_metric_fn=tp_fp_fn_tn_role_agreement_multiple_gold,
+                    exact_match=True
                     )
     metrics_file_string += "\n\nAgreement without Coref\n"
     metrics_file_string += compute_metrics(dataset,
@@ -198,6 +218,7 @@ def main():
                     unique_id_to_source_coref_clusters,
                     report_or_source=report_or_source,
                     eval_metric_fn=tp_fp_fn_tn_role_agreement_single_gold,
+                    exact_match=False
                     )
     metrics_file_string += "\n\nAgreement with Coref\n"
     metrics_file_string += compute_metrics(dataset,
@@ -205,6 +226,7 @@ def main():
                     unique_id_to_source_coref_clusters,
                     report_or_source=report_or_source,
                     eval_metric_fn=tp_fp_fn_tn_role_agreement_multiple_gold,
+                    exact_match=False
                     )
     with open(os.path.join(args.model_checkpoint,
                             f"metrics_{args.split}.txt"), "w") as f:

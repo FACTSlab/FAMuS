@@ -20,12 +20,12 @@ Max Source Tokens: `5553` \
 #### Role Counts
 For json outputs of the specific frame/role data see `sorted_norm_roles.json`
 Average Roles Across Frames: 
-- Combined: Intersection: `2.8149019607843155` Union: `3.6807843137254865`
+- Combined: `3.6807843137254865`
 - Report: `3.015686274509804`
 - Source: `3.4799999999999973`
 
 Average Arguments Across Frames: 
-- Combined: Intersection: `29.474509803921567` Union: `34.10588235294118`
+- Combined: `6.8211764705882345`
 - Report: `15.48235294117647`
 - Source: `18.623529411764707`
 
@@ -67,14 +67,14 @@ Max Source Tokens: `5553` \
 #### Role Counts
 For json outputs of the specific frame/role data see `sorted_norm_roles_train.json`\
 Average Roles Across Frames: 
-- Combined: Intersection: `2.7607843137254915` Union: `3.613071895424835`
+- Combined: `3.613071895424835`
 - Report: `2.943790849673201`
 - Source: `3.4300653594771213`
 
 Average Arguments Across Frames: 
-- Combined: Intersection: `17.372549019607842` Union: `20.12549019607843`
-- Report: `9.101960784313725`
-- Source: `11.023529411764706`
+- Combined: `6.708496732026146`
+- Report: `3.033986928104574`
+- Source: `3.674509803921567`
 
 
 Top 10 Frames with most roles (normalized by number of roles in a frame):
@@ -115,12 +115,12 @@ Max Source Tokens: `5389` \
 #### Role Counts
 For json outputs of the specific frame/role data see `sorted_norm_roles_dev.json`\
 Average Roles Across Frames: 
-- Combined: Intersection: `3.215686274509804` Union: `3.996078431372549`
+- Combined: `3.996078431372549`
 - Report: `3.392156862745098`
 - Source: `3.819607843137255`
 
 Average Arguments Across Frames: 
-- Combined: Intersection: `6.788235294117647` Union: `7.63921568627451`
+- Combined: `7.63921568627451`
 - Report: `3.466666666666667`
 - Source: `4.172549019607843`
 
@@ -162,12 +162,12 @@ Max Source Tokens: `4856` \
 #### Role Counts
 For json outputs of the specific frame/role data see `sorted_norm_roles_test.json`
 Average Roles Across Frames: 
-- Combined: Intersection: `2.5764705882352943` Union: `3.5686274509803924`
+- Combined: `3.5686274509803924`
 - Report: `2.854901960784314`
 - Source: `3.2901960784313724`
 
 Average Arguments Across Frames: 
-- Combined: Intersection: `5.313725490196078` Union: `6.341176470588235`
+- Combined: `6.341176470588235`
 - Report: `2.9137254901960783`
 - Source: `3.4274509803921567`
 

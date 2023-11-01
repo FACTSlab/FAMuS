@@ -139,7 +139,7 @@ def role_counts(data: list, num_docs=5):
                 role_info[frame]['counts'][split][role] /= num_docs
     return role_info
 
-def argument_counts(data: list):
+def argument_counts(data: list, num_docs=5):
     """
     Counts the average number/proportion of filled roles in report/source
 
@@ -215,6 +215,13 @@ def argument_counts(data: list):
         arg_info[doc['frame']]['role-total'] += sum(filled_report_roles.values())
         arg_info[doc['frame']]['source-total'] += sum(filled_source_roles.values())
 
+    for frame in arg_info:
+        arg_info[frame]['combined-average'] = arg_info[frame]['combined-total'] / num_docs
+        arg_info[frame]['role-average'] = arg_info[frame]['role-total'] / num_docs
+        arg_info[frame]['source-average'] = arg_info[frame]['source-total'] / num_docs
+        for split in arg_info[frame]['counts']:
+            for role in arg_info[frame]['counts'][split]:
+                arg_info[frame]['counts'][split][role] /= num_docs
     return arg_info
 
 
@@ -329,16 +336,16 @@ def main():
 
 
     # get average number of arguments in report/source. There can be multiple args per role
-    arg_info = argument_counts(data)
+    arg_info = argument_counts(data, num_docs=num_docs)
 
     if args.verbose:
         all_doc_total_combined = 0
         all_doc_total_role = 0
         all_doc_total_source = 0
         for frame in arg_info:
-            all_doc_total_combined += arg_info[frame]['combined-total']
-            all_doc_total_role += arg_info[frame]['role-total']
-            all_doc_total_source += arg_info[frame]['source-total']
+            all_doc_total_combined += arg_info[frame]['combined-average']
+            all_doc_total_role += arg_info[frame]['role-average']
+            all_doc_total_source += arg_info[frame]['source-average']
         print("Total number of filled arguments across all frames combined: {}".format(all_doc_total_combined / len(arg_info)))
         print("Total number of filled arguments across all frames for report: {}".format(all_doc_total_role / len(arg_info)))
         print("Total number of filled arguments across all frames for source: {}".format(all_doc_total_source / len(arg_info)))

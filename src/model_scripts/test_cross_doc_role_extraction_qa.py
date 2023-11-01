@@ -10,9 +10,9 @@ from tqdm import tqdm
 from fastcoref import FCoref
 from src.metrics.cross_doc_role_metrics import (
                               tp_fp_fn_tn_role_agreement_multiple_gold,
-                              tp_fp_fn_tn_role_exact_match_multiple_gold,
                               tp_fp_fn_tn_role_agreement_single_gold,
-                              tp_fp_fn_tn_role_exact_match_single_gold)
+                              agreement_score,
+                              exact_match_score)
 
 class ListDataset(Dataset):
     def __init__(self, original_list):
@@ -25,14 +25,15 @@ class ListDataset(Dataset):
     
 
 def instance2answerAndcluster(instance,
-                              unique_id_to_source_coref_clusters):
+                              unique_id_to_source_coref_clusters,
+                              report_or_source="report"):
     """
     Given a QA instance, find the cluster that contains the answer span
     using the coref clusters from the source document.
     """
     qa_id = instance['id']
     famus_id = qa_id.split("-Role-")[0]
-    coref_clusters = unique_id_to_source_coref_clusters[famus_id]
+    coref_clusters = unique_id_to_source_coref_clusters[famus_id][report_or_source]
     actual_answer = instance['answers']['text']
     if actual_answer == []:
         actual_answer = ""
@@ -54,22 +55,42 @@ def instance2answerAndcluster(instance,
 def compute_metrics(dataset,
                     results,
                     unique_id_to_source_coref_clusters,
+                    report_or_source="report",
                     eval_metric_fn=tp_fp_fn_tn_role_agreement_multiple_gold,
+                    exact_match = False
                     ):
     """
     Given a dataset and results, compute the metrics
+
+    Args:
+        dataset: a dataset object
+        results: a list of dictionaries with keys: id, answer, score
+        unique_id_to_source_coref_clusters: a dictionary mapping from
+                                            famus_id to coref clusters
+        report_or_source: whether to use the report or source coref clusters
+        eval_metric_fn: a function that takes in a gold answer and a predicted
+                        answer and returns the tp, fp, fn, tn scores
+        exact_match: whether to use exact match or agreement score in the
+                        eval_metric_fn
     """
+    if exact_match:
+        agreement_fn = exact_match_score
+    else:
+        agreement_fn = agreement_score
+
     results_based_on_threshold = [result['answer'] for result in results]
     tps, fps, fns, tns = 0, 0, 0, 0
     for idx, prediction in tqdm(enumerate(results_based_on_threshold)):
         instance = dataset[idx]
         gold_answer, gold_cluster = instance2answerAndcluster(instance,
-                                                              unique_id_to_source_coref_clusters)
+                                                              unique_id_to_source_coref_clusters,
+                                                              report_or_source=report_or_source)
         if "multiple_gold" in eval_metric_fn.__name__:
             gold_answer = gold_cluster
 
         c_tp, c_fp, c_fn, c_tn = eval_metric_fn(gold_answer, 
-                                                prediction)
+                                                prediction,
+                                                agreement_fn=agreement_fn)
 
         tps += c_tp
         fps += c_fp
@@ -113,21 +134,18 @@ def parse_args():
 
 def main():
     args = parse_args()
-    model = AutoModelForQuestionAnswering.from_pretrained(args.model_checkpoint)
-    tokenizer = AutoTokenizer.from_pretrained("allenai/longformer-base-4096")
+    # based on input dir, figure out if its report or source data
+    if "report" in args.input_data_dir:
+        report_or_source = "report"
+    elif "source" in args.input_data_dir:
+        report_or_source = "source"
+    # Load the dataset
     datasets = load_dataset("json", data_files={'train': os.path.join(args.input_data_dir, 
                                                                       "train.json"),
                                              'validation': os.path.join(args.input_data_dir,
                                                                          "dev.json"),
                                             'test': os.path.join(args.input_data_dir, 
                                                                  "test.json")})
-
-    # Invoke the pipeline
-    question_answerer = pipeline("question-answering", 
-                                model=model,
-                                tokenizer=tokenizer,
-                                device=args.gpu)
-    
     if args.split == "dev":
         dataset = datasets["validation"]
     elif args.split == "test":
@@ -136,18 +154,36 @@ def main():
     # Evaluate on the dataset
     data_list = ListDataset(dataset)
 
-    results = []
-    for out in tqdm(question_answerer(data_list, 
-                                      doc_stride=256, 
-                                      max_answer_len = 64,
-                                      max_seq_len = 2048,
-                                      handle_impossible_answer=True)):
-        results.append(out)
-    
-    # Save the results
-    with open(os.path.join(args.model_checkpoint, 
-                            f"results_{args.split }.json"), "w") as f:
-        json.dump(results, f)
+    # If results already exist, skip
+    if not os.path.exists(os.path.join(args.model_checkpoint,
+                                    f"results_{args.split }.json")):
+        # Load the model
+        model = AutoModelForQuestionAnswering.from_pretrained(args.model_checkpoint)
+        tokenizer = AutoTokenizer.from_pretrained("allenai/longformer-base-4096")
+        
+
+        # Invoke the pipeline
+        question_answerer = pipeline("question-answering", 
+                                    model=model,
+                                    tokenizer=tokenizer,
+                                    device=args.gpu)
+        
+
+        results = []
+        for out in tqdm(question_answerer(data_list, 
+                                        doc_stride=256, 
+                                        max_answer_len = 64,
+                                        max_seq_len = 2048,
+                                        handle_impossible_answer=True)):
+            results.append(out)
+        
+        # Save the results
+        with open(os.path.join(args.model_checkpoint, 
+                                f"results_{args.split }.json"), "w") as f:
+            json.dump(results, f)
+
+    else:
+        print(f"{args.split} results already exist on this model. Skipping inference...")
 
     ########################################################
     # Compute Metrics and Output to File
@@ -164,25 +200,33 @@ def main():
     metrics_file_string += compute_metrics(dataset,
                     results_from_file,
                     unique_id_to_source_coref_clusters,
-                    eval_metric_fn=tp_fp_fn_tn_role_exact_match_single_gold,
+                    report_or_source=report_or_source,
+                    eval_metric_fn=tp_fp_fn_tn_role_agreement_single_gold,
+                    exact_match=True
                     )
     metrics_file_string += "\n\nExact match with Coref\n"
     metrics_file_string += compute_metrics(dataset,
                     results_from_file,
                     unique_id_to_source_coref_clusters,
-                    eval_metric_fn=tp_fp_fn_tn_role_exact_match_multiple_gold,
+                    report_or_source=report_or_source,
+                    eval_metric_fn=tp_fp_fn_tn_role_agreement_multiple_gold,
+                    exact_match=True
                     )
     metrics_file_string += "\n\nAgreement without Coref\n"
     metrics_file_string += compute_metrics(dataset,
                     results_from_file,
                     unique_id_to_source_coref_clusters,
+                    report_or_source=report_or_source,
                     eval_metric_fn=tp_fp_fn_tn_role_agreement_single_gold,
+                    exact_match=False
                     )
     metrics_file_string += "\n\nAgreement with Coref\n"
     metrics_file_string += compute_metrics(dataset,
                     results_from_file,
                     unique_id_to_source_coref_clusters,
+                    report_or_source=report_or_source,
                     eval_metric_fn=tp_fp_fn_tn_role_agreement_multiple_gold,
+                    exact_match=False
                     )
     with open(os.path.join(args.model_checkpoint,
                             f"metrics_{args.split}.txt"), "w") as f:

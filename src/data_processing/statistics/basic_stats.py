@@ -96,6 +96,40 @@ def role_counts(data: list, num_docs=5):
     
     return role_info
 
+def argument_counts(data: list):
+    arg_info = {} #has structure {frame: average: int, counts:{role: count}}}
+    for doc in tqdm(data):
+        if doc['frame'] not in arg_info:
+            arg_info[doc['frame']] = {'total': 0, 'average': 0, 'counts': {}}
+
+        # get number of filled roles
+        filled_roles = {} # has structure {role: 1/0}, 1 if filled, 0 if not
+        for role in doc['report_dict']['role_annotations']:
+            if role == 'role-spans-indices-in-all-spans':
+                continue
+            if doc['report_dict']['role_annotations'][role] != []:
+                filled_roles[role] = len(doc['report_dict']['role_annotations'][role])
+            else:
+                filled_roles[role] = 0
+
+        # update counts
+        for role in filled_roles:
+            if role not in arg_info[doc['frame']]['counts']:
+                arg_info[doc['frame']]['counts'][role] = 0
+            arg_info[doc['frame']]['counts'][role] += filled_roles[role]
+
+        # update average
+        arg_info[doc['frame']]['total'] += sum(filled_roles.values())
+
+    # divide each count by 5 (the number of docs) to get the average 
+    for frame in arg_info:
+        arg_info[frame]['average'] = arg_info[frame]['total']
+        for role in arg_info[frame]['counts']:
+            arg_info[frame]['counts'][role] = arg_info[frame]['counts'][role]
+    
+    return arg_info
+
+
 def normalize_roles(role_info: dict):
     """
     Normalize averages by number of roles in the frame
@@ -115,7 +149,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", type=str, default="data/cross_doc_role_extraction", help="directory of data") 
     parser.add_argument("--dataset", type=str, default="all", help="dataset to analyze") # all, train, dev, test
-    parser.add_argument("--output_dir", type=str, default="src/data_processing/statistics", help="directory to save output")
+    parser.add_argument("--output_dir", type=str, default="src/data_processing/statistics/json_files", help="directory to save output")
     parser.add_argument("--verbose", action="store_true", help="print out statistics")
     args = parser.parse_args()
 
@@ -189,6 +223,26 @@ def main():
     json_name = "sorted_norm_roles" + "_" + args.dataset + ".json"
     with open(os.path.join(args.output_dir, json_name), "w") as f:
         json.dump(sorted_norm_roles, f, indent=4)
+
+
+    # get average number of arguments in report/source. There can be multiple args per role
+    arg_info = argument_counts(data)
+
+    if args.verbose:
+        all_doc_average = 0
+        for frame in arg_info:
+            all_doc_average += arg_info[frame]['average']
+        print("Average number of arguments across all frames: {}".format(all_doc_average / len(arg_info)))
+
+    sorted_args = sorted(arg_info.items(), key=lambda x: x[1]['average'], reverse=True)
+
+    # write sorted norm roles to a json file
+    json_name = "sorted_args" + "_" + args.dataset + ".json"
+    with open(os.path.join(args.output_dir, json_name), "w") as f:
+        json.dump(sorted_args, f, indent=4)
+
+    
+
 
 
 if __name__ == "__main__":

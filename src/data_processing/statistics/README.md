@@ -20,6 +20,7 @@ Max Source Tokens: `5553` \
 #### Role Counts
 For json outputs of the specific frame/role data see `sorted_norm_roles.json`
 Average Roles Across Frames: `3.015686274509804`
+Average Arguments Across Frames: `15.48235294117647`
 
 Top 10 Frames with most roles (normalized by number of roles in a frame):
 1. `Subsisting`-> `1.0`
@@ -56,8 +57,9 @@ Min Source Tokens: `154` \
 Max Source Tokens: `5553` \
 
 #### Role Counts
-For json outputs of the specific frame/role data see `sorted_norm_roles_train.json`
-Average Roles Across Frames: `2.943790849673201`
+For json outputs of the specific frame/role data see `sorted_norm_roles_train.json`\
+Average Roles Across Frames: `2.943790849673201`\
+Average Arguments Across Frames: `9.101960784313725`\
 
 Top 10 Frames with most roles (normalized by number of roles in a frame):
 1. `Coming_to_be`-> `1.0`
@@ -95,8 +97,9 @@ Min Source Tokens: `177` \
 Max Source Tokens: `5389` \
 
 #### Role Counts
-For json outputs of the specific frame/role data see `sorted_norm_roles_dev.json`
-Average Roles Across Frames: `3.392156862745098`
+For json outputs of the specific frame/role data see `sorted_norm_roles_dev.json`\
+Average Roles Across Frames: `3.392156862745098`\
+Average Arguments Across Frames: `3.466666666666667`\
 
 Top 10 Frames with most roles (normalized by number of roles in a frame):
 1. `Activity_resume`-> `1.0`
@@ -136,6 +139,7 @@ Max Source Tokens: `4856` \
 #### Role Counts
 For json outputs of the specific frame/role data see `sorted_norm_roles_test.json`
 Average Roles Across Frames: `2.854901960784314`
+Average Arguments Across Frames: `2.9137254901960783`
 
 Top 10 Frames with most roles (normalized by number of roles in a frame):
 1. `Attending`-> `1.0`

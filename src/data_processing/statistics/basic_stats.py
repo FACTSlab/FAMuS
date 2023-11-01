@@ -102,7 +102,7 @@ def role_counts(data: list, num_docs=5):
 
         # get number of filled roles for combined report and source
         for role in filled_report_roles:
-            if filled_report_roles[role] == 1 and filled_source_roles[role] == 1:
+            if filled_report_roles[role] == 1 or filled_source_roles[role] == 1:
                 filled_roles_combined[role] = 1
             else:
                 filled_roles_combined[role] = 0
@@ -189,7 +189,7 @@ def argument_counts(data: list):
 
         # get number of filled roles for combined report and source
         for role in filled_report_roles:
-            if filled_report_roles[role] > 0 and filled_source_roles[role] > 0:
+            if filled_report_roles[role] > 0 or filled_source_roles[role] > 0:
                 filled_roles_combined[role] = filled_report_roles[role] + filled_source_roles[role]
             else:
                 filled_roles_combined[role] = 0

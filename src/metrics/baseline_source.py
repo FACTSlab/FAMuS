@@ -21,14 +21,19 @@ from src.metrics.cross_doc_role_metrics import (
                                 exact_match_score)
 
 
+def format_as_prediction(data):
+    """
+    Formats the gold report data as a predicted source data
+    """
+    
 
 
-def baseline_source(data):
+
+def baseline_source(data, unique_id_to_source_coref_clusters, report_or_source="report"):
     """
     Baselines source extraction using report data
     """
     score = compute_metrics(data,
-                            data,
                             unique_id_to_source_coref_clusters,
                             report_or_source="report",
                             eval_metric_fn=tp_fp_fn_tn_role_agreement_multiple_gold,
@@ -55,7 +60,15 @@ def main():
         with open(os.path.join(args.data_dir, args.dataset + ".jsonl"), "r") as f:
             data = [json.loads(line) for line in f]
 
+    report_as_results = format_as_prediction(data)
+
     data_list = ListDataset(data)
+
+    # /home/amartin/famus/FAMuS/data/cross_doc_role_extraction/coref_clusters/instance_id_to_coref_clusters.json
+    with open(os.path.join(args.data_dir, "coref_clusters/instance_id_to_coref_clusters.json"), "r") as f:
+        unique_id_to_source_coref_clusters = json.load(f)
+
+    baseline_source(data_list, unique_id_to_source_coref_clusters, report_or_source="source")
 
     # get baseline score
 

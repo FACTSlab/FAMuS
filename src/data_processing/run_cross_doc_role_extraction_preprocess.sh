@@ -14,6 +14,11 @@ echo "Running the IterX format preprocessing pipeline (gold spans)"
 python "$SCRIPT_DIR/preprocess_iterx_format_to_gold_spans.py" \
         --input_dir "$SCRIPT_DIR/../../data/cross_doc_role_extraction/iterx_format"
 
+echo "Running the IterX format preprocessing pipeline (predicted spans)"
+python "$SCRIPT_DIR/preprocess_iterx_format_to_predicted_spans.py" \
+        --input_release_dir "$FAMUS_RELEASE_DIR" \
+        --input_iterx_format_dir "$SCRIPT_DIR/../../data/cross_doc_role_extraction/iterx_format"
+
 echo "Running the QA format preprocessing pipeline"
 python "$SCRIPT_DIR/preprocess_release_format_to_qa_format.py" \
         --input_dir "$FAMUS_RELEASE_DIR" \

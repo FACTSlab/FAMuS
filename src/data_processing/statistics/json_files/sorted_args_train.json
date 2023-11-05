@@ -80,6 +80,55 @@
         }
     ],
     [
+        "Cause_change",
+        {
+            "combined-total": 39,
+            "role-total": 19,
+            "source-total": 20,
+            "counts": {
+                "report": {
+                    "Agent": 0.3333333333333333,
+                    "Final_value": 0.6666666666666666,
+                    "Initial_value": 0.6666666666666666,
+                    "Attribute": 0.3333333333333333,
+                    "Place": 0.6666666666666666,
+                    "Time": 0.6666666666666666,
+                    "Cause": 0.3333333333333333,
+                    "Entity": 1.0,
+                    "Initial_category": 0.6666666666666666,
+                    "Final_category": 1.0
+                },
+                "source": {
+                    "Initial_value": 0.6666666666666666,
+                    "Attribute": 0.3333333333333333,
+                    "Cause": 0.3333333333333333,
+                    "Entity": 1.0,
+                    "Agent": 0.6666666666666666,
+                    "Place": 1.0,
+                    "Final_category": 1.0,
+                    "Final_value": 0.6666666666666666,
+                    "Initial_category": 0.3333333333333333,
+                    "Time": 0.6666666666666666
+                },
+                "combined": {
+                    "Agent": 1.0,
+                    "Final_value": 1.3333333333333333,
+                    "Initial_value": 1.3333333333333333,
+                    "Attribute": 0.6666666666666666,
+                    "Place": 1.6666666666666667,
+                    "Time": 1.3333333333333333,
+                    "Cause": 0.6666666666666666,
+                    "Entity": 2.0,
+                    "Initial_category": 1.0,
+                    "Final_category": 2.0
+                }
+            },
+            "combined-average": 13.0,
+            "role-average": 6.333333333333333,
+            "source-average": 6.666666666666667
+        }
+    ],
+    [
         "Revenge",
         {
             "combined-total": 37,
@@ -354,43 +403,6 @@
         }
     ],
     [
-        "Causation",
-        {
-            "combined-total": 32,
-            "role-total": 15,
-            "source-total": 17,
-            "counts": {
-                "report": {
-                    "Place": 0.6666666666666666,
-                    "Time": 1.0,
-                    "Affected": 1.0,
-                    "Actor": 1.0,
-                    "Cause": 0.6666666666666666,
-                    "Effect": 0.6666666666666666
-                },
-                "source": {
-                    "Affected": 1.3333333333333333,
-                    "Actor": 1.6666666666666667,
-                    "Place": 1.0,
-                    "Time": 1.0,
-                    "Cause": 0.3333333333333333,
-                    "Effect": 0.3333333333333333
-                },
-                "combined": {
-                    "Place": 1.6666666666666667,
-                    "Time": 2.0,
-                    "Affected": 2.3333333333333335,
-                    "Actor": 2.6666666666666665,
-                    "Cause": 1.0,
-                    "Effect": 1.0
-                }
-            },
-            "combined-average": 10.666666666666666,
-            "role-average": 5.0,
-            "source-average": 5.666666666666667
-        }
-    ],
-    [
         "Translating",
         {
             "combined-total": 32,
@@ -480,6 +492,37 @@
         }
     ],
     [
+        "Intentionally_act",
+        {
+            "combined-total": 31,
+            "role-total": 14,
+            "source-total": 17,
+            "counts": {
+                "report": {
+                    "Agent": 0.3333333333333333,
+                    "Act": 1.3333333333333333,
+                    "Place": 2.3333333333333335,
+                    "Time": 0.6666666666666666
+                },
+                "source": {
+                    "Act": 2.0,
+                    "Agent": 0.6666666666666666,
+                    "Place": 2.0,
+                    "Time": 1.0
+                },
+                "combined": {
+                    "Agent": 1.0,
+                    "Act": 3.3333333333333335,
+                    "Place": 4.333333333333333,
+                    "Time": 1.6666666666666667
+                }
+            },
+            "combined-average": 10.333333333333334,
+            "role-average": 4.666666666666667,
+            "source-average": 5.666666666666667
+        }
+    ],
+    [
         "Objective_influence",
         {
             "combined-total": 31,
@@ -526,6 +569,43 @@
         }
     ],
     [
+        "Causation",
+        {
+            "combined-total": 30,
+            "role-total": 15,
+            "source-total": 15,
+            "counts": {
+                "report": {
+                    "Time": 0.3333333333333333,
+                    "Actor": 1.0,
+                    "Place": 0.6666666666666666,
+                    "Cause": 1.0,
+                    "Effect": 1.0,
+                    "Affected": 1.0
+                },
+                "source": {
+                    "Actor": 1.0,
+                    "Time": 0.6666666666666666,
+                    "Place": 0.6666666666666666,
+                    "Cause": 0.6666666666666666,
+                    "Effect": 0.6666666666666666,
+                    "Affected": 1.3333333333333333
+                },
+                "combined": {
+                    "Time": 1.0,
+                    "Actor": 2.0,
+                    "Place": 1.3333333333333333,
+                    "Cause": 1.6666666666666667,
+                    "Effect": 1.6666666666666667,
+                    "Affected": 2.3333333333333335
+                }
+            },
+            "combined-average": 10.0,
+            "role-average": 5.0,
+            "source-average": 5.0
+        }
+    ],
+    [
         "Control",
         {
             "combined-total": 30,
@@ -533,94 +613,42 @@
             "source-total": 17,
             "counts": {
                 "report": {
+                    "Controlling_variable": 0.0,
+                    "Dependent_situation": 0.3333333333333333,
+                    "Dependent_variable": 0.0,
+                    "Controlling_situation": 0.0,
+                    "Degree": 0.3333333333333333,
                     "Place": 0.6666666666666666,
                     "Dependent_entity": 0.6666666666666666,
                     "Time": 0.6666666666666666,
-                    "Controlling_entity": 1.6666666666666667,
-                    "Controlling_variable": 0.0,
-                    "Dependent_variable": 0.0,
-                    "Controlling_situation": 0.0,
-                    "Dependent_situation": 0.3333333333333333,
-                    "Degree": 0.3333333333333333
+                    "Controlling_entity": 1.6666666666666667
                 },
                 "source": {
-                    "Place": 1.0,
-                    "Dependent_entity": 1.0,
-                    "Controlling_entity": 1.6666666666666667,
-                    "Time": 0.6666666666666666,
                     "Controlling_variable": 0.0,
+                    "Dependent_situation": 0.6666666666666666,
                     "Dependent_variable": 0.0,
                     "Controlling_situation": 0.3333333333333333,
                     "Degree": 0.3333333333333333,
-                    "Dependent_situation": 0.6666666666666666
+                    "Place": 1.0,
+                    "Dependent_entity": 1.0,
+                    "Controlling_entity": 1.6666666666666667,
+                    "Time": 0.6666666666666666
                 },
                 "combined": {
+                    "Controlling_variable": 0.0,
+                    "Dependent_situation": 1.0,
+                    "Dependent_variable": 0.0,
+                    "Controlling_situation": 0.3333333333333333,
+                    "Degree": 0.6666666666666666,
                     "Place": 1.6666666666666667,
                     "Dependent_entity": 1.6666666666666667,
                     "Time": 1.3333333333333333,
-                    "Controlling_entity": 3.3333333333333335,
-                    "Controlling_variable": 0.0,
-                    "Dependent_variable": 0.0,
-                    "Controlling_situation": 0.3333333333333333,
-                    "Dependent_situation": 1.0,
-                    "Degree": 0.6666666666666666
+                    "Controlling_entity": 3.3333333333333335
                 }
             },
             "combined-average": 10.0,
             "role-average": 4.333333333333333,
             "source-average": 5.666666666666667
-        }
-    ],
-    [
-        "Undergo_change",
-        {
-            "combined-total": 30,
-            "role-total": 15,
-            "source-total": 15,
-            "counts": {
-                "report": {
-                    "Initial_category": 0.3333333333333333,
-                    "Final_quality": 0.0,
-                    "Value_range": 0.3333333333333333,
-                    "Final_situation": 0.3333333333333333,
-                    "Initial_situation": 0.3333333333333333,
-                    "Entity": 1.0,
-                    "Place": 0.3333333333333333,
-                    "Initial_quality": 0.3333333333333333,
-                    "Time": 0.6666666666666666,
-                    "Final_category": 0.6666666666666666,
-                    "Attribute": 0.6666666666666666
-                },
-                "source": {
-                    "Initial_quality": 0.0,
-                    "Value_range": 0.0,
-                    "Final_situation": 0.3333333333333333,
-                    "Initial_situation": 0.0,
-                    "Place": 0.6666666666666666,
-                    "Time": 0.6666666666666666,
-                    "Entity": 1.0,
-                    "Attribute": 0.6666666666666666,
-                    "Final_category": 0.6666666666666666,
-                    "Initial_category": 0.6666666666666666,
-                    "Final_quality": 0.3333333333333333
-                },
-                "combined": {
-                    "Initial_category": 1.0,
-                    "Final_quality": 0.3333333333333333,
-                    "Value_range": 0.3333333333333333,
-                    "Final_situation": 0.6666666666666666,
-                    "Initial_situation": 0.3333333333333333,
-                    "Entity": 2.0,
-                    "Place": 1.0,
-                    "Initial_quality": 0.3333333333333333,
-                    "Time": 1.3333333333333333,
-                    "Final_category": 1.3333333333333333,
-                    "Attribute": 1.3333333333333333
-                }
-            },
-            "combined-average": 10.0,
-            "role-average": 5.0,
-            "source-average": 5.0
         }
     ],
     [
@@ -710,52 +738,55 @@
         }
     ],
     [
-        "Cause_change",
+        "Undergo_change",
         {
-            "combined-total": 28,
-            "role-total": 12,
-            "source-total": 16,
+            "combined-total": 29,
+            "role-total": 15,
+            "source-total": 14,
             "counts": {
                 "report": {
-                    "Agent": 0.0,
-                    "Initial_category": 0.6666666666666666,
-                    "Final_value": 0.0,
-                    "Initial_value": 0.0,
-                    "Place": 0.3333333333333333,
+                    "Initial_quality": 0.0,
+                    "Final_quality": 0.0,
+                    "Place": 0.6666666666666666,
                     "Entity": 1.0,
-                    "Final_category": 1.0,
-                    "Time": 0.6666666666666666,
-                    "Cause": 0.0,
-                    "Attribute": 0.3333333333333333
+                    "Attribute": 0.3333333333333333,
+                    "Value_range": 0.6666666666666666,
+                    "Initial_situation": 0.3333333333333333,
+                    "Initial_category": 0.6666666666666666,
+                    "Final_situation": 0.3333333333333333,
+                    "Final_category": 0.6666666666666666,
+                    "Time": 0.3333333333333333
                 },
                 "source": {
-                    "Agent": 0.6666666666666666,
-                    "Initial_category": 0.6666666666666666,
-                    "Final_value": 0.3333333333333333,
-                    "Initial_value": 0.0,
-                    "Entity": 1.0,
-                    "Final_category": 1.0,
+                    "Initial_quality": 0.0,
+                    "Final_quality": 0.0,
+                    "Value_range": 0.3333333333333333,
+                    "Initial_situation": 0.0,
                     "Place": 0.6666666666666666,
                     "Time": 0.6666666666666666,
-                    "Cause": 0.0,
-                    "Attribute": 0.3333333333333333
+                    "Entity": 1.0,
+                    "Final_situation": 0.3333333333333333,
+                    "Attribute": 0.3333333333333333,
+                    "Final_category": 0.6666666666666666,
+                    "Initial_category": 0.6666666666666666
                 },
                 "combined": {
-                    "Agent": 0.6666666666666666,
-                    "Initial_category": 1.3333333333333333,
-                    "Final_value": 0.3333333333333333,
-                    "Initial_value": 0.0,
-                    "Place": 1.0,
+                    "Initial_quality": 0.0,
+                    "Final_quality": 0.0,
+                    "Place": 1.3333333333333333,
                     "Entity": 2.0,
-                    "Final_category": 2.0,
-                    "Time": 1.3333333333333333,
-                    "Cause": 0.0,
-                    "Attribute": 0.6666666666666666
+                    "Attribute": 0.6666666666666666,
+                    "Value_range": 1.0,
+                    "Initial_situation": 0.3333333333333333,
+                    "Initial_category": 1.3333333333333333,
+                    "Final_situation": 0.6666666666666666,
+                    "Final_category": 1.3333333333333333,
+                    "Time": 1.0
                 }
             },
-            "combined-average": 9.333333333333334,
-            "role-average": 4.0,
-            "source-average": 5.333333333333333
+            "combined-average": 9.666666666666666,
+            "role-average": 5.0,
+            "source-average": 4.666666666666667
         }
     ],
     [
@@ -1477,40 +1508,6 @@
             "combined-average": 8.666666666666666,
             "role-average": 4.333333333333333,
             "source-average": 4.333333333333333
-        }
-    ],
-    [
-        "Cause_change_of_strength",
-        {
-            "combined-total": 26,
-            "role-total": 12,
-            "source-total": 14,
-            "counts": {
-                "report": {
-                    "Time": 0.6666666666666666,
-                    "Agent": 1.0,
-                    "Patient": 1.0,
-                    "Place": 0.6666666666666666,
-                    "Cause": 0.6666666666666666
-                },
-                "source": {
-                    "Place": 0.6666666666666666,
-                    "Time": 1.0,
-                    "Patient": 1.0,
-                    "Agent": 1.3333333333333333,
-                    "Cause": 0.6666666666666666
-                },
-                "combined": {
-                    "Time": 1.6666666666666667,
-                    "Agent": 2.3333333333333335,
-                    "Patient": 2.0,
-                    "Place": 1.3333333333333333,
-                    "Cause": 1.3333333333333333
-                }
-            },
-            "combined-average": 8.666666666666666,
-            "role-average": 4.0,
-            "source-average": 4.666666666666667
         }
     ],
     [
@@ -2303,6 +2300,37 @@
         }
     ],
     [
+        "Activity_stop",
+        {
+            "combined-total": 24,
+            "role-total": 10,
+            "source-total": 14,
+            "counts": {
+                "report": {
+                    "Time": 1.0,
+                    "Agent": 0.6666666666666666,
+                    "Activity": 1.0,
+                    "Place": 0.6666666666666666
+                },
+                "source": {
+                    "Time": 1.3333333333333333,
+                    "Agent": 1.0,
+                    "Activity": 1.0,
+                    "Place": 1.3333333333333333
+                },
+                "combined": {
+                    "Time": 2.3333333333333335,
+                    "Agent": 1.6666666666666667,
+                    "Activity": 2.0,
+                    "Place": 2.0
+                }
+            },
+            "combined-average": 8.0,
+            "role-average": 3.3333333333333335,
+            "source-average": 4.666666666666667
+        }
+    ],
+    [
         "Appointing",
         {
             "combined-total": 24,
@@ -2377,40 +2405,6 @@
             "combined-average": 8.0,
             "role-average": 3.3333333333333335,
             "source-average": 4.666666666666667
-        }
-    ],
-    [
-        "Creating",
-        {
-            "combined-total": 24,
-            "role-total": 12,
-            "source-total": 12,
-            "counts": {
-                "report": {
-                    "Created_entity": 1.0,
-                    "Time": 1.0,
-                    "Creator": 1.0,
-                    "Place": 0.6666666666666666,
-                    "Cause": 0.3333333333333333
-                },
-                "source": {
-                    "Created_entity": 1.0,
-                    "Time": 1.0,
-                    "Creator": 0.6666666666666666,
-                    "Place": 0.6666666666666666,
-                    "Cause": 0.6666666666666666
-                },
-                "combined": {
-                    "Created_entity": 2.0,
-                    "Time": 2.0,
-                    "Creator": 1.6666666666666667,
-                    "Place": 1.3333333333333333,
-                    "Cause": 1.0
-                }
-            },
-            "combined-average": 8.0,
-            "role-average": 4.0,
-            "source-average": 4.0
         }
     ],
     [
@@ -2522,6 +2516,43 @@
         }
     ],
     [
+        "Rewards_and_punishments",
+        {
+            "combined-total": 24,
+            "role-total": 10,
+            "source-total": 14,
+            "counts": {
+                "report": {
+                    "Reason": 0.6666666666666666,
+                    "Place": 0.6666666666666666,
+                    "Evaluee": 0.6666666666666666,
+                    "Agent": 0.3333333333333333,
+                    "Time": 0.3333333333333333,
+                    "Response_action": 0.6666666666666666
+                },
+                "source": {
+                    "Response_action": 0.6666666666666666,
+                    "Evaluee": 1.0,
+                    "Time": 0.6666666666666666,
+                    "Reason": 1.0,
+                    "Agent": 0.3333333333333333,
+                    "Place": 1.0
+                },
+                "combined": {
+                    "Reason": 1.6666666666666667,
+                    "Place": 1.6666666666666667,
+                    "Evaluee": 1.6666666666666667,
+                    "Agent": 0.6666666666666666,
+                    "Time": 1.0,
+                    "Response_action": 1.3333333333333333
+                }
+            },
+            "combined-average": 8.0,
+            "role-average": 3.3333333333333335,
+            "source-average": 4.666666666666667
+        }
+    ],
+    [
         "Vehicle_landing",
         {
             "combined-total": 24,
@@ -2584,6 +2615,40 @@
         }
     ],
     [
+        "Becoming",
+        {
+            "combined-total": 23,
+            "role-total": 11,
+            "source-total": 12,
+            "counts": {
+                "report": {
+                    "Entity": 0.6666666666666666,
+                    "Final_quality": 0.3333333333333333,
+                    "Time": 0.6666666666666666,
+                    "Place": 1.0,
+                    "Final_category": 1.0
+                },
+                "source": {
+                    "Entity": 0.6666666666666666,
+                    "Final_quality": 0.3333333333333333,
+                    "Final_category": 0.6666666666666666,
+                    "Place": 1.6666666666666667,
+                    "Time": 0.6666666666666666
+                },
+                "combined": {
+                    "Entity": 1.3333333333333333,
+                    "Final_quality": 0.6666666666666666,
+                    "Time": 1.3333333333333333,
+                    "Place": 2.6666666666666665,
+                    "Final_category": 1.6666666666666667
+                }
+            },
+            "combined-average": 7.666666666666667,
+            "role-average": 3.6666666666666665,
+            "source-average": 4.0
+        }
+    ],
+    [
         "Cause_change_of_position_on_a_scale",
         {
             "combined-total": 23,
@@ -2618,6 +2683,40 @@
             "combined-average": 7.666666666666667,
             "role-average": 3.0,
             "source-average": 4.666666666666667
+        }
+    ],
+    [
+        "Cause_change_of_strength",
+        {
+            "combined-total": 23,
+            "role-total": 12,
+            "source-total": 11,
+            "counts": {
+                "report": {
+                    "Cause": 0.3333333333333333,
+                    "Time": 1.0,
+                    "Agent": 1.0,
+                    "Patient": 1.0,
+                    "Place": 0.6666666666666666
+                },
+                "source": {
+                    "Cause": 0.3333333333333333,
+                    "Place": 0.6666666666666666,
+                    "Time": 0.6666666666666666,
+                    "Patient": 1.0,
+                    "Agent": 1.0
+                },
+                "combined": {
+                    "Cause": 0.6666666666666666,
+                    "Time": 1.6666666666666667,
+                    "Agent": 2.0,
+                    "Patient": 2.0,
+                    "Place": 1.3333333333333333
+                }
+            },
+            "combined-average": 7.666666666666667,
+            "role-average": 4.0,
+            "source-average": 3.6666666666666665
         }
     ],
     [
@@ -3352,6 +3451,43 @@
         }
     ],
     [
+        "Response",
+        {
+            "combined-total": 22,
+            "role-total": 10,
+            "source-total": 12,
+            "counts": {
+                "report": {
+                    "Responding_entity": 0.0,
+                    "Time": 0.6666666666666666,
+                    "Trigger": 0.6666666666666666,
+                    "Response": 0.3333333333333333,
+                    "Place": 0.6666666666666666,
+                    "Agent": 1.0
+                },
+                "source": {
+                    "Responding_entity": 0.3333333333333333,
+                    "Time": 0.3333333333333333,
+                    "Trigger": 1.0,
+                    "Place": 0.6666666666666666,
+                    "Response": 0.6666666666666666,
+                    "Agent": 1.0
+                },
+                "combined": {
+                    "Responding_entity": 0.3333333333333333,
+                    "Time": 1.0,
+                    "Trigger": 1.6666666666666667,
+                    "Response": 1.0,
+                    "Place": 1.3333333333333333,
+                    "Agent": 2.0
+                }
+            },
+            "combined-average": 7.333333333333333,
+            "role-average": 3.3333333333333335,
+            "source-average": 4.0
+        }
+    ],
+    [
         "Smuggling",
         {
             "combined-total": 22,
@@ -3461,6 +3597,37 @@
                     "Theme": 2.0,
                     "Donor": 1.3333333333333333,
                     "Recipient": 2.0
+                }
+            },
+            "combined-average": 7.333333333333333,
+            "role-average": 3.6666666666666665,
+            "source-average": 3.6666666666666665
+        }
+    ],
+    [
+        "Undergoing",
+        {
+            "combined-total": 22,
+            "role-total": 11,
+            "source-total": 11,
+            "counts": {
+                "report": {
+                    "Place": 0.6666666666666666,
+                    "Event": 1.0,
+                    "Time": 0.6666666666666666,
+                    "Entity": 1.3333333333333333
+                },
+                "source": {
+                    "Place": 0.3333333333333333,
+                    "Event": 1.0,
+                    "Entity": 1.3333333333333333,
+                    "Time": 1.0
+                },
+                "combined": {
+                    "Place": 1.0,
+                    "Event": 2.0,
+                    "Time": 1.6666666666666667,
+                    "Entity": 2.6666666666666665
                 }
             },
             "combined-average": 7.333333333333333,
@@ -5286,40 +5453,6 @@
         }
     ],
     [
-        "Rewards_and_punishments",
-        {
-            "combined-total": 19,
-            "role-total": 8,
-            "source-total": 11,
-            "counts": {
-                "report": {
-                    "Reason": 0.3333333333333333,
-                    "Place": 0.6666666666666666,
-                    "Evaluee": 1.0,
-                    "Agent": 0.3333333333333333,
-                    "Time": 0.3333333333333333
-                },
-                "source": {
-                    "Agent": 0.3333333333333333,
-                    "Time": 0.6666666666666666,
-                    "Reason": 0.6666666666666666,
-                    "Evaluee": 1.0,
-                    "Place": 1.0
-                },
-                "combined": {
-                    "Reason": 1.0,
-                    "Place": 1.6666666666666667,
-                    "Evaluee": 2.0,
-                    "Agent": 0.6666666666666666,
-                    "Time": 1.0
-                }
-            },
-            "combined-average": 6.333333333333333,
-            "role-average": 2.6666666666666665,
-            "source-average": 3.6666666666666665
-        }
-    ],
-    [
         "Sign_agreement",
         {
             "combined-total": 19,
@@ -5886,37 +6019,6 @@
         }
     ],
     [
-        "Perception_active",
-        {
-            "combined-total": 18,
-            "role-total": 7,
-            "source-total": 11,
-            "counts": {
-                "report": {
-                    "Time": 0.3333333333333333,
-                    "Place": 0.0,
-                    "Perceiver_agentive": 1.0,
-                    "Phenomenon": 1.0
-                },
-                "source": {
-                    "Time": 0.3333333333333333,
-                    "Perceiver_agentive": 1.0,
-                    "Place": 1.3333333333333333,
-                    "Phenomenon": 1.0
-                },
-                "combined": {
-                    "Time": 0.6666666666666666,
-                    "Place": 1.3333333333333333,
-                    "Perceiver_agentive": 2.0,
-                    "Phenomenon": 2.0
-                }
-            },
-            "combined-average": 6.0,
-            "role-average": 2.3333333333333335,
-            "source-average": 3.6666666666666665
-        }
-    ],
-    [
         "Practice",
         {
             "combined-total": 18,
@@ -6178,34 +6280,6 @@
                     "Place": 1.0,
                     "Agent": 2.0,
                     "Activity": 2.0
-                }
-            },
-            "combined-average": 5.666666666666667,
-            "role-average": 2.6666666666666665,
-            "source-average": 3.0
-        }
-    ],
-    [
-        "Activity_stop",
-        {
-            "combined-total": 17,
-            "role-total": 8,
-            "source-total": 9,
-            "counts": {
-                "report": {
-                    "Time": 1.0,
-                    "Agent": 0.6666666666666666,
-                    "Place": 1.0
-                },
-                "source": {
-                    "Agent": 1.0,
-                    "Place": 1.0,
-                    "Time": 1.0
-                },
-                "combined": {
-                    "Time": 2.0,
-                    "Agent": 1.6666666666666667,
-                    "Place": 2.0
                 }
             },
             "combined-average": 5.666666666666667,
@@ -6576,35 +6650,32 @@
         }
     ],
     [
-        "Response",
+        "Rape",
         {
             "combined-total": 17,
             "role-total": 8,
             "source-total": 9,
             "counts": {
                 "report": {
-                    "Responding_entity": 0.0,
-                    "Time": 0.6666666666666666,
-                    "Trigger": 0.6666666666666666,
-                    "Place": 0.3333333333333333,
-                    "Agent": 1.0,
-                    "Response": 0.0
+                    "Perpetrator": 0.6666666666666666,
+                    "Event": 0.0,
+                    "Time": 0.3333333333333333,
+                    "Victim": 1.0,
+                    "Place": 0.6666666666666666
                 },
                 "source": {
-                    "Responding_entity": 0.0,
                     "Time": 0.3333333333333333,
-                    "Trigger": 1.0,
+                    "Victim": 0.6666666666666666,
                     "Place": 0.6666666666666666,
-                    "Agent": 1.0,
-                    "Response": 0.0
+                    "Event": 0.3333333333333333,
+                    "Perpetrator": 1.0
                 },
                 "combined": {
-                    "Responding_entity": 0.0,
-                    "Time": 1.0,
-                    "Trigger": 1.6666666666666667,
-                    "Place": 1.0,
-                    "Agent": 2.0,
-                    "Response": 0.0
+                    "Perpetrator": 1.6666666666666667,
+                    "Event": 0.3333333333333333,
+                    "Time": 0.6666666666666666,
+                    "Victim": 1.6666666666666667,
+                    "Place": 1.3333333333333333
                 }
             },
             "combined-average": 5.666666666666667,
@@ -7081,37 +7152,6 @@
         }
     ],
     [
-        "Undergoing",
-        {
-            "combined-total": 16,
-            "role-total": 7,
-            "source-total": 9,
-            "counts": {
-                "report": {
-                    "Time": 0.3333333333333333,
-                    "Place": 0.3333333333333333,
-                    "Entity": 1.3333333333333333,
-                    "Event": 0.3333333333333333
-                },
-                "source": {
-                    "Place": 0.6666666666666666,
-                    "Entity": 1.3333333333333333,
-                    "Event": 0.3333333333333333,
-                    "Time": 0.6666666666666666
-                },
-                "combined": {
-                    "Time": 1.0,
-                    "Place": 1.0,
-                    "Entity": 2.6666666666666665,
-                    "Event": 0.6666666666666666
-                }
-            },
-            "combined-average": 5.333333333333333,
-            "role-average": 2.3333333333333335,
-            "source-average": 3.0
-        }
-    ],
-    [
         "Achieving_first",
         {
             "combined-total": 15,
@@ -7205,40 +7245,6 @@
             "combined-average": 5.0,
             "role-average": 2.3333333333333335,
             "source-average": 2.6666666666666665
-        }
-    ],
-    [
-        "Becoming",
-        {
-            "combined-total": 15,
-            "role-total": 8,
-            "source-total": 7,
-            "counts": {
-                "report": {
-                    "Final_quality": 0.0,
-                    "Time": 0.6666666666666666,
-                    "Place": 0.6666666666666666,
-                    "Entity": 1.0,
-                    "Final_category": 0.3333333333333333
-                },
-                "source": {
-                    "Final_quality": 0.0,
-                    "Time": 0.3333333333333333,
-                    "Place": 0.6666666666666666,
-                    "Entity": 1.0,
-                    "Final_category": 0.3333333333333333
-                },
-                "combined": {
-                    "Final_quality": 0.0,
-                    "Time": 1.0,
-                    "Place": 1.3333333333333333,
-                    "Entity": 2.0,
-                    "Final_category": 0.6666666666666666
-                }
-            },
-            "combined-average": 5.0,
-            "role-average": 2.6666666666666665,
-            "source-average": 2.3333333333333335
         }
     ],
     [
@@ -7549,37 +7555,6 @@
         }
     ],
     [
-        "Intentionally_act",
-        {
-            "combined-total": 15,
-            "role-total": 7,
-            "source-total": 8,
-            "counts": {
-                "report": {
-                    "Agent": 0.3333333333333333,
-                    "Place": 0.6666666666666666,
-                    "Act": 0.6666666666666666,
-                    "Time": 0.6666666666666666
-                },
-                "source": {
-                    "Act": 0.6666666666666666,
-                    "Place": 0.6666666666666666,
-                    "Agent": 0.6666666666666666,
-                    "Time": 0.6666666666666666
-                },
-                "combined": {
-                    "Agent": 1.0,
-                    "Place": 1.3333333333333333,
-                    "Act": 1.3333333333333333,
-                    "Time": 1.3333333333333333
-                }
-            },
-            "combined-average": 5.0,
-            "role-average": 2.3333333333333335,
-            "source-average": 2.6666666666666665
-        }
-    ],
-    [
         "Manipulation",
         {
             "combined-total": 15,
@@ -7642,37 +7617,6 @@
             "combined-average": 5.0,
             "role-average": 2.6666666666666665,
             "source-average": 2.3333333333333335
-        }
-    ],
-    [
-        "Text_creation",
-        {
-            "combined-total": 15,
-            "role-total": 7,
-            "source-total": 8,
-            "counts": {
-                "report": {
-                    "Time": 0.0,
-                    "Place": 0.3333333333333333,
-                    "Author": 1.0,
-                    "Text": 1.0
-                },
-                "source": {
-                    "Time": 0.3333333333333333,
-                    "Place": 0.3333333333333333,
-                    "Author": 1.0,
-                    "Text": 1.0
-                },
-                "combined": {
-                    "Time": 0.3333333333333333,
-                    "Place": 0.6666666666666666,
-                    "Author": 2.0,
-                    "Text": 2.0
-                }
-            },
-            "combined-average": 5.0,
-            "role-average": 2.3333333333333335,
-            "source-average": 2.6666666666666665
         }
     ],
     [
@@ -7955,37 +7899,6 @@
         }
     ],
     [
-        "Rape",
-        {
-            "combined-total": 14,
-            "role-total": 6,
-            "source-total": 8,
-            "counts": {
-                "report": {
-                    "Time": 0.0,
-                    "Perpetrator": 0.6666666666666666,
-                    "Place": 0.6666666666666666,
-                    "Victim": 0.6666666666666666
-                },
-                "source": {
-                    "Victim": 0.6666666666666666,
-                    "Time": 0.3333333333333333,
-                    "Perpetrator": 1.0,
-                    "Place": 0.6666666666666666
-                },
-                "combined": {
-                    "Time": 0.3333333333333333,
-                    "Perpetrator": 1.6666666666666667,
-                    "Place": 1.3333333333333333,
-                    "Victim": 1.3333333333333333
-                }
-            },
-            "combined-average": 4.666666666666667,
-            "role-average": 2.0,
-            "source-average": 2.6666666666666665
-        }
-    ],
-    [
         "Silencing",
         {
             "combined-total": 14,
@@ -8170,6 +8083,37 @@
                     "Time": 1.0,
                     "Cause": 1.3333333333333333,
                     "Artifact": 2.0
+                }
+            },
+            "combined-average": 4.333333333333333,
+            "role-average": 2.3333333333333335,
+            "source-average": 2.0
+        }
+    ],
+    [
+        "Text_creation",
+        {
+            "combined-total": 13,
+            "role-total": 7,
+            "source-total": 6,
+            "counts": {
+                "report": {
+                    "Author": 0.6666666666666666,
+                    "Time": 0.3333333333333333,
+                    "Place": 0.3333333333333333,
+                    "Text": 1.0
+                },
+                "source": {
+                    "Time": 0.0,
+                    "Place": 0.0,
+                    "Author": 1.0,
+                    "Text": 1.0
+                },
+                "combined": {
+                    "Author": 1.6666666666666667,
+                    "Time": 0.3333333333333333,
+                    "Place": 0.3333333333333333,
+                    "Text": 2.0
                 }
             },
             "combined-average": 4.333333333333333,
@@ -8756,16 +8700,16 @@
             "source-total": 4,
             "counts": {
                 "report": {
-                    "Entity": 1.0,
-                    "State": 0.3333333333333333
+                    "State": 0.3333333333333333,
+                    "Entity": 1.0
                 },
                 "source": {
-                    "Entity": 1.0,
-                    "State": 0.3333333333333333
+                    "State": 0.3333333333333333,
+                    "Entity": 1.0
                 },
                 "combined": {
-                    "Entity": 2.0,
-                    "State": 0.6666666666666666
+                    "State": 0.6666666666666666,
+                    "Entity": 2.0
                 }
             },
             "combined-average": 2.6666666666666665,

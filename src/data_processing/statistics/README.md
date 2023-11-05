@@ -10,271 +10,271 @@ The basic statistics for the dataset are generated using the `basic_statistics.p
 
 ### Whole Dataset: 
 #### Token Counts 
-Average Report Tokens: `58.95529411764706` \
+Average Report Tokens: `58.91699604743083` \
 Min Report Tokens: `10` \
 Max Report Tokens: `526` \
-Average Source Token: `1163.9843137254902` \
+Average Source Token: `1164.8679841897233` \
 Min Source Tokens: `154` \
 Max Source Tokens: `5553` \
 
 #### Role Counts
 For json outputs of the specific frame/role data see `sorted_norm_roles.json`
 Average Roles Across Frames: 
-- Combined: `3.6807843137254865`
-- Report: `3.015686274509804`
-- Source: `3.4799999999999973`
+- Combined: `3.7090909090909063`
+- Report: `3.035573122529645`
+- Source: `3.508300395256914`
 
 Average Arguments Across Frames: 
-- Combined: `6.8211764705882345`
-- Report: `15.48235294117647`
-- Source: `18.623529411764707`
+- Combined: `6.890118577075101`
+- Report: `3.124901185770753`
+- Source: `3.7652173913043474`
 
 
 Top 10 Frames with most roles (combined):
-1. `Subsisting`-> `1.0`
-2. `Transportation_status`-> `1.0`
-3. `Vehicle_landing`-> `0.95`
-4. `Cause_to_make_progress`-> `0.9`
-5. `Visiting`-> `0.9`
-6. `Chaos`-> `0.85`
-7. `Detonate_explosive`-> `0.85`
-8. `Escaping`-> `0.85`
-9. `Being_located`-> `0.8`
-10. `Kidnapping`-> `0.8`
+1. `Attack`-> `1.0`
+2. `Subsisting`-> `1.0`
+3. `Transportation_status`-> `1.0`
+4. `Vehicle_landing`-> `1.0`
+5. `Breaking_out_captive`-> `0.96`
+6. `Enforcing`-> `0.96`
+7. `Piracy`-> `0.96`
+8. `Activity_pause`-> `0.95`
+9. `Attempt`-> `0.95`
+10. `Chaos`-> `0.95`
 
 Top 10 Frames with least roles (normalized by number of roles in a frame):
-1. `Render_nonfunctional`-> `0.36`
-2. `Translating`-> `0.35`
-3. `Motion`-> `0.3333333333333333`
-4. `Cause_to_be_included`-> `0.31428571428571433`
-5. `Cure`-> `0.3`
-6. `Change_of_leadership`-> `0.2888888888888889`
-7. `Proliferating_in_number`-> `0.275`
-8. `Cause_motion`-> `0.23636363636363636`
-9. `Education_teaching`-> `0.21538461538461537`
-10. `Apply_heat`-> `0.17142857142857143`
+1. `Render_nonfunctional`-> `0.48`
+2. `Cure`-> `0.475`
+3. `Change_of_leadership`-> `0.4666666666666667`
+4. `Change_position_on_a_scale`-> `0.45999999999999996`
+5. `Motion`-> `0.4444444444444444`
+6. `Cause_motion`-> `0.4`
+7. `Cause_to_be_sharp`-> `0.4`
+8. `Education_teaching`-> `0.38461538461538464`
+9. `Proliferating_in_number`-> `0.375`
+10. `Apply_heat`-> `0.2857142857142857`
 
 ### Train Dataset: 
 Total Documents: 765 
 #### Token Counts
-Average Report Tokens: `59.209150326797385` \
+Average Report Tokens: `59.201581027667984` \
 Min Report Tokens: `10` \
 Max Report Tokens: `526` \
-Average Source Token: `1087.7660130718955` \
+Average Source Token: `1084.258234519104` \
 Min Source Tokens: `154` \
 Max Source Tokens: `5553` \
 
 #### Role Counts
 For json outputs of the specific frame/role data see `sorted_norm_roles_train.json`\
 Average Roles Across Frames: 
-- Combined: `3.613071895424835`
-- Report: `2.943790849673201`
-- Source: `3.4300653594771213`
+- Combined: `3.6455862977602096`
+- Report: `2.971014492753622`
+- Source: `3.451910408432145`
 
 Average Arguments Across Frames: 
-- Combined: `6.708496732026146`
-- Report: `3.033986928104574`
-- Source: `3.674509803921567`
+- Combined: `6.776021080368908`
+- Report: `3.071146245059288`
+- Source: `3.704874835309617`
 
 
 Top 10 Frames with most roles (normalized by number of roles in a frame):
-1. `Subsisting`-> `1.0`
-2. `Transportation_status`-> `1.0`
-3. `Visiting`-> `1.0`
-4. `Detonate_explosive`-> `0.9166666666666666`
-5. `Vehicle_landing`-> `0.9166666666666666`
-6. `Activity_stop`-> `0.8888888888888888`
-7. `Abusing`-> `0.8333333333333334`
-8. `Besieging`-> `0.8333333333333334`
-9. `Cause_to_make_progress`-> `0.8333333333333334`
-10. `Chaos`-> `0.8333333333333334`
+1. `Abusing`-> `1.0`
+2. `Activity_pause`-> `1.0`
+3. `Activity_stop`-> `1.0`
+4. `Attack`-> `1.0`
+5. `Being_born`-> `1.0`
+6. `Besieging`-> `1.0`
+7. `Coming_to_be`-> `1.0`
+8. `Quitting_a_place`-> `1.0`
+9. `Receiving`-> `1.0`
+10. `Subsisting`-> `1.0`
 
 Top 10 Frames with least roles (normalized by number of roles in a frame):
-1. `Proliferating_in_number`-> `0.3333333333333333`
-2. `Rotting`-> `0.3333333333333333`
-3. `Theft`-> `0.3333333333333333`
-4. `Motion`-> `0.2962962962962963`
-5. `Adjusting`-> `0.26666666666666666`
-6. `Change_of_leadership`-> `0.2592592592592593`
-7. `Cure`-> `0.25`
-8. `Cause_motion`-> `0.2424242424242424`
-9. `Education_teaching`-> `0.20512820512820512`
-10. `Apply_heat`-> `0.14285714285714285`
+1. `Cause_motion`-> `0.42424242424242425`
+2. `Proliferating_in_number`-> `0.4166666666666667`
+3. `Education_teaching`-> `0.41025641025641024`
+4. `Motion`-> `0.4074074074074074`
+5. `Cause_to_be_sharp`-> `0.4`
+6. `Change_position_on_a_scale`-> `0.4`
+7. `Grinding`-> `0.4`
+8. `Theft`-> `0.3888888888888889`
+9. `Apply_heat`-> `0.33333333333333337`
+10. `Damaging`-> `0.33333333333333337`
 
 ### Dev Dataset:
 Total Documents: 255
 
 #### Token Counts
-Average Report Tokens: `60.062745098039215` \
+Average Report Tokens: `59.58498023715415` \
 Min Report Tokens: `11` \
 Max Report Tokens: `208` \
-Average Source Token: `1511.1490196078432` \
+Average Source Token: `1510.7351778656127` \
 Min Source Tokens: `177` \
 Max Source Tokens: `5389` \
 
 #### Role Counts
 For json outputs of the specific frame/role data see `sorted_norm_roles_dev.json`\
 Average Roles Across Frames: 
-- Combined: `3.996078431372549`
-- Report: `3.392156862745098`
-- Source: `3.819607843137255`
+- Combined: `4.063241106719367`
+- Report: `3.4545454545454546`
+- Source: `3.8932806324110674`
 
 Average Arguments Across Frames: 
-- Combined: `7.63921568627451`
-- Report: `3.466666666666667`
-- Source: `4.172549019607843`
+- Combined: `7.822134387351778`
+- Report: `3.5454545454545454`
+- Source: `4.276679841897233`
 
 Top 10 Frames with most roles (normalized by number of roles in a frame):
-1. `Activity_start`-> `1.0`
-2. `Attack`-> `1.0`
-3. `Being_located`-> `1.0`
-4. `Cause_change_of_strength`-> `1.0`
-5. `Cause_to_make_progress`-> `1.0`
-6. `Change_of_consistency`-> `1.0`
-7. `Chaos`-> `1.0`
-8. `Come_down_with`-> `1.0`
-9. `Coming_to_be`-> `1.0`
-10. `Commerce_buy`-> `1.0`
+1. `Achieving_first`-> `1.0`
+2. `Activity_pause`-> `1.0`
+3. `Activity_ready_state`-> `1.0`
+4. `Activity_resume`-> `1.0`
+5. `Activity_start`-> `1.0`
+6. `Activity_stop`-> `1.0`
+7. `Arraignment`-> `1.0`
+8. `Arrest`-> `1.0`
+9. `Attack`-> `1.0`
+10. `Attempt`-> `1.0`
 
 Top 10 Frames with least roles (normalized by number of roles in a frame):
-1. `Text_creation`-> `0.25`
-2. `Translating`-> `0.25`
-3. `Cause_to_be_dry`-> `0.2`
-4. `Forging`-> `0.2`
-5. `Inhibit_movement`-> `0.16666666666666666`
-6. `Examination`-> `0.14285714285714285`
-7. `Proliferating_in_number`-> `0.125`
-8. `Cause_motion`-> `0.09090909090909091`
-9. `Exercising`-> `0.0`
-10. `Killing`-> `0.0`
+1. `Exercising`-> `0.3333333333333333`
+2. `Apply_heat`-> `0.2857142857142857`
+3. `Examination`-> `0.2857142857142857`
+4. `Cause_motion`-> `0.2727272727272727`
+5. `Abusing`-> `0.25`
+6. `Besieging`-> `0.25`
+7. `Hit_target`-> `0.25`
+8. `Cause_to_be_dry`-> `0.2`
+9. `Inhibit_movement`-> `0.16666666666666666`
+10. `Proliferating_in_number`-> `0.125`
 
 ### Test Dataset:
 Total Documents: 255
 
 #### Token Counts
-Average Report Tokens: `57.08627450980392` \
+Average Report Tokens: `57.39525691699605` \
 Min Report Tokens: `17` \
 Max Report Tokens: `181` \
-Average Source Token: `1045.4745098039216` \
+Average Source Token: `1060.8300395256917` \
 Min Source Tokens: `173` \
 Max Source Tokens: `4856` \
 
 #### Role Counts
 For json outputs of the specific frame/role data see `sorted_norm_roles_test.json`
 Average Roles Across Frames: 
-- Combined: `3.5686274509803924`
-- Report: `2.854901960784314`
-- Source: `3.2901960784313724`
+- Combined: `3.5454545454545454`
+- Report: `2.8102766798418974`
+- Source: `3.292490118577075`
 
 Average Arguments Across Frames: 
-- Combined: `6.341176470588235`
-- Report: `2.9137254901960783`
-- Source: `3.4274509803921567`
+- Combined: `6.300395256916996`
+- Report: `2.8656126482213438`
+- Source: `3.4347826086956523`
 
 Top 10 Frames with most roles (normalized by number of roles in a frame):
-1. `Cause_to_make_progress`-> `1.0`
-2. `Escaping`-> `1.0`
-3. `Operating_a_system`-> `1.0`
-4. `Presence`-> `1.0`
-5. `State_of_entity`-> `1.0`
-6. `Subsisting`-> `1.0`
-7. `Transportation_status`-> `1.0`
-8. `Undergoing`-> `1.0`
-9. `Vehicle_landing`-> `1.0`
-10. `Visiting`-> `1.0`
+1. `Abusing`-> `1.0`
+2. `Activity_start`-> `1.0`
+3. `Attack`-> `1.0`
+4. `Attempt`-> `1.0`
+5. `Attending`-> `1.0`
+6. `Being_born`-> `1.0`
+7. `Besieging`-> `1.0`
+8. `Breaking_out_captive`-> `1.0`
+9. `Causation`-> `1.0`
+10. `Cause_change_of_strength`-> `1.0`
 
 Top 10 Frames with least roles (normalized by number of roles in a frame):
-1. `Forging`-> `0.2`
-2. `Grinding`-> `0.2`
-3. `Manipulation`-> `0.2`
-4. `Render_nonfunctional`-> `0.2`
-5. `Submitting_documents`-> `0.2`
-6. `Arrest`-> `0.16666666666666666`
-7. `Theft`-> `0.16666666666666666`
-8. `Education_teaching`-> `0.15384615384615385`
-9. `Apply_heat`-> `0.14285714285714285`
-10. `Cause_to_be_included`-> `0.14285714285714285`
+1. `Get_a_job`-> `0.3333333333333333`
+2. `Placing`-> `0.3333333333333333`
+3. `Process_completed_state`-> `0.3333333333333333`
+4. `Rotting`-> `0.3333333333333333`
+5. `Emotions_success_or_failure`-> `0.2857142857142857`
+6. `Fleeing`-> `0.2857142857142857`
+7. `Education_teaching`-> `0.23076923076923078`
+8. `Motion`-> `0.2222222222222222`
+9. `Manipulation`-> `0.2`
+10. `Apply_heat`-> `0.14285714285714285`
 
 ## Distance Statistics
 ### All Data
 #### Report 
 ![Alt text](assets/report_distances_all.png "Report Distances 100 Buckets")
 
-Mean: `18.857704402515722` \
+Mean: `18.68066561014263` \
 Median: `14.0` \
 Max: `135` \
 Min: `0` \
-Standard deviation: `17.569476741474855` \
-Variance: `308.68651296922593` 
+Standard deviation: `17.650379654107788` \
+Variance: `311.5359019341422` 
 
 #### Source
 ![Alt text](assets/source_distances_all.png "Source Distances 100 Buckets")
 
-Mean: `203.41981132075472` \
-Median: `64.5` \
+Mean: `207.85182250396196` \
+Median: `68.0` \
 Max: `3311` \
 Min: `0` \
-Standard deviation: `386.984062919` \
-Variance: `149756.66495342352` 
+Standard deviation: `390.41874314720144` \
+Variance: `152426.79500064044` 
 
 ### Train Data
 #### Report
 ![Alt text](assets/report_distances_train.png "Source Distances 100 Buckets")
 
-Mean: `17.926701570680628` \
+Mean: `17.886543535620053` \
 Median: `13.0` \
 Max: `135` \
 Min: `0` \
-Standard deviation: `17.69993844784599` \
-Variance: `313.2878210575368`
+Standard deviation: `17.618660754619327` \
+Variance: `310.41720678636324`
 
 #### Source
 ![Alt text](assets/source_distances_train.png "Source Distances 100 Buckets")
 
-Mean: `190.5091623036649` \
+Mean: `190.72295514511873` \
 Median: `64.0` \
 Max: `3311` \
 Min: `0` \
-Standard deviation: `361.44022362814894` \
-Variance: `130639.03525636632`
+Standard deviation: `353.50339669985965` \
+Variance: `124964.65147833836`
 
 ### Dev Data
 #### Report
 ![Alt text](assets/report_distances_dev.png "Source Distances 100 Buckets")
 
-Mean: `22.42292490118577` \
-Median: `18.0` \
+Mean: `23.07171314741036` \
+Median: `19.0` \
 Max: `90` \
 Min: `0` \
-Standard deviation: `18.635228128824515` \
-Variance: `347.2717274133325`
+Standard deviation: `18.700055304192738` \
+Variance: `349.69206837986695`
 
 #### Source
 ![Alt text](assets/source_distances_dev.png "Source Distances 100 Buckets")
 
-Mean: `291.0395256916996` \
-Median: `108.0` \
+Mean: `307.44621513944224` \
+Median: `118.0` \
 Max: `3043` \
 Min: `0` \
-Standard deviation: `508.7967655511856` \
-Variance: `258874.14863534816`
+Standard deviation: `529.0742347837113` \
+Variance: `279919.5459119697`
 ### Test Data
 #### Report
 ![Alt text](assets/report_distances_test.png "Source Distances 100 Buckets")
 
-Mean: `17.32941176470588` \
+Mean: `16.703557312252965` \
 Median: `12.0` \
 Max: `86` \
 Min: `0` \
-Standard deviation: `16.268377772238196` \
-Variance: `264.6601153402538`
+Standard deviation: `15.877839828585289` \
+Variance: `252.10579762220934`
 
 #### Source
 ![Alt text](assets/source_distances_test.png "Source Distances 100 Buckets")
 
-Mean: `154.33333333333334` \
-Median: `40.0` \
+Mean: `160.36363636363637` \
+Median: `44.0` \
 Max: `2254` \
 Min: `0` \
-Standard deviation: `297.6219912459471` \
-Variance: `88578.84967320261`
+Standard deviation: `308.61785818889507` \
+Variance: `95244.98239310096`

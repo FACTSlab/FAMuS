@@ -56,45 +56,8 @@ def main():
         with open(os.path.join(args.data_dir, args.dataset + ".jsonl"), "r") as f:
             data = [json.loads(line) for line in f]
 
-    train_data = []
-    dev_data = []
-    test_data = []
-    with open(os.path.join(args.data_dir, "train.jsonl"), "r") as f:
-        train_data = [json.loads(line) for line in f]
-    with open(os.path.join(args.data_dir, "dev.jsonl"), "r") as f:
-        dev_data = [json.loads(line) for line in f]
-    with open(os.path.join(args.data_dir, "test.jsonl"), "r") as f:
-        test_data = [json.loads(line) for line in f]
-
-    # count number of roles
-    # filled_roles, total_roles = count_roles(data)
-    # if args.verbose: print("Total number of filled roles: {} out of {}".format(filled_roles, total_roles))
-
-    # count number of roles in train, dev, test
-    train_filled_roles_report, train_filled_roles_source, train_total_roles = count_roles(train_data)
-    dev_filled_roles, dev_filled_roles_source, dev_total_roles = count_roles(dev_data)
-    test_filled_roles, test_filled_roles_source, test_total_roles = count_roles(test_data)
-
-    # what is in test that isn't in the other sets
-    test_not_in_train = test_total_roles - train_total_roles
-    test_not_in_dev = test_total_roles - dev_total_roles
-    test_not_in_train_or_dev = test_not_in_train - dev_total_roles
-
-    train_not_in_test = train_total_roles - test_total_roles
-    train_not_in_dev = train_total_roles - dev_total_roles
-
-    dev_not_in_test = dev_total_roles - test_total_roles
-    dev_not_in_train = dev_total_roles - train_total_roles
-
-    # print set differenes 
-    if args.verbose:
-        print("Test not in train: {}".format(test_not_in_train))
-        print("Test not in dev: {}".format(test_not_in_dev))
-        print("Test not in train or dev: {}".format(test_not_in_train_or_dev))
-        print("Train not in test: {}".format(train_not_in_test))
-        print("Train not in dev: {}".format(train_not_in_dev))
-        print("Dev not in test: {}".format(dev_not_in_test))
-        print("Dev not in train: {}".format(dev_not_in_train))
+    report_seen, source_seen, possible_roles = count_roles(data)
+    print(len(report_seen), len(source_seen), len(possible_roles))    
 
 
 

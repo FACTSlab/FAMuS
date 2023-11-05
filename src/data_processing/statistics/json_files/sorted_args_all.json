@@ -123,49 +123,49 @@
         "Cause_change",
         {
             "combined-total": 59,
-            "role-total": 27,
-            "source-total": 32,
+            "role-total": 29,
+            "source-total": 30,
             "counts": {
                 "report": {
                     "Agent": 0.2,
-                    "Initial_category": 0.8,
                     "Final_value": 0.4,
                     "Initial_value": 0.4,
+                    "Attribute": 0.6,
                     "Place": 0.6,
-                    "Entity": 1.0,
-                    "Final_category": 1.0,
                     "Time": 0.6,
-                    "Cause": 0.0,
-                    "Attribute": 0.4
+                    "Cause": 0.4,
+                    "Entity": 1.0,
+                    "Initial_category": 0.6,
+                    "Final_category": 1.0
                 },
                 "source": {
-                    "Agent": 0.6,
-                    "Initial_category": 0.6,
-                    "Final_value": 0.4,
                     "Initial_value": 0.4,
+                    "Attribute": 0.6,
+                    "Cause": 0.4,
                     "Entity": 1.0,
-                    "Final_category": 1.0,
+                    "Agent": 0.4,
                     "Place": 0.8,
-                    "Time": 1.0,
-                    "Cause": 0.2,
-                    "Attribute": 0.4
+                    "Final_category": 1.0,
+                    "Final_value": 0.4,
+                    "Initial_category": 0.4,
+                    "Time": 0.6
                 },
                 "combined": {
-                    "Agent": 0.8,
-                    "Initial_category": 1.4,
+                    "Agent": 0.6,
                     "Final_value": 0.8,
                     "Initial_value": 0.8,
+                    "Attribute": 1.2,
                     "Place": 1.4,
+                    "Time": 1.2,
+                    "Cause": 0.8,
                     "Entity": 2.0,
-                    "Final_category": 2.0,
-                    "Time": 1.6,
-                    "Cause": 0.2,
-                    "Attribute": 0.8
+                    "Initial_category": 1.0,
+                    "Final_category": 2.0
                 }
             },
             "combined-average": 11.8,
-            "role-average": 5.4,
-            "source-average": 6.4
+            "role-average": 5.8,
+            "source-average": 6.0
         }
     ],
     [
@@ -307,6 +307,43 @@
         }
     ],
     [
+        "Causation",
+        {
+            "combined-total": 53,
+            "role-total": 26,
+            "source-total": 27,
+            "counts": {
+                "report": {
+                    "Time": 0.6,
+                    "Actor": 1.0,
+                    "Place": 0.6,
+                    "Cause": 1.0,
+                    "Effect": 1.0,
+                    "Affected": 1.0
+                },
+                "source": {
+                    "Actor": 1.0,
+                    "Time": 0.8,
+                    "Place": 0.8,
+                    "Cause": 0.8,
+                    "Effect": 0.8,
+                    "Affected": 1.2
+                },
+                "combined": {
+                    "Time": 1.4,
+                    "Actor": 2.0,
+                    "Place": 1.4,
+                    "Cause": 1.8,
+                    "Effect": 1.8,
+                    "Affected": 2.2
+                }
+            },
+            "combined-average": 10.6,
+            "role-average": 5.2,
+            "source-average": 5.4
+        }
+    ],
+    [
         "Cause_to_amalgamate",
         {
             "combined-total": 53,
@@ -384,6 +421,52 @@
             "combined-average": 10.6,
             "role-average": 4.8,
             "source-average": 5.8
+        }
+    ],
+    [
+        "Control",
+        {
+            "combined-total": 53,
+            "role-total": 23,
+            "source-total": 30,
+            "counts": {
+                "report": {
+                    "Controlling_variable": 0.2,
+                    "Dependent_situation": 0.4,
+                    "Dependent_variable": 0.2,
+                    "Controlling_situation": 0.0,
+                    "Degree": 0.4,
+                    "Place": 0.8,
+                    "Dependent_entity": 0.8,
+                    "Time": 0.4,
+                    "Controlling_entity": 1.4
+                },
+                "source": {
+                    "Controlling_variable": 0.2,
+                    "Dependent_situation": 0.6,
+                    "Dependent_variable": 0.2,
+                    "Controlling_situation": 0.4,
+                    "Degree": 0.4,
+                    "Place": 1.0,
+                    "Dependent_entity": 1.0,
+                    "Controlling_entity": 1.4,
+                    "Time": 0.8
+                },
+                "combined": {
+                    "Controlling_variable": 0.4,
+                    "Dependent_situation": 1.0,
+                    "Dependent_variable": 0.4,
+                    "Controlling_situation": 0.4,
+                    "Degree": 0.8,
+                    "Place": 1.8,
+                    "Dependent_entity": 1.8,
+                    "Time": 1.2,
+                    "Controlling_entity": 2.8
+                }
+            },
+            "combined-average": 10.6,
+            "role-average": 4.6,
+            "source-average": 6.0
         }
     ],
     [
@@ -679,49 +762,55 @@
         }
     ],
     [
-        "Control",
+        "Undergo_change",
         {
-            "combined-total": 49,
-            "role-total": 21,
-            "source-total": 28,
+            "combined-total": 50,
+            "role-total": 25,
+            "source-total": 25,
             "counts": {
                 "report": {
+                    "Initial_quality": 0.2,
+                    "Final_quality": 0.0,
                     "Place": 0.8,
-                    "Dependent_entity": 0.8,
-                    "Time": 0.4,
-                    "Controlling_entity": 1.4,
-                    "Controlling_variable": 0.0,
-                    "Dependent_variable": 0.0,
-                    "Controlling_situation": 0.0,
-                    "Dependent_situation": 0.4,
-                    "Degree": 0.4
+                    "Entity": 1.0,
+                    "Attribute": 0.4,
+                    "Value_range": 0.4,
+                    "Initial_situation": 0.2,
+                    "Initial_category": 0.6,
+                    "Final_situation": 0.2,
+                    "Final_category": 0.8,
+                    "Time": 0.4
                 },
                 "source": {
-                    "Place": 1.0,
-                    "Dependent_entity": 1.0,
-                    "Controlling_entity": 1.4,
-                    "Time": 0.8,
-                    "Controlling_variable": 0.0,
-                    "Dependent_variable": 0.0,
-                    "Controlling_situation": 0.4,
-                    "Degree": 0.4,
-                    "Dependent_situation": 0.6
+                    "Initial_quality": 0.0,
+                    "Final_quality": 0.2,
+                    "Value_range": 0.2,
+                    "Initial_situation": 0.0,
+                    "Place": 0.8,
+                    "Time": 0.6,
+                    "Entity": 1.0,
+                    "Final_situation": 0.2,
+                    "Attribute": 0.4,
+                    "Final_category": 0.8,
+                    "Initial_category": 0.8
                 },
                 "combined": {
-                    "Place": 1.8,
-                    "Dependent_entity": 1.8,
-                    "Time": 1.2,
-                    "Controlling_entity": 2.8,
-                    "Controlling_variable": 0.0,
-                    "Dependent_variable": 0.0,
-                    "Controlling_situation": 0.4,
-                    "Dependent_situation": 1.0,
-                    "Degree": 0.8
+                    "Initial_quality": 0.2,
+                    "Final_quality": 0.2,
+                    "Place": 1.6,
+                    "Entity": 2.0,
+                    "Attribute": 0.8,
+                    "Value_range": 0.6,
+                    "Initial_situation": 0.2,
+                    "Initial_category": 1.4,
+                    "Final_situation": 0.4,
+                    "Final_category": 1.6,
+                    "Time": 1.0
                 }
             },
-            "combined-average": 9.8,
-            "role-average": 4.2,
-            "source-average": 5.6
+            "combined-average": 10.0,
+            "role-average": 5.0,
+            "source-average": 5.0
         }
     ],
     [
@@ -808,55 +897,34 @@
         }
     ],
     [
-        "Undergo_change",
+        "Activity_stop",
         {
-            "combined-total": 48,
-            "role-total": 24,
-            "source-total": 24,
+            "combined-total": 47,
+            "role-total": 20,
+            "source-total": 27,
             "counts": {
                 "report": {
-                    "Initial_category": 0.6,
-                    "Final_quality": 0.0,
-                    "Value_range": 0.4,
-                    "Final_situation": 0.2,
-                    "Initial_situation": 0.2,
-                    "Entity": 1.0,
-                    "Place": 0.6,
-                    "Initial_quality": 0.2,
-                    "Time": 0.4,
-                    "Final_category": 0.8,
-                    "Attribute": 0.4
+                    "Time": 0.8,
+                    "Agent": 0.8,
+                    "Activity": 1.6,
+                    "Place": 0.8
                 },
                 "source": {
-                    "Initial_quality": 0.0,
-                    "Value_range": 0.2,
-                    "Final_situation": 0.2,
-                    "Initial_situation": 0.0,
-                    "Place": 0.8,
-                    "Time": 0.4,
-                    "Entity": 1.0,
-                    "Attribute": 0.4,
-                    "Final_category": 0.8,
-                    "Initial_category": 0.8,
-                    "Final_quality": 0.2
+                    "Time": 1.2,
+                    "Agent": 1.0,
+                    "Activity": 2.2,
+                    "Place": 1.0
                 },
                 "combined": {
-                    "Initial_category": 1.4,
-                    "Final_quality": 0.2,
-                    "Value_range": 0.6,
-                    "Final_situation": 0.4,
-                    "Initial_situation": 0.2,
-                    "Entity": 2.0,
-                    "Place": 1.4,
-                    "Initial_quality": 0.2,
-                    "Time": 0.8,
-                    "Final_category": 1.6,
-                    "Attribute": 0.8
+                    "Time": 2.0,
+                    "Agent": 1.8,
+                    "Activity": 3.8,
+                    "Place": 1.8
                 }
             },
-            "combined-average": 9.6,
-            "role-average": 4.8,
-            "source-average": 4.8
+            "combined-average": 9.4,
+            "role-average": 4.0,
+            "source-average": 5.4
         }
     ],
     [
@@ -1477,6 +1545,37 @@
         }
     ],
     [
+        "Intentionally_act",
+        {
+            "combined-total": 44,
+            "role-total": 20,
+            "source-total": 24,
+            "counts": {
+                "report": {
+                    "Agent": 0.6,
+                    "Act": 1.0,
+                    "Place": 1.6,
+                    "Time": 0.8
+                },
+                "source": {
+                    "Act": 1.8,
+                    "Agent": 0.8,
+                    "Place": 1.4,
+                    "Time": 0.8
+                },
+                "combined": {
+                    "Agent": 1.4,
+                    "Act": 2.8,
+                    "Place": 3.0,
+                    "Time": 1.6
+                }
+            },
+            "combined-average": 8.8,
+            "role-average": 4.0,
+            "source-average": 4.8
+        }
+    ],
+    [
         "Thriving",
         {
             "combined-total": 44,
@@ -1505,43 +1604,6 @@
             "combined-average": 8.8,
             "role-average": 3.8,
             "source-average": 5.0
-        }
-    ],
-    [
-        "Causation",
-        {
-            "combined-total": 43,
-            "role-total": 20,
-            "source-total": 23,
-            "counts": {
-                "report": {
-                    "Place": 0.6,
-                    "Time": 0.6,
-                    "Affected": 1.0,
-                    "Actor": 1.0,
-                    "Cause": 0.4,
-                    "Effect": 0.4
-                },
-                "source": {
-                    "Affected": 1.2,
-                    "Actor": 1.4,
-                    "Place": 0.8,
-                    "Time": 0.8,
-                    "Cause": 0.2,
-                    "Effect": 0.2
-                },
-                "combined": {
-                    "Place": 1.4,
-                    "Time": 1.4,
-                    "Affected": 2.2,
-                    "Actor": 2.4,
-                    "Cause": 0.6,
-                    "Effect": 0.6
-                }
-            },
-            "combined-average": 8.6,
-            "role-average": 4.0,
-            "source-average": 4.6
         }
     ],
     [
@@ -2105,40 +2167,6 @@
         }
     ],
     [
-        "Cause_change_of_strength",
-        {
-            "combined-total": 41,
-            "role-total": 20,
-            "source-total": 21,
-            "counts": {
-                "report": {
-                    "Time": 0.8,
-                    "Agent": 1.0,
-                    "Patient": 1.0,
-                    "Place": 0.8,
-                    "Cause": 0.4
-                },
-                "source": {
-                    "Place": 0.8,
-                    "Time": 0.8,
-                    "Patient": 1.0,
-                    "Agent": 1.2,
-                    "Cause": 0.4
-                },
-                "combined": {
-                    "Time": 1.6,
-                    "Agent": 2.2,
-                    "Patient": 2.0,
-                    "Place": 1.6,
-                    "Cause": 0.8
-                }
-            },
-            "combined-average": 8.2,
-            "role-average": 4.0,
-            "source-average": 4.2
-        }
-    ],
-    [
         "Cause_to_end",
         {
             "combined-total": 41,
@@ -2318,6 +2346,43 @@
         }
     ],
     [
+        "Rewards_and_punishments",
+        {
+            "combined-total": 41,
+            "role-total": 17,
+            "source-total": 24,
+            "counts": {
+                "report": {
+                    "Reason": 0.6,
+                    "Place": 0.8,
+                    "Evaluee": 0.8,
+                    "Agent": 0.4,
+                    "Time": 0.4,
+                    "Response_action": 0.4
+                },
+                "source": {
+                    "Response_action": 0.8,
+                    "Evaluee": 1.0,
+                    "Time": 0.6,
+                    "Reason": 1.0,
+                    "Agent": 0.4,
+                    "Place": 1.0
+                },
+                "combined": {
+                    "Reason": 1.6,
+                    "Place": 1.8,
+                    "Evaluee": 1.8,
+                    "Agent": 0.8,
+                    "Time": 1.0,
+                    "Response_action": 1.2
+                }
+            },
+            "combined-average": 8.2,
+            "role-average": 3.4,
+            "source-average": 4.8
+        }
+    ],
+    [
         "Attack",
         {
             "combined-total": 40,
@@ -2346,6 +2411,40 @@
             "combined-average": 8.0,
             "role-average": 3.2,
             "source-average": 4.8
+        }
+    ],
+    [
+        "Cause_change_of_strength",
+        {
+            "combined-total": 40,
+            "role-total": 20,
+            "source-total": 20,
+            "counts": {
+                "report": {
+                    "Cause": 0.4,
+                    "Time": 0.8,
+                    "Agent": 1.0,
+                    "Patient": 1.0,
+                    "Place": 0.8
+                },
+                "source": {
+                    "Cause": 0.4,
+                    "Place": 0.8,
+                    "Time": 0.8,
+                    "Patient": 1.0,
+                    "Agent": 1.0
+                },
+                "combined": {
+                    "Cause": 0.8,
+                    "Time": 1.6,
+                    "Agent": 2.0,
+                    "Patient": 2.0,
+                    "Place": 1.6
+                }
+            },
+            "combined-average": 8.0,
+            "role-average": 4.0,
+            "source-average": 4.0
         }
     ],
     [
@@ -2411,40 +2510,6 @@
             "combined-average": 8.0,
             "role-average": 3.4,
             "source-average": 4.6
-        }
-    ],
-    [
-        "Creating",
-        {
-            "combined-total": 40,
-            "role-total": 20,
-            "source-total": 20,
-            "counts": {
-                "report": {
-                    "Created_entity": 1.2,
-                    "Time": 0.8,
-                    "Creator": 0.8,
-                    "Place": 0.8,
-                    "Cause": 0.4
-                },
-                "source": {
-                    "Created_entity": 1.0,
-                    "Time": 1.0,
-                    "Creator": 0.6,
-                    "Place": 0.8,
-                    "Cause": 0.6
-                },
-                "combined": {
-                    "Created_entity": 2.2,
-                    "Time": 1.8,
-                    "Creator": 1.4,
-                    "Place": 1.6,
-                    "Cause": 1.0
-                }
-            },
-            "combined-average": 8.0,
-            "role-average": 4.0,
-            "source-average": 4.0
         }
     ],
     [
@@ -3491,6 +3556,43 @@
         }
     ],
     [
+        "Response",
+        {
+            "combined-total": 37,
+            "role-total": 18,
+            "source-total": 19,
+            "counts": {
+                "report": {
+                    "Responding_entity": 0.0,
+                    "Time": 0.8,
+                    "Trigger": 0.8,
+                    "Response": 0.6,
+                    "Place": 0.4,
+                    "Agent": 1.0
+                },
+                "source": {
+                    "Responding_entity": 0.2,
+                    "Time": 0.4,
+                    "Trigger": 1.0,
+                    "Place": 0.6,
+                    "Response": 0.8,
+                    "Agent": 0.8
+                },
+                "combined": {
+                    "Responding_entity": 0.2,
+                    "Time": 1.2,
+                    "Trigger": 1.8,
+                    "Response": 1.4,
+                    "Place": 1.0,
+                    "Agent": 1.8
+                }
+            },
+            "combined-average": 7.4,
+            "role-average": 3.6,
+            "source-average": 3.8
+        }
+    ],
+    [
         "Transfer",
         {
             "combined-total": 37,
@@ -3939,6 +4041,37 @@
             "combined-average": 7.2,
             "role-average": 3.6,
             "source-average": 3.6
+        }
+    ],
+    [
+        "Undergoing",
+        {
+            "combined-total": 36,
+            "role-total": 17,
+            "source-total": 19,
+            "counts": {
+                "report": {
+                    "Place": 0.6,
+                    "Event": 1.0,
+                    "Time": 0.6,
+                    "Entity": 1.2
+                },
+                "source": {
+                    "Place": 0.6,
+                    "Event": 1.2,
+                    "Entity": 1.2,
+                    "Time": 0.8
+                },
+                "combined": {
+                    "Place": 1.2,
+                    "Event": 2.2,
+                    "Time": 1.4,
+                    "Entity": 2.4
+                }
+            },
+            "combined-average": 7.2,
+            "role-average": 3.4,
+            "source-average": 3.8
         }
     ],
     [
@@ -4395,43 +4528,6 @@
         }
     ],
     [
-        "Rewards_and_punishments",
-        {
-            "combined-total": 35,
-            "role-total": 15,
-            "source-total": 20,
-            "counts": {
-                "report": {
-                    "Reason": 0.6,
-                    "Place": 0.8,
-                    "Evaluee": 0.8,
-                    "Agent": 0.4,
-                    "Time": 0.4,
-                    "Response_action": 0.0
-                },
-                "source": {
-                    "Agent": 0.4,
-                    "Time": 0.6,
-                    "Reason": 0.8,
-                    "Evaluee": 1.0,
-                    "Place": 1.0,
-                    "Response_action": 0.2
-                },
-                "combined": {
-                    "Reason": 1.4,
-                    "Place": 1.8,
-                    "Evaluee": 1.8,
-                    "Agent": 0.8,
-                    "Time": 1.0,
-                    "Response_action": 0.2
-                }
-            },
-            "combined-average": 7.0,
-            "role-average": 3.0,
-            "source-average": 4.0
-        }
-    ],
-    [
         "Shoot_projectiles",
         {
             "combined-total": 35,
@@ -4525,6 +4621,40 @@
             "combined-average": 6.8,
             "role-average": 2.8,
             "source-average": 4.0
+        }
+    ],
+    [
+        "Becoming",
+        {
+            "combined-total": 34,
+            "role-total": 17,
+            "source-total": 17,
+            "counts": {
+                "report": {
+                    "Entity": 0.8,
+                    "Final_quality": 0.2,
+                    "Time": 0.6,
+                    "Place": 0.8,
+                    "Final_category": 1.0
+                },
+                "source": {
+                    "Entity": 0.8,
+                    "Final_quality": 0.2,
+                    "Final_category": 0.8,
+                    "Place": 1.2,
+                    "Time": 0.4
+                },
+                "combined": {
+                    "Entity": 1.6,
+                    "Final_quality": 0.4,
+                    "Time": 1.0,
+                    "Place": 2.0,
+                    "Final_category": 1.8
+                }
+            },
+            "combined-average": 6.8,
+            "role-average": 3.4,
+            "source-average": 3.4
         }
     ],
     [
@@ -5471,43 +5601,6 @@
         }
     ],
     [
-        "Response",
-        {
-            "combined-total": 32,
-            "role-total": 15,
-            "source-total": 17,
-            "counts": {
-                "report": {
-                    "Responding_entity": 0.0,
-                    "Time": 0.8,
-                    "Trigger": 0.6,
-                    "Place": 0.4,
-                    "Agent": 1.0,
-                    "Response": 0.2
-                },
-                "source": {
-                    "Responding_entity": 0.2,
-                    "Time": 0.4,
-                    "Trigger": 1.0,
-                    "Place": 0.6,
-                    "Agent": 0.8,
-                    "Response": 0.4
-                },
-                "combined": {
-                    "Responding_entity": 0.2,
-                    "Time": 1.2,
-                    "Trigger": 1.6,
-                    "Place": 1.0,
-                    "Agent": 1.8,
-                    "Response": 0.6
-                }
-            },
-            "combined-average": 6.4,
-            "role-average": 3.0,
-            "source-average": 3.4
-        }
-    ],
-    [
         "Sign_agreement",
         {
             "combined-total": 32,
@@ -5738,6 +5831,40 @@
                     "Patient": 2.2,
                     "Agent": 1.0,
                     "Place": 1.8
+                }
+            },
+            "combined-average": 6.2,
+            "role-average": 2.6,
+            "source-average": 3.6
+        }
+    ],
+    [
+        "Rape",
+        {
+            "combined-total": 31,
+            "role-total": 13,
+            "source-total": 18,
+            "counts": {
+                "report": {
+                    "Perpetrator": 0.8,
+                    "Event": 0.0,
+                    "Time": 0.4,
+                    "Victim": 0.8,
+                    "Place": 0.6
+                },
+                "source": {
+                    "Time": 0.6,
+                    "Victim": 0.8,
+                    "Place": 0.6,
+                    "Event": 0.6,
+                    "Perpetrator": 1.0
+                },
+                "combined": {
+                    "Perpetrator": 1.8,
+                    "Event": 0.6,
+                    "Time": 1.0,
+                    "Victim": 1.6,
+                    "Place": 1.2
                 }
             },
             "combined-average": 6.2,
@@ -6415,37 +6542,6 @@
         }
     ],
     [
-        "Perception_active",
-        {
-            "combined-total": 29,
-            "role-total": 14,
-            "source-total": 15,
-            "counts": {
-                "report": {
-                    "Time": 0.6,
-                    "Place": 0.4,
-                    "Perceiver_agentive": 0.8,
-                    "Phenomenon": 1.0
-                },
-                "source": {
-                    "Time": 0.2,
-                    "Perceiver_agentive": 0.8,
-                    "Place": 1.0,
-                    "Phenomenon": 1.0
-                },
-                "combined": {
-                    "Time": 0.8,
-                    "Place": 1.4,
-                    "Perceiver_agentive": 1.6,
-                    "Phenomenon": 2.0
-                }
-            },
-            "combined-average": 5.8,
-            "role-average": 2.8,
-            "source-average": 3.0
-        }
-    ],
-    [
         "Quitting_a_place",
         {
             "combined-total": 29,
@@ -6536,37 +6632,6 @@
             "combined-average": 5.8,
             "role-average": 2.0,
             "source-average": 3.8
-        }
-    ],
-    [
-        "Undergoing",
-        {
-            "combined-total": 29,
-            "role-total": 14,
-            "source-total": 15,
-            "counts": {
-                "report": {
-                    "Time": 0.6,
-                    "Place": 0.6,
-                    "Entity": 1.2,
-                    "Event": 0.4
-                },
-                "source": {
-                    "Place": 0.6,
-                    "Entity": 1.2,
-                    "Event": 0.4,
-                    "Time": 0.8
-                },
-                "combined": {
-                    "Time": 1.4,
-                    "Place": 1.2,
-                    "Entity": 2.4,
-                    "Event": 0.8
-                }
-            },
-            "combined-average": 5.8,
-            "role-average": 2.8,
-            "source-average": 3.0
         }
     ],
     [
@@ -6867,40 +6932,6 @@
         }
     ],
     [
-        "Becoming",
-        {
-            "combined-total": 27,
-            "role-total": 14,
-            "source-total": 13,
-            "counts": {
-                "report": {
-                    "Final_quality": 0.2,
-                    "Time": 0.6,
-                    "Place": 0.6,
-                    "Entity": 1.0,
-                    "Final_category": 0.4
-                },
-                "source": {
-                    "Final_quality": 0.2,
-                    "Time": 0.4,
-                    "Place": 0.8,
-                    "Entity": 1.0,
-                    "Final_category": 0.2
-                },
-                "combined": {
-                    "Final_quality": 0.4,
-                    "Time": 1.0,
-                    "Place": 1.4,
-                    "Entity": 2.0,
-                    "Final_category": 0.6
-                }
-            },
-            "combined-average": 5.4,
-            "role-average": 2.8,
-            "source-average": 2.6
-        }
-    ],
-    [
         "Burying",
         {
             "combined-total": 27,
@@ -7102,40 +7133,6 @@
         }
     ],
     [
-        "Rape",
-        {
-            "combined-total": 27,
-            "role-total": 13,
-            "source-total": 14,
-            "counts": {
-                "report": {
-                    "Time": 0.4,
-                    "Perpetrator": 0.8,
-                    "Place": 0.6,
-                    "Victim": 0.8,
-                    "Event": 0.0
-                },
-                "source": {
-                    "Victim": 0.8,
-                    "Time": 0.4,
-                    "Perpetrator": 1.0,
-                    "Place": 0.6,
-                    "Event": 0.0
-                },
-                "combined": {
-                    "Time": 0.8,
-                    "Perpetrator": 1.8,
-                    "Place": 1.2,
-                    "Victim": 1.6,
-                    "Event": 0.0
-                }
-            },
-            "combined-average": 5.4,
-            "role-average": 2.6,
-            "source-average": 2.8
-        }
-    ],
-    [
         "Renting",
         {
             "combined-total": 27,
@@ -7198,6 +7195,37 @@
             "combined-average": 5.4,
             "role-average": 2.8,
             "source-average": 2.6
+        }
+    ],
+    [
+        "Text_creation",
+        {
+            "combined-total": 27,
+            "role-total": 13,
+            "source-total": 14,
+            "counts": {
+                "report": {
+                    "Author": 0.8,
+                    "Time": 0.2,
+                    "Place": 0.6,
+                    "Text": 1.0
+                },
+                "source": {
+                    "Time": 0.4,
+                    "Place": 0.4,
+                    "Author": 1.0,
+                    "Text": 1.0
+                },
+                "combined": {
+                    "Author": 1.8,
+                    "Time": 0.6,
+                    "Place": 1.0,
+                    "Text": 2.0
+                }
+            },
+            "combined-average": 5.4,
+            "role-average": 2.6,
+            "source-average": 2.8
         }
     ],
     [
@@ -7292,37 +7320,6 @@
                     "Place": 0.4,
                     "New_idea": 2.0,
                     "Cognizer": 2.2
-                }
-            },
-            "combined-average": 5.2,
-            "role-average": 2.4,
-            "source-average": 2.8
-        }
-    ],
-    [
-        "Activity_stop",
-        {
-            "combined-total": 26,
-            "role-total": 12,
-            "source-total": 14,
-            "counts": {
-                "report": {
-                    "Time": 0.8,
-                    "Agent": 0.8,
-                    "Place": 0.6,
-                    "Activity": 0.2
-                },
-                "source": {
-                    "Agent": 1.0,
-                    "Place": 0.8,
-                    "Time": 0.8,
-                    "Activity": 0.2
-                },
-                "combined": {
-                    "Time": 1.6,
-                    "Agent": 1.8,
-                    "Place": 1.4,
-                    "Activity": 0.4
                 }
             },
             "combined-average": 5.2,
@@ -7449,37 +7446,6 @@
             "combined-average": 5.2,
             "role-average": 2.4,
             "source-average": 2.8
-        }
-    ],
-    [
-        "Intentionally_act",
-        {
-            "combined-total": 26,
-            "role-total": 13,
-            "source-total": 13,
-            "counts": {
-                "report": {
-                    "Agent": 0.6,
-                    "Place": 0.6,
-                    "Act": 0.6,
-                    "Time": 0.8
-                },
-                "source": {
-                    "Act": 0.6,
-                    "Place": 0.6,
-                    "Agent": 0.8,
-                    "Time": 0.6
-                },
-                "combined": {
-                    "Agent": 1.4,
-                    "Place": 1.2,
-                    "Act": 1.2,
-                    "Time": 1.4
-                }
-            },
-            "combined-average": 5.2,
-            "role-average": 2.6,
-            "source-average": 2.6
         }
     ],
     [
@@ -7943,37 +7909,6 @@
                     "Place": 1.0,
                     "Event": 2.0,
                     "Time": 1.8
-                }
-            },
-            "combined-average": 4.8,
-            "role-average": 2.4,
-            "source-average": 2.4
-        }
-    ],
-    [
-        "Text_creation",
-        {
-            "combined-total": 24,
-            "role-total": 12,
-            "source-total": 12,
-            "counts": {
-                "report": {
-                    "Time": 0.2,
-                    "Place": 0.4,
-                    "Author": 0.8,
-                    "Text": 1.0
-                },
-                "source": {
-                    "Time": 0.2,
-                    "Place": 0.2,
-                    "Author": 1.0,
-                    "Text": 1.0
-                },
-                "combined": {
-                    "Time": 0.4,
-                    "Place": 0.6,
-                    "Author": 1.8,
-                    "Text": 2.0
                 }
             },
             "combined-average": 4.8,
@@ -8735,26 +8670,26 @@
     [
         "State_of_entity",
         {
-            "combined-total": 14,
-            "role-total": 7,
-            "source-total": 7,
+            "combined-total": 16,
+            "role-total": 8,
+            "source-total": 8,
             "counts": {
                 "report": {
-                    "Entity": 1.0,
-                    "State": 0.4
+                    "State": 0.6,
+                    "Entity": 1.0
                 },
                 "source": {
-                    "Entity": 1.0,
-                    "State": 0.4
+                    "State": 0.6,
+                    "Entity": 1.0
                 },
                 "combined": {
-                    "Entity": 2.0,
-                    "State": 0.8
+                    "State": 1.2,
+                    "Entity": 2.0
                 }
             },
-            "combined-average": 2.8,
-            "role-average": 1.4,
-            "source-average": 1.4
+            "combined-average": 3.2,
+            "role-average": 1.6,
+            "source-average": 1.6
         }
     ],
     [

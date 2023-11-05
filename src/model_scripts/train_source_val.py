@@ -142,7 +142,7 @@ def main():
     
     training_args = TrainingArguments(
         output_dir=model_output_dir,          # output directory
-        num_train_epochs=10,              # total number of training epochs
+        num_train_epochs=15,              # total number of training epochs
         per_device_train_batch_size=2,  # batch size per device during training
         per_device_eval_batch_size=2,   # batch size for evaluation
         learning_rate=1.25e-06,
@@ -191,6 +191,7 @@ def main():
     # Update training_args with the best hyperparameters
     training_args.learning_rate = best_hyperparameters["learning_rate"]
     training_args.weight_decay = best_hyperparameters["weight_decay"]
+    training_args.num_train_epochs = 30
 
     # Reinitialize the Trainer with the new training_args
     trainer = Trainer(

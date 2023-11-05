@@ -65,7 +65,7 @@ def main():
     ########################################################
     ## Save the coref clusters
     ########################################################
-    with open(os.path.join(args.output_dir, "instance_id_to_source_coref_clusters.json"), "w") as f:
+    with open(os.path.join(args.output_dir, "instance_id_to_coref_clusters.json"), "w") as f:
         json.dump(unique_id_to_source_coref_clusters, f)
 
 

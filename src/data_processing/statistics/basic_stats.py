@@ -4,8 +4,28 @@ import json
 import argparse
 import numpy as np
 from tqdm import tqdm
+import stanza
 
+nlp = stanza.Pipeline(lang='en', processors='tokenize')
 
+def tok_per_sentence(data: list):
+    """
+    Counts the average number of tokens per sentence in each document
+
+    Returns 
+        average number of tokens per sentence
+    """
+    tok_per_sentence = []
+    for doc in tqdm(data):
+        report_sents = nlp(doc["report_dict"]["doctext"])
+        source_sents = nlp(doc["source_dict"]["doctext"])
+        sum = 0 
+        for i, sentence in enumerate(report_sents.sentences):
+            sum += len(sentence.tokens)
+        for i, sentence in enumerate(source_sents.sentences):
+            sum += len(sentence.tokens)
+        tok_per_sentence.append(sum / (len(report_sents.sentences) + len(source_sents.sentences)))
+    return np.mean(tok_per_sentence)
 
 def token_counts(data: list):
     """
@@ -269,8 +289,10 @@ def main():
 
     # get average number of tokens in report/source
     report_data, source_data = token_counts(data)
+    tok_count = tok_per_sentence(data)
 
     if args.verbose: 
+        print("Average number of tokens per sentence: {}".format(tok_count))
         print("Average number of tokens in report: {}".format(report_data[0]))
         print("Min Report Tokens: {}".format(report_data[1]))
         print("Max Report Tokens: {}".format(report_data[2]))

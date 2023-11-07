@@ -5,16 +5,16 @@ import numpy as np
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
-def distance(role1: list, role2: list):
+def distance(span1: list, span2: list):
     """
     Computes the distance (number of tokens) between two roles. 
+    Distance is the middle of the span to the middle of the span
 
     Input: 
-        role1: list [start, end]
-        role2: list [start, end]
+        span1: list [start, end]
+        span2: list [start, end]
     """
-    # distance is the end of the first role minus the start of the second role 
-    return abs(role1[1] - role2[0])
+    return abs(((span1[0] + span1[1]) / 2) - ((span2[0] + span2[1]) / 2))
 
 def find_first_last_role(roles: list):
     """
@@ -78,7 +78,7 @@ def check_repeated_role_filler(data: list):
 
     return report_count, source_count
             
-def max_distances(data: list):
+def max_distances(data: list, verbose=False):
     """
     Computes the distance between the first role and last role in report/source
     """
@@ -104,9 +104,10 @@ def max_distances(data: list):
                     source_roles.append(role[3:5])
 
         if len(report_roles) == 0 or len(source_roles) == 0:
-            if len(report_roles) == 0: print('no report roles')
-            if len(source_roles) == 0: print('no source roles')
-            print(doc['instance_id'])
+            if verbose: 
+                if len(report_roles) == 0: print('no report roles')
+                if len(source_roles) == 0: print('no source roles')
+                print(doc['instance_id'])
         else:
             # compute distances between first and last role in report
             if len(report_roles) == 1:
@@ -123,6 +124,44 @@ def max_distances(data: list):
                 source_distances.append(distance(first_source_role, last_source_role))
         
     return report_distances, source_distances
+
+def trigger_distance(data: list, verbose=False):
+    """
+    Computes the distance between the arguments and the trigger
+    (only for the report document)
+
+    Returns: 
+        distances (list): list of distances between the arguments and the trigger
+        avg_distance (float): average distance between the arguments and the trigger
+    """
+    report_distances = []
+    for doc in tqdm(data):
+        report_info = doc["report_dict"]["role_annotations"]
+        trigger_span = doc["report_dict"]["frame-trigger-span"][3:5]
+        report_roles = []
+        role_distances = []
+        for frame in report_info:
+            if frame == 'role-spans-indices-in-all-spans':
+                continue
+            if report_info[frame] != []:
+                for role in report_info[frame]:
+                    report_roles.append(role[3:5])
+
+        if len(report_roles) == 0:
+            if verbose: 
+                print('no report roles')
+                print(doc['instance_id'])
+        else:
+            # compute distances between first and last role in report
+            for role in report_roles:
+                role_distances.append(distance(role, trigger_span))
+            report_distances.append(np.mean(role_distances))
+
+    if len(report_distances) != 0:
+        avg_distance = np.mean(report_distances)
+        return report_distances, avg_distance
+    else:
+        return None, None
 
 def main():
     parser = argparse.ArgumentParser()
@@ -145,28 +184,40 @@ def main():
             data = [json.loads(line) for line in f]
 
     # compute statistics
-    print(len(data))
+    if args.verbose: print(len(data))
     report_distances, source_distances = max_distances(data)
 
     report_count, source_count = check_repeated_role_filler(data)
-    print(report_count, source_count)
+    if args.verbose: print(report_count, source_count)
+
+    trigger_distances, avg_trig_distance = trigger_distance(data)
+    if args.verbose: print(avg_trig_distance)
 
     # plt histogram
     report_fig_name = 'report_distances_' + args.dataset + '.png'
     source_fig_name = 'source_distances_' + args.dataset + '.png'
     plt.hist(report_distances, bins=100)
-    plt.title("Distance between first and last role in report")
+    plt.title("Distance Between First and Last Role in Report")
     plt.xlabel("Distance")
     plt.ylabel("Frequency")
     plt.savefig(os.path.join(args.output_dir, report_fig_name))
     plt.clf()
 
     plt.hist(source_distances, bins=100)
-    plt.title("Distance between first and last role in source")
+    plt.title("Distance Between First and Last Role in Source")
     plt.xlabel("Distance")
     plt.ylabel("Frequency")
     plt.savefig(os.path.join(args.output_dir, source_fig_name))
     plt.clf()
+
+    trigger_distance_fig_name = 'trigger_distances_' + args.dataset + '.png'
+    plt.hist(trigger_distances, bins=100)
+    plt.title("Average Distances Between Arguments and Trigger in Report")
+    plt.xlabel("Distance")
+    plt.ylabel("Frequency")
+    plt.savefig(os.path.join(args.output_dir, trigger_distance_fig_name))
+    plt.clf()
+
 
     # print statistics
     if args.verbose:
@@ -184,6 +235,27 @@ def main():
         print("Min:", np.min(source_distances))
         print("Standard deviation:", np.std(source_distances))
         print("Variance:", np.var(source_distances))
+
+    # print stats in MD formatting 
+    # Mean : `number` \ 
+    if args.verbose:
+        print("Report distances:")
+        print("Mean: `", np.mean(report_distances), '`\\')
+        print("Median: `", np.median(report_distances), '`\\')
+        print("Max: `", np.max(report_distances), '`\\')
+        print("Min: `", np.min(report_distances), '`\\')
+        print("Standard deviation: `", np.std(report_distances), '`\\')
+        print("Variance: `", np.var(report_distances), '`\\')
+        print("Source distances:")
+        print("Mean: `", np.mean(source_distances), '`\\')
+        print("Median: `", np.median(source_distances), '`\\')
+        print("Max: `", np.max(source_distances), '`\\')
+        print("Min: `", np.min(source_distances), '`\\')
+        print("Standard deviation: `", np.std(source_distances), '`\\')
+        print("Variance: `", np.var(source_distances), '`\\')
+
+
+
 
     
 

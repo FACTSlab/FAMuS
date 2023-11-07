@@ -23,7 +23,10 @@ def convert_iterxInstance2roleByFrameIterxInstance(instance):
         if role == 'incident_type' or role == 'template-spans':
             new_template[role] = role_fillers
         else:
-            new_role_name = f"{frame}.{role}"
+            if role == "Time" or role == "Place":
+                new_role_name = role
+            else:
+                new_role_name = f"{frame}.{role}"
             # change the last field in the role filler
             # to have the new role name
             if role_fillers:

@@ -78,7 +78,9 @@ def compute_metrics(dataset,
     else:
         agreement_fn = agreement_score
 
-    results_based_on_threshold = [result['answer'] for result in results]
+    # we fetch the first answer from the top k answers (this is a temporary
+    # way of getting the answer, we will change this later)
+    results_based_on_threshold = [result[0]['answer'] for result in results]
     tps, fps, fns, tns = 0, 0, 0, 0
     for idx, prediction in tqdm(enumerate(results_based_on_threshold)):
         instance = dataset[idx]
@@ -174,7 +176,8 @@ def main():
                                         doc_stride=256, 
                                         max_answer_len = 64,
                                         max_seq_len = 2048,
-                                        handle_impossible_answer=True)):
+                                        handle_impossible_answer=True,
+                                        top_k=5)):
             results.append(out)
         
         # Save the results
@@ -189,7 +192,7 @@ def main():
     # Compute Metrics and Output to File
     ########################################################
     with open(os.path.join(args.coref_cluster_data_path,
-                           "instance_id_to_source_coref_clusters.json") , "r") as f:
+                           "instance_id_to_coref_clusters.json") , "r") as f:
         unique_id_to_source_coref_clusters = json.load(f)
 
     results_from_file = json.load(open(os.path.join(args.model_checkpoint, 

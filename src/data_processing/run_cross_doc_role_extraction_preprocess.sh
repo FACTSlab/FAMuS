@@ -19,6 +19,11 @@ python "$SCRIPT_DIR/preprocess_iterx_format_to_predicted_spans.py" \
         --input_release_dir "$FAMUS_RELEASE_DIR" \
         --input_iterx_format_dir "$SCRIPT_DIR/../../data/cross_doc_role_extraction/iterx_format"
 
+echo "Running the IterX format preprocessing pipeline (role_prefixed_by_frames)"
+python "$SCRIPT_DIR/preprocess_iterx_format_to_rolebyFrame_iterx_format.py" \
+        --input_dir "$SCRIPT_DIR/../../data/cross_doc_role_extraction/iterx_format" \
+        --output_dir "$SCRIPT_DIR/../../data/cross_doc_role_extraction/iterx_format_with_prefixed_roles"
+
 echo "Running the QA format preprocessing pipeline"
 python "$SCRIPT_DIR/preprocess_release_format_to_qa_format.py" \
         --input_dir "$FAMUS_RELEASE_DIR" \

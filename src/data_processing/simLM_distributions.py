@@ -142,42 +142,42 @@ def main():
 
     # Plot for positive similarity scores
     axs[0, 0].hist(pos_sim_scores, bins=100)
-    axs[0, 0].set_xlabel('Similarity Score between Report and Source',  
+    axs[0, 0].set_xlabel('Similarity Score',  
                             fontsize=16)
     axs[0, 0].set_ylabel('Frequency of Docs',  
                             fontsize=16)
     axs[0, 0].set_xlim(-9, 4)
-    axs[0, 0].set_title('SV (+) Instances (Train + Dev)',  
+    axs[0, 0].set_title('SV (+) Instances',  
                             fontsize=20)
 
     # Plot for negative similarity scores
     axs[0, 1].hist(neg_sim_scores, bins=100)
-    axs[0, 1].set_xlabel('Similarity Score between Report and Source',  
+    axs[0, 1].set_xlabel('Similarity Score',  
                             fontsize=16)
     axs[0, 1].set_ylabel('Frequency of Docs',  
                             fontsize=16)
     axs[0, 1].set_xlim(-9, 4)
-    axs[0, 1].set_title('SV (-) Instances (Train + Dev)',  
+    axs[0, 1].set_title('SV (-) Instances',  
                             fontsize=20)
 
     # Plot for gold negative similarity scores
     axs[1, 0].hist(neg_gold_sim_scores, bins=100)
-    axs[1, 0].set_xlabel('Similarity Score between Report and Source',  
+    axs[1, 0].set_xlabel('Similarity Score',  
                             fontsize=16)
     axs[1, 0].set_ylabel('Frequency of Docs',  
                             fontsize=16)
     axs[1, 0].set_xlim(-9, 4)
-    axs[1, 0].set_title('Gold SV (-): (Train + Dev)',  
+    axs[1, 0].set_title('SV (-) Gold Only',  
                             fontsize=20)
 
     # Plot for generated negative similarity scores
     axs[1, 1].hist(neg_gen_sim_scores, bins=100)
-    axs[1, 1].set_xlabel('Similarity Score between Report and Source',  
+    axs[1, 1].set_xlabel('Similarity Score',  
                             fontsize=16)
     axs[1, 1].set_ylabel('Frequency of Docs',  
                             fontsize=16)
     axs[1, 1].set_xlim(-9, 4)
-    axs[1, 1].set_title('Silver SV (-): (Train + Dev)',  
+    axs[1, 1].set_title('SV (-) Silver Only',  
                             fontsize=20)
 
     # Improve layout

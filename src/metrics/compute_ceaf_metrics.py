@@ -6,6 +6,16 @@ import numpy as np
 from tqdm import tqdm
 import argparse
 import os
+import argparse
+
+def str2bool(v):
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+
 
 def print_compute_ceafe_rme_scores(gold_file, predictions,
                                    ignore_no_template_doc = False ,
@@ -144,13 +154,22 @@ def parse_args():
     parser.add_argument("--output_dir", 
                         type=str, 
                         required=True)
+    # boolean to check whether to use coref or not
+    parser.add_argument("--use_coref",
+                        type=str2bool,
+                        default=False,
+                        required=True)
     args = parser.parse_args()
     return args
 
 def return_cdae_iterx_data_filename(split, 
                                     context, 
-                                    spans):
-    return f"/data/svashishtha/FAMuS/data/cross_doc_role_extraction/iterx_format/{context}_data/{spans}_spans/{split}.jsonl"
+                                    spans,
+                                    use_coref = False):
+    if use_coref:
+        return f"/data/svashishtha/FAMuS/data/cross_doc_role_extraction/iterx_format/{context}_data/{spans}_spans/{split}_gold_with_silver_coref.jsonl"
+    else:
+        return f"/data/svashishtha/FAMuS/data/cross_doc_role_extraction/iterx_format/{context}_data/{spans}_spans/{split}.jsonl"
 
 def return_cdae_qa_predictions(split,
                                context):
@@ -183,8 +202,19 @@ def return_cdae_chatgpt_predictions(split,
     predictions_in_format = chatgpt_response_to_iterx_format(chatgpt_predictions)
     return predictions_in_format
 
+def return_cdae_llama_predictions(split,
+                                  context):
+    with open(f"/data/svashishtha/FAMuS/models/cdae/llama/{split}_{context}_llama_13b_responses.jsonl") as f:
+        llama_predictions = [json.loads(line) for line in f]
+    predictions_in_format = chatgpt_response_to_iterx_format(llama_predictions)
+    return predictions_in_format
+
 def main():
     args = parse_args()
+    # coref or not
+    use_coref = args.use_coref
+    print(f"Using coref: {use_coref}")
+
     os.makedirs(args.output_dir, exist_ok=True)
     split = args.split
     metrics_string = "(CEAF_RME_phi-3) P, R, F1, (CEAF_RME_phi-a) P, R, F1:\n"
@@ -198,13 +228,13 @@ def main():
     metrics_string += "#################### Iter-X ####################\n"
     metrics_string += "Gold Spans (Report) \n"
     metrics_string += print_compute_ceafe_rme_scores(
-                                return_cdae_iterx_data_filename(split, context, spans),
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_iterx_predictions(split, context, spans))
     ## Source
     context = 'source'
     metrics_string += "\nGold Spans (Source) \n"
     metrics_string += print_compute_ceafe_rme_scores(
-                                return_cdae_iterx_data_filename(split, context, spans),
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_iterx_predictions(split, context, spans))
     ##### Predicted Spans
     ## Report
@@ -212,13 +242,13 @@ def main():
     context = 'report'
     metrics_string += "\nPredicted Spans (Report) \n"
     metrics_string += print_compute_ceafe_rme_scores(
-                                return_cdae_iterx_data_filename(split, context, spans),
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_iterx_predictions(split, context, spans))
     ## Source
     context = 'source'
     metrics_string += "\nPredicted Spans (Source) \n"
     metrics_string += print_compute_ceafe_rme_scores(
-                                return_cdae_iterx_data_filename(split, context, spans),
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_iterx_predictions(split, context, spans))
     ##### Mixed Spans
     ## Report
@@ -226,13 +256,13 @@ def main():
     context = 'report'
     metrics_string += "\nMixed Spans (Report) \n"
     metrics_string += print_compute_ceafe_rme_scores(
-                                return_cdae_iterx_data_filename(split, context, spans),
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_iterx_predictions(split, context, spans))
     ## Source
     context = 'source'
     metrics_string += "\nMixed Spans (Source) \n"
     metrics_string += print_compute_ceafe_rme_scores(
-                                return_cdae_iterx_data_filename(split, context, spans),
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_iterx_predictions(split, context, spans))
     ##########################
     ## QA models
@@ -241,12 +271,12 @@ def main():
     metrics_string += "\n#################### QA-models ####################\n"
     metrics_string += "Report \n"
     metrics_string += print_compute_ceafe_rme_scores(
-                                return_cdae_iterx_data_filename(split, context,"mixed"),
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_qa_predictions(split, context))
     context = 'source'
     metrics_string += "\nSource \n"
     metrics_string += print_compute_ceafe_rme_scores(
-                                return_cdae_iterx_data_filename(split, context,"mixed"),
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_qa_predictions(split, context))
     ##########################
     ## ChatGPT models
@@ -255,15 +285,31 @@ def main():
     metrics_string += "\n#################### ChatGPT ####################\n"
     metrics_string += "Report \n"
     metrics_string += print_compute_ceafe_rme_scores(
-                                return_cdae_iterx_data_filename(split, context,"mixed"),    
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),    
                                 return_cdae_chatgpt_predictions(split, context))
     context = 'source'
     metrics_string += "\nSource \n"
     metrics_string += print_compute_ceafe_rme_scores(
-                                return_cdae_iterx_data_filename(split, context,"mixed"),
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_chatgpt_predictions(split, context))
+
     ##########################
-    with open(f"{args.output_dir}/{split}_caefe_results.txt", 'w') as f:
+    ## Llama models
+    ##########################
+    context = 'report'
+    metrics_string += "\n#################### Llama ####################\n"
+    metrics_string += "Report \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),    
+                                return_cdae_llama_predictions(split, context))
+
+    context = 'source'
+    metrics_string += "\nSource \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
+                                return_cdae_llama_predictions(split, context))
+    
+    with open(f"{args.output_dir}/{split}_caefe_results_coref_{use_coref}.txt", 'w') as f:
         f.write(metrics_string)
 
 if __name__ == "__main__":

@@ -39,3 +39,8 @@ python "$SCRIPT_DIR/create_coref_clusters_for_data.py" \
         --data_dir "$FAMUS_RELEASE_DIR" \
         --output_dir "$FAMUS_RELEASE_DIR/coref_clusters" \
         --gpu 2
+
+echo "Running the Silver coref reference files preprocessing pipeline"
+python "$SCRIPT_DIR/preprocess_coref_silver_reference_files.py" \
+        --input_coref_file "$SCRIPT_DIR/../../data/cross_doc_role_extraction/coref_clusters/instance_id_to_coref_clusters.json" \
+        --input_iterx_dir "$SCRIPT_DIR/../../data/cross_doc_role_extraction/iterx_format"

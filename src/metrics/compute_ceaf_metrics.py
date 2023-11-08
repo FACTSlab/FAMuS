@@ -145,6 +145,40 @@ def chatgpt_response_to_iterx_format(chatgpt_predictions):
     return result
 
 
+def convert_gold_template_to_predicted_format(template):
+    """
+    Convert a gold template to the format of the predicted template
+    """
+    result = {}
+    for role, fillers in template.items():
+        if role == 'incident_type':
+            result['incident_type'] = fillers
+        elif role == 'template-spans':
+            continue
+        else:
+            for filler in fillers:
+                if role not in result:
+                    result[role] = []
+                result[role].append([filler[0][0]])
+
+    return result
+
+def gold_instances_to_predicted_format(gold_instances):
+    """
+    Convert a list of gold instances to the format of the predicted instances
+    """
+    result = {}
+    for instance in gold_instances:
+        famus_id = instance['docid']
+        template = instance['templates'][0]
+        converted_prediction = convert_gold_template_to_predicted_format(template)
+        if len(converted_prediction) == 1:
+            result[famus_id] = []
+        else:
+            result[famus_id] = [converted_prediction]
+    return result
+
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--split",
@@ -171,8 +205,35 @@ def return_cdae_iterx_data_filename(split,
     else:
         return f"/data/svashishtha/FAMuS/data/cross_doc_role_extraction/iterx_format/{context}_data/{spans}_spans/{split}.jsonl"
 
+
+def modify_predictions_with_gold_report_annotations(predictions,
+                                                    gold_report_predictions):
+    """
+    Given a list of predictions and gold report predictions,
+    modify the predictions to include the gold report annotations
+    whenever any role is missing from the predictions
+    """
+    for docid, templates in predictions.items():
+        # There is only one template per document
+        filled_gold_report_roles = template_to_list_filled_roles(gold_report_predictions[docid][0])
+        # if there are no filled roles in the gold report, then
+        # use the gold report prediction
+        if len(templates) == 0:
+            templates = gold_report_predictions[docid]
+        # if there are filled roles in the gold report, then
+        # use the gold report prediction only for the missing roles
+        else:
+            predicted_template = templates[0]
+            for role in filled_gold_report_roles:
+                if role not in predicted_template:
+                    predicted_template[role] = gold_report_predictions[docid][0][role]
+
+    return predictions
+
+
 def return_cdae_qa_predictions(split,
-                               context):
+                               context,
+                               gold_report_predictions = None):
     with open(f"../../models/cdae/best_model_{context}_qa/results_{split}.json") as f:
         results = json.load(f)
     with open(f"../../data/cross_doc_role_extraction/qa_format/{context}_data/{split}.json") as f:
@@ -181,32 +242,70 @@ def return_cdae_qa_predictions(split,
     predictions_qa = aggregate_predictions_for_QA([x['id'] for x in gold],
                                                 get_highest_score_results_qa(results))
     
+    # Combine the predictions with the gold report predictions
+    # if it is provided
+    if gold_report_predictions:
+        modify_predictions_with_gold_report_annotations(predictions_qa,
+                                                        gold_report_predictions)
+    
     return predictions_qa
 
+def template_to_list_filled_roles(template):
+    """
+    Given a template, extract a list of all filled roles
+    """
+    filled_roles = []
+    for role, fillers in template.items():
+        if role == 'incident_type' or role == 'template-spans':
+            continue
+        else:
+            if fillers:
+                filled_roles.append(role)
+    return filled_roles
 
 def return_cdae_iterx_predictions(split,
                                   context,
-                                  spans):
+                                  spans,
+                                  gold_report_predictions = None):
     predictions_file = f"/data/svashishtha/FAMuS/models/cdae/famus_model_{context}_data_{spans}_spans/{split}_predictions.jsonl"
     with open(predictions_file) as f:
         predictions_data = [json.loads(line) for line in f]
     predictions = {doc_id: templates for doc_pred_dict in predictions_data 
                         for doc_id, templates in doc_pred_dict.items()}
+    # Combine the predictions with the gold report predictions
+    # if it is provided
+    if gold_report_predictions:
+        modify_predictions_with_gold_report_annotations(predictions,
+                                                        gold_report_predictions)
+
     return predictions
 
 
 def return_cdae_chatgpt_predictions(split,
-                                    context):
+                                    context,
+                                    gold_report_predictions = None):
     with open(f"/data/svashishtha/FAMuS/models/cdae/chatgpt/{split}_{context}_gpt-3.5-turbo-0301_responses.jsonl") as f:
         chatgpt_predictions = [json.loads(line) for line in f]
     predictions_in_format = chatgpt_response_to_iterx_format(chatgpt_predictions)
+    # Combine the predictions with the gold report predictions
+    # if it is provided
+    if gold_report_predictions:
+        modify_predictions_with_gold_report_annotations(predictions_in_format,
+                                                        gold_report_predictions)
+
     return predictions_in_format
 
 def return_cdae_llama_predictions(split,
-                                  context):
+                                  context,
+                                  gold_report_predictions = None):
     with open(f"/data/svashishtha/FAMuS/models/cdae/llama/{split}_{context}_llama_13b_responses.jsonl") as f:
         llama_predictions = [json.loads(line) for line in f]
     predictions_in_format = chatgpt_response_to_iterx_format(llama_predictions)
+    # Combine the predictions with the gold report predictions
+    # if it is provided
+    if gold_report_predictions:
+        modify_predictions_with_gold_report_annotations(predictions_in_format,
+                                                        gold_report_predictions)
     return predictions_in_format
 
 def main():
@@ -218,6 +317,22 @@ def main():
     os.makedirs(args.output_dir, exist_ok=True)
     split = args.split
     metrics_string = "(CEAF_RME_phi-3) P, R, F1, (CEAF_RME_phi-a) P, R, F1:\n"
+
+    ##########################
+    ## Report Baseline
+    ##########################
+    with open(return_cdae_iterx_data_filename(split,
+                                              "report",
+                                              "mixed", 
+                                              use_coref=use_coref),) as f:
+        context_gold = [json.loads(line) for line in f.readlines()]
+    context_gold_predictions = gold_instances_to_predicted_format(context_gold)
+    metrics_string += "#################### Report Baseline ####################\n"
+    metrics_string+= print_compute_ceafe_rme_scores(
+                return_cdae_iterx_data_filename(split,"source","mixed", use_coref=use_coref),
+                                                context_gold_predictions)
+
+
     ##########################
     ## Iter-X models
     ##########################
@@ -225,7 +340,8 @@ def main():
     ## Report
     spans = 'gold'
     context = 'report'
-    metrics_string += "#################### Iter-X ####################\n"
+    metrics_string += "\n#################### Iter-X ####################\n"
+    metrics_string += "\n ##########  Gold Spans ########### \n"
     metrics_string += "Gold Spans (Report) \n"
     metrics_string += print_compute_ceafe_rme_scores(
                                 return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
@@ -236,10 +352,24 @@ def main():
     metrics_string += print_compute_ceafe_rme_scores(
                                 return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_iterx_predictions(split, context, spans))
+    
+    metrics_string += "\n (((Combined with Report Gold))) \n"
+    metrics_string += "Gold Spans (Report) \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
+                                return_cdae_iterx_predictions(split, context, spans, 
+                                                              gold_report_predictions=context_gold_predictions))
+    metrics_string += "\n Gold Spans (Source) \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
+                                return_cdae_iterx_predictions(split, context, spans, 
+                                                              gold_report_predictions=context_gold_predictions))
+
     ##### Predicted Spans
     ## Report
     spans = 'predicted'
     context = 'report'
+    metrics_string += "\n ##########  Predicted Spans ########### \n"
     metrics_string += "\nPredicted Spans (Report) \n"
     metrics_string += print_compute_ceafe_rme_scores(
                                 return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
@@ -250,10 +380,23 @@ def main():
     metrics_string += print_compute_ceafe_rme_scores(
                                 return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_iterx_predictions(split, context, spans))
+    
+    metrics_string += "\n (((Combined with Report Gold))) \n"
+    metrics_string += "Predicted Spans (Report) \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
+                                return_cdae_iterx_predictions(split, context, spans, 
+                                                              gold_report_predictions=context_gold_predictions))
+    metrics_string += "\n Predicted Spans (Source) \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
+                                return_cdae_iterx_predictions(split, context, spans, 
+                                                              gold_report_predictions=context_gold_predictions))
     ##### Mixed Spans
     ## Report
     spans = 'mixed'
     context = 'report'
+    metrics_string += "\n ##########  Mixed Spans ########### \n"
     metrics_string += "\nMixed Spans (Report) \n"
     metrics_string += print_compute_ceafe_rme_scores(
                                 return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
@@ -264,6 +407,20 @@ def main():
     metrics_string += print_compute_ceafe_rme_scores(
                                 return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_iterx_predictions(split, context, spans))
+    
+    metrics_string += "\n (((Combined with Report Gold))) \n"
+    metrics_string += "Mixed Spans (Report) \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
+                                return_cdae_iterx_predictions(split, context, spans, 
+                                                              gold_report_predictions=context_gold_predictions))
+    
+    metrics_string += "\n Mixed Spans (Source) \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
+                                return_cdae_iterx_predictions(split, context, spans, 
+                                                              gold_report_predictions=context_gold_predictions))
+    
     ##########################
     ## QA models
     ##########################
@@ -278,6 +435,19 @@ def main():
     metrics_string += print_compute_ceafe_rme_scores(
                                 return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_qa_predictions(split, context))
+    
+    metrics_string += "\n (((Combined with Report Gold))) \n"
+    metrics_string += "Report \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),    
+                                return_cdae_qa_predictions(split, context, 
+                                                            gold_report_predictions=context_gold_predictions))  
+    context = 'source'
+    metrics_string += "\nSource \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),    
+                                return_cdae_qa_predictions(split, context, 
+                                                            gold_report_predictions=context_gold_predictions))
     ##########################
     ## ChatGPT models
     ##########################
@@ -293,6 +463,19 @@ def main():
                                 return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_chatgpt_predictions(split, context))
 
+    metrics_string += "\n (((Combined with Report Gold))) \n"
+    metrics_string += "Report \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),    
+                                return_cdae_chatgpt_predictions(split, context, 
+                                                            gold_report_predictions=context_gold_predictions))
+    
+    context = 'source'
+    metrics_string += "\nSource \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),    
+                                return_cdae_chatgpt_predictions(split, context, 
+                                                            gold_report_predictions=context_gold_predictions))
     ##########################
     ## Llama models
     ##########################
@@ -309,6 +492,19 @@ def main():
                                 return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),
                                 return_cdae_llama_predictions(split, context))
     
+    metrics_string += "\n (((Combined with Report Gold))) \n"
+    metrics_string += "Report \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),    
+                                return_cdae_llama_predictions(split, context, 
+                                                            gold_report_predictions=context_gold_predictions))  
+    context = 'source'
+    metrics_string += "\nSource \n"
+    metrics_string += print_compute_ceafe_rme_scores(
+                                return_cdae_iterx_data_filename(split, context,"mixed", use_coref=use_coref),    
+                                return_cdae_llama_predictions(split, context, 
+                                                            gold_report_predictions=context_gold_predictions))
+
     with open(f"{args.output_dir}/{split}_caefe_results_coref_{use_coref}.txt", 'w') as f:
         f.write(metrics_string)
 

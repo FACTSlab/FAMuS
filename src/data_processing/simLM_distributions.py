@@ -8,6 +8,8 @@ import torch
 import argparse
 import os
 import matplotlib.pyplot as plt
+# Set global font size
+plt.rcParams['font.size'] = 16
 
 def encode(tokenizer: PreTrainedTokenizerFast,
            query: str, passage: str, title: str = '-') -> BatchEncoding:
@@ -140,31 +142,43 @@ def main():
 
     # Plot for positive similarity scores
     axs[0, 0].hist(pos_sim_scores, bins=100)
-    axs[0, 0].set_xlabel('Similarity Score between Report and Source')
-    axs[0, 0].set_ylabel('Frequency of Docs')
+    axs[0, 0].set_xlabel('Similarity Score between Report and Source',  
+                            fontsize=16)
+    axs[0, 0].set_ylabel('Frequency of Docs',  
+                            fontsize=16)
     axs[0, 0].set_xlim(-9, 4)
-    axs[0, 0].set_title('SV (+) Instances (Train + Dev)')
+    axs[0, 0].set_title('SV (+) Instances (Train + Dev)',  
+                            fontsize=20)
 
     # Plot for negative similarity scores
     axs[0, 1].hist(neg_sim_scores, bins=100)
-    axs[0, 1].set_xlabel('Similarity Score between Report and Source')
-    axs[0, 1].set_ylabel('Frequency of Docs')
+    axs[0, 1].set_xlabel('Similarity Score between Report and Source',  
+                            fontsize=16)
+    axs[0, 1].set_ylabel('Frequency of Docs',  
+                            fontsize=16)
     axs[0, 1].set_xlim(-9, 4)
-    axs[0, 1].set_title('SV (-) Instances (Train + Dev)')
+    axs[0, 1].set_title('SV (-) Instances (Train + Dev)',  
+                            fontsize=20)
 
     # Plot for gold negative similarity scores
     axs[1, 0].hist(neg_gold_sim_scores, bins=100)
-    axs[1, 0].set_xlabel('Similarity Score between Report and Source')
-    axs[1, 0].set_ylabel('Frequency of Docs')
+    axs[1, 0].set_xlabel('Similarity Score between Report and Source',  
+                            fontsize=16)
+    axs[1, 0].set_ylabel('Frequency of Docs',  
+                            fontsize=16)
     axs[1, 0].set_xlim(-9, 4)
-    axs[1, 0].set_title('Gold SV (-): (Train + Dev)')
+    axs[1, 0].set_title('Gold SV (-): (Train + Dev)',  
+                            fontsize=20)
 
     # Plot for generated negative similarity scores
     axs[1, 1].hist(neg_gen_sim_scores, bins=100)
-    axs[1, 1].set_xlabel('Similarity Score between Report and Source')
-    axs[1, 1].set_ylabel('Frequency of Docs')
+    axs[1, 1].set_xlabel('Similarity Score between Report and Source',  
+                            fontsize=16)
+    axs[1, 1].set_ylabel('Frequency of Docs',  
+                            fontsize=16)
     axs[1, 1].set_xlim(-9, 4)
-    axs[1, 1].set_title('Silver SV (-): (Train + Dev)')
+    axs[1, 1].set_title('Silver SV (-): (Train + Dev)',  
+                            fontsize=20)
 
     # Improve layout
     plt.tight_layout()
@@ -173,8 +187,6 @@ def main():
     plt.savefig('histogram_simLM_all_examples.png', format='png', dpi=300)
     plt.show()
     plt.close()
-    
+
 if __name__ == '__main__':
     main()
-
-

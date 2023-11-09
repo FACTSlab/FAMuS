@@ -4,7 +4,7 @@ import argparse
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--generated', type=str, required=True)
-    parser.add_argument('--targe', type=str, required=True)
+    parser.add_argument('--target', type=str, required=True)
     parser.add_argument('--output', type=str, required=True)
     args = parser.parse_args()
 
@@ -25,3 +25,7 @@ def main():
     with open(args.output, 'w') as f:
         for line in generated_jsons:
             f.write(json.dumps(line) + '\n')
+    print('Done')
+
+if __name__ == '__main__':
+    main()

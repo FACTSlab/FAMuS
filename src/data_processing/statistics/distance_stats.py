@@ -110,14 +110,14 @@ def max_distances(data: list, verbose=False):
                 print(doc['instance_id'])
         else:
             # compute distances between first and last role in report
-            if len(report_roles) == 1:
+            if len(report_roles) == 1: # only 1 role in report
                 report_distances.append(0)
             else:
                 first_report_role, last_report_role = find_first_last_role(report_roles)
                 report_distances.append(distance(first_report_role, last_report_role))
 
             # compute distances between first and last role in source
-            if len(source_roles) == 1:
+            if len(source_roles) == 1: # only 1 role in source
                 source_distances.append(0)
             else:
                 first_source_role, last_source_role = find_first_last_role(source_roles)
@@ -139,7 +139,6 @@ def trigger_distance(data: list, verbose=False):
         report_info = doc["report_dict"]["role_annotations"]
         trigger_span = doc["report_dict"]["frame-trigger-span"][3:5]
         report_roles = []
-        role_distances = []
         for frame in report_info:
             if frame == 'role-spans-indices-in-all-spans':
                 continue
@@ -155,8 +154,6 @@ def trigger_distance(data: list, verbose=False):
             # compute distances between first and last role in report
             for role in report_roles:
                 report_distances.append(distance(role, trigger_span))
-            #     role_distances.append(distance(role, trigger_span))
-            # report_distances.append(np.mean(role_distances))
 
     if len(report_distances) != 0:
         avg_distance = np.mean(report_distances)
@@ -198,14 +195,12 @@ def main():
     report_fig_name = 'report_distances_' + args.dataset + '.png'
     source_fig_name = 'source_distances_' + args.dataset + '.png'
     plt.hist(report_distances, bins=100)
-    # plt.title("Distance Between First and Last Role in Report")
     plt.xlabel("Distance")
     plt.ylabel("Frequency")
     plt.savefig(os.path.join(args.output_dir, report_fig_name))
     plt.clf()
 
     plt.hist(source_distances, bins=100)
-    # plt.title("Distance Between First and Last Role in Source")
     plt.xlabel("Distance")
     plt.ylabel("Frequency")
     plt.savefig(os.path.join(args.output_dir, source_fig_name))
@@ -213,7 +208,6 @@ def main():
 
     trigger_distance_fig_name = 'trigger_distances_' + args.dataset + '.png'
     plt.hist(trigger_distances, bins=100)
-    # plt.title("Average Distances Between Arguments and Trigger in Report")
     plt.xlabel("Distance")
     plt.ylabel("Frequency")
     plt.savefig(os.path.join(args.output_dir, trigger_distance_fig_name))
@@ -238,7 +232,6 @@ def main():
         print("Variance:", np.var(source_distances))
 
     # print stats in MD formatting 
-    # Mean : `number` \ 
     if args.verbose:
         print("Report distances:")
         print("Mean: `", np.mean(report_distances), '`\\')
@@ -255,13 +248,5 @@ def main():
         print("Standard deviation: `", np.std(source_distances), '`\\')
         print("Variance: `", np.var(source_distances), '`\\')
 
-
-
-
-    
-
-
 if __name__ == "__main__":
     main()
-
-

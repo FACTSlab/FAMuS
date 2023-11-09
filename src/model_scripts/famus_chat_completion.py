@@ -10,12 +10,12 @@ from llama import Llama, Dialog
 
 class Batch:
     """
-    All the dialogs split into batches of 4.
+    All the dialogs split into batches
     """
-    def __init__(self, json_info):
+    def __init__(self, json_info, batch_size=2):
         self.json_info = json_info
         self.dialogs = self._get_dialogs()
-        self.batch_size = 2
+        self.batch_size = batch_size
         self.current = 0
         self.batches = self._get_batches()
 

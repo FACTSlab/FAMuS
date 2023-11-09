@@ -244,7 +244,6 @@ def argument_counts(data: list, num_docs=5):
                 arg_info[frame]['counts'][split][role] /= num_docs
     return arg_info
 
-
 def normalize_roles(role_info: dict):
     """
     Normalize averages by number of roles in the frame
@@ -263,7 +262,6 @@ def normalize_roles(role_info: dict):
         normalized_roles[frame]['role-average'] = role_info[frame]['role-average'] / len(role_info[frame]['counts']['report'])
         normalized_roles[frame]['source-average'] = role_info[frame]['source-average'] / len(role_info[frame]['counts']['source'])
     return normalized_roles
-
 
 def main(): 
     parser = argparse.ArgumentParser()
@@ -325,15 +323,6 @@ def main():
 
     sorted_roles = sorted(role_info.items(), key=lambda x: x[1]['combined-average'], reverse=True)
 
-    # if args.verbose:
-    #     print("Top 3 frames with the most filled roles:")
-    #     for frame in sorted_roles[:3]:
-    #         print(frame[0], frame[1]['average'])
-
-    #     print("Top 3 frames with the least filled roles:")
-    #     for frame in sorted_roles[-3:]:
-    #         print(frame[0], frame[1]['average'])
-
     norm_roles = normalize_roles(role_info)
 
     sorted_norm_roles = sorted(norm_roles.items(), key=lambda x: x[1]['combined-average'], reverse=True)
@@ -347,7 +336,6 @@ def main():
         for frame in sorted_norm_roles[-10:]:
             print(frame[0], frame[1]['combined-average'])
 
-    # write to a json file
     json_name = "sorted_roles_" + args.dataset + ".json"
     with open(os.path.join(args.output_dir, json_name), "w") as f:
         json.dump(sorted_roles, f, indent=4)
@@ -375,14 +363,9 @@ def main():
 
     sorted_args = sorted(arg_info.items(), key=lambda x: x[1]['combined-total'], reverse=True)
 
-    # write sorted norm roles to a json file
     json_name = "sorted_args" + "_" + args.dataset + ".json"
     with open(os.path.join(args.output_dir, json_name), "w") as f:
         json.dump(sorted_args, f, indent=4)
-
-    
-
-
 
 if __name__ == "__main__":
     main()

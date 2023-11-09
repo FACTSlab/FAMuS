@@ -154,8 +154,9 @@ def trigger_distance(data: list, verbose=False):
         else:
             # compute distances between first and last role in report
             for role in report_roles:
-                role_distances.append(distance(role, trigger_span))
-            report_distances.append(np.mean(role_distances))
+                report_distances.append(distance(role, trigger_span))
+            #     role_distances.append(distance(role, trigger_span))
+            # report_distances.append(np.mean(role_distances))
 
     if len(report_distances) != 0:
         avg_distance = np.mean(report_distances)
@@ -197,14 +198,14 @@ def main():
     report_fig_name = 'report_distances_' + args.dataset + '.png'
     source_fig_name = 'source_distances_' + args.dataset + '.png'
     plt.hist(report_distances, bins=100)
-    plt.title("Distance Between First and Last Role in Report")
+    # plt.title("Distance Between First and Last Role in Report")
     plt.xlabel("Distance")
     plt.ylabel("Frequency")
     plt.savefig(os.path.join(args.output_dir, report_fig_name))
     plt.clf()
 
     plt.hist(source_distances, bins=100)
-    plt.title("Distance Between First and Last Role in Source")
+    # plt.title("Distance Between First and Last Role in Source")
     plt.xlabel("Distance")
     plt.ylabel("Frequency")
     plt.savefig(os.path.join(args.output_dir, source_fig_name))
@@ -212,7 +213,7 @@ def main():
 
     trigger_distance_fig_name = 'trigger_distances_' + args.dataset + '.png'
     plt.hist(trigger_distances, bins=100)
-    plt.title("Average Distances Between Arguments and Trigger in Report")
+    # plt.title("Average Distances Between Arguments and Trigger in Report")
     plt.xlabel("Distance")
     plt.ylabel("Frequency")
     plt.savefig(os.path.join(args.output_dir, trigger_distance_fig_name))

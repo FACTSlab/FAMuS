@@ -42,13 +42,15 @@ def is_lemma_in_source(instance):
         return False
     
 
-def parse_llm_response_for_source_val(response):
+def parse_llm_response_for_source_val(response,
+                                      verbose = False):
     soup = BeautifulSoup(response, 'html.parser')
     # check if 'valid_source' tag is present, if yes extract the text
     if soup.find('valid_source'):
         prediction = 1 if 'yes' in soup.find('valid_source').text.strip().lower() else 0
     else:
-        print(f"No valid_source tag found in response: {response}\n")
+        if verbose:
+            print(f"No valid_source tag found in response: {response}\n")
         prediction = 0
 
     return prediction

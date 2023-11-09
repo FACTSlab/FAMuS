@@ -125,16 +125,16 @@ def main():
 
     # Run a loop over entire dataframe to get gpt responses
     # and save the responses to a file
-    # os.makedirs(args.output_dir, exist_ok=True)
-    # model_name = "gpt-3.5-turbo-0301"
-    # generate_responses_with_retry(report_test_instances,
-    #                             openai,
-    #                             model_name = model_name,
-    #                             max_response_tokens = 128,
-    #                             temperature = 0,
-    #                             output_path = args.output_dir,
-    #                             output_gpt_filename = f"{args.split}_report_{model_name}_responses.jsonl"
-    #                                 )
+    os.makedirs(args.output_dir, exist_ok=True)
+    model_name = "gpt-3.5-turbo-0301"
+    generate_responses_with_retry(report_test_instances,
+                                openai,
+                                model_name = model_name,
+                                max_response_tokens = 128,
+                                temperature = 0,
+                                output_path = args.output_dir,
+                                output_gpt_filename = f"{args.split}_report_{model_name}_responses.jsonl"
+                                    )
     
     ############################
     ## Source Data

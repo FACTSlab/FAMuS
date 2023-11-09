@@ -17,6 +17,39 @@ def str2bool(v):
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
 
+def get_compute_ceafe_rme_scores(gold_file, predictions,
+                                ignore_no_template_doc = False ,
+                                sanitize_special_chars= False,):
+    # Exact Match
+    iterx_famus = IterXFAMuSMetric({gold_file: gold_file},
+                                 scorer_type = 'phi-3',
+                                 ignore_no_template_doc = ignore_no_template_doc,
+                                 sanitize_special_chars = sanitize_special_chars)
+
+    prediction_keys = list(predictions.keys())
+    # get only the references for the prediction keys
+    iterx_famus.references[gold_file] = {docid: iterx_famus.references[gold_file][docid] for docid in prediction_keys}
+
+    iterx_famus(predictions, 
+                gold_file,
+                normalize_role = False)
+    
+    exact_match_dict = iterx_famus.get_metric(reset=True)
+
+    # Soft Match
+    iterx_famus = IterXFAMuSMetric({gold_file: gold_file},
+                                      scorer_type = 'phi-3-levenshtein',
+                                      ignore_no_template_doc = ignore_no_template_doc,
+                                      sanitize_special_chars = sanitize_special_chars)
+    iterx_famus.references[gold_file] = {docid: iterx_famus.references[gold_file][docid] for docid in prediction_keys}
+    iterx_famus(predictions,
+                gold_file,
+                normalize_role = False)
+    soft_match_dict = iterx_famus.get_metric(reset=True)
+
+    return exact_match_dict, soft_match_dict
+
+
 def print_compute_ceafe_rme_scores(gold_file, predictions,
                                    ignore_no_template_doc = False ,
                                    sanitize_special_chars= False,):
@@ -128,6 +161,9 @@ def chatgpt_response_to_iterx_format(chatgpt_predictions):
         except:
             response_dict = {}
 
+        if isinstance(response_dict, str) or isinstance(response_dict, int):
+            response_dict = {}
+
         # Initialize the dictionary for this famus_id if it doesn't exist
         if famus_id not in result:
             result[famus_id] = [{'incident_type': incident_type}]
@@ -199,10 +235,13 @@ def parse_args():
 def return_cdae_iterx_data_filename(split, 
                                     context, 
                                     spans,
+                                    smaller_size = False,
                                     use_coref = False):
     if use_coref:
         return f"/data/svashishtha/FAMuS/data/cross_doc_role_extraction/iterx_format/{context}_data/{spans}_spans/{split}_gold_with_silver_coref.jsonl"
     else:
+        if smaller_size:
+            return f"/data/svashishtha/FAMuS/data/cross_doc_role_extraction/iterx_format/{context}_data/{spans}_spans/{split}_with_only_metric_keys.jsonl"
         return f"/data/svashishtha/FAMuS/data/cross_doc_role_extraction/iterx_format/{context}_data/{spans}_spans/{split}.jsonl"
 
 

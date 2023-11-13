@@ -80,7 +80,7 @@ def source_val_instances_predictions_to_true_and_predicted_labels(
         prediction_labels = [int(x['label'].split('_')[-1]) for x in model_predictions]
     elif model == 'lemma':
         prediction_labels = [int(is_lemma_in_source(instance)) for instance in model_predictions]
-    elif model == 'chatgpt' or model == 'llama':
+    elif model == 'chatgpt' or model == 'llama-2-13b':
         prediction_labels = [parse_llm_response_for_source_val(response_dct['response']) 
                                     for response_dct in model_predictions]
     else:
@@ -128,6 +128,7 @@ def main():
     source_val_model_path = args.model_path
     longformer_model_path = os.path.join(source_val_model_path, "results", "best_model")
     chatgpt_model_path = os.path.join(source_val_model_path, "chatgpt")
+    llama_model_path = os.path.join(source_val_model_path, "llama")
 
     ## Load data
     with open(os.path.join(source_val_data_path, "dev.jsonl"), 'r') as f:
@@ -140,6 +141,9 @@ def main():
     with open(os.path.join(chatgpt_model_path, "dev_gpt-3.5-turbo-0301_responses.jsonl"), 'r') as f:
         chatgpt_predictions = [json.loads(line) for line in f.readlines()]
 
+    with open(os.path.join(llama_model_path, "dev_sv_llama_13b_responses.jsonl"), 'r') as f:
+        llama_predictions = [json.loads(line) for line in f.readlines()]
+
     ## Create bins based on Source Length
     longformer_bins_with_indices = bin_data_with_indices(source_val_data, 
                                           source_lengths, 
@@ -149,10 +153,14 @@ def main():
                                             source_val_data)
     chatgpt_model_bins_with_indices = bin_data_with_indices(source_val_data,
                                                 source_lengths,
-                                            chatgpt_predictions)  
+                                            chatgpt_predictions)
+
+    llama_model_bins_with_indices = bin_data_with_indices(source_val_data,
+                                                source_lengths,
+                                            llama_predictions)  
 
     ## Compute metrics across bins
-    models = ['longformer', 'lemma', 'chatgpt']
+    models = ['longformer', 'lemma', 'chatgpt', 'llama-2-13b']
     # Initialize the dictionary
     metric_values_dict = {'accuracy': {model: [] for model in models},
                           'precision': {model: [] for model in models},
@@ -166,6 +174,8 @@ def main():
                 bins_with_indices = lemma_model_bins_with_indices
             elif model == 'chatgpt':
                 bins_with_indices = chatgpt_model_bins_with_indices
+            elif model == 'llama-2-13b':
+                bins_with_indices = llama_model_bins_with_indices
 
             # Compute the metrics for each bin
             for bin_key in bins_with_indices:
@@ -209,7 +219,7 @@ def main():
         if height > 0:
             # Show accuracy values to two decimal places
             barplot.annotate(int(height),
-                            (p.get_x() + p.get_width() / 2., height*0.94),
+                            (p.get_x() + p.get_width() / 2., height*0.90),
                             ha = 'center', va = 'center', 
                             color='ivory', fontsize=15)
 

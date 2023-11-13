@@ -75,6 +75,11 @@ def parse_args():
                         required = True,
                         help="Path to the chatgpt output file")
     
+    parser.add_argument("--llama_output_file_path",
+                        type=str,
+                        required = True,
+                        help="Path to the llama output file")
+    
     parser.add_argument("--split", 
                         type=str, 
                         default="test",
@@ -156,6 +161,17 @@ def main():
             chatgpt_responses = [json.loads(line) for line in f.readlines()]
         for response_dct in chatgpt_responses:
             chatgpt_predictions.append(parse_llm_response_for_source_val(response_dct['response']))
+
+    ########################
+    # Llama predictions
+    ########################
+    # check if chatgpt output file exists
+    llama_predictions = []
+    if os.path.exists(args.llama_output_file_path):
+        with open(args.llama_output_file_path) as f:
+            llama_responses = [json.loads(line) for line in f.readlines()]
+        for response_dct in llama_responses:
+            llama_predictions.append(parse_llm_response_for_source_val(response_dct['response']))
     # Write metrics
     ########################
     with open(os.path.join(args.metrics_output_dir, f"metrics_source_val_{args.split}.json"), 'w') as f:
@@ -183,6 +199,14 @@ def main():
             chatgpt_r = f"{recall_score(test_labels, chatgpt_predictions, average='binary')*100:.2f}"
             chatgpt_f1 = f"{f1_score(test_labels, chatgpt_predictions, average='binary')*100:.2f}"
             f.write(f"{chatgpt_a} & {chatgpt_p} & {chatgpt_r} & {chatgpt_f1}\n")
+        f.write("\n###########################\n")
+        if llama_predictions:
+            f.write("Llama Model Metrics:\n")
+            llama_a = f"{accuracy_score(test_labels, llama_predictions)*100:.2f}"
+            llama_p = f"{precision_score(test_labels, llama_predictions, average='binary')*100:.2f}"
+            llama_r = f"{recall_score(test_labels, llama_predictions, average='binary')*100:.2f}"
+            llama_f1 = f"{f1_score(test_labels, llama_predictions, average='binary')*100:.2f}"
+            f.write(f"{llama_a} & {llama_p} & {llama_r} & {llama_f1}\n")
     print(f"Metrics exported to: {os.path.join(args.metrics_output_dir, f'metrics_source_val_{args.split}.json')}")
 
 

@@ -186,55 +186,7 @@ def main():
             json.dump(results, f)
 
     else:
-        print(f"{args.split} results already exist on this model. Skipping inference...")
-
-    ########################################################
-    # Compute Metrics and Output to File
-    ########################################################
-    with open(os.path.join(args.coref_cluster_data_path,
-                           "instance_id_to_coref_clusters.json") , "r") as f:
-        unique_id_to_source_coref_clusters = json.load(f)
-
-    results_from_file = json.load(open(os.path.join(args.model_checkpoint, 
-                            f"results_{args.split }.json")))
-    
-    metrics_file_string = ""
-    metrics_file_string += "Exact match without Coref\n"
-    metrics_file_string += compute_metrics(dataset,
-                    results_from_file,
-                    unique_id_to_source_coref_clusters,
-                    report_or_source=report_or_source,
-                    eval_metric_fn=tp_fp_fn_tn_role_agreement_single_gold,
-                    exact_match=True
-                    )
-    metrics_file_string += "\n\nExact match with Coref\n"
-    metrics_file_string += compute_metrics(dataset,
-                    results_from_file,
-                    unique_id_to_source_coref_clusters,
-                    report_or_source=report_or_source,
-                    eval_metric_fn=tp_fp_fn_tn_role_agreement_multiple_gold,
-                    exact_match=True
-                    )
-    metrics_file_string += "\n\nAgreement without Coref\n"
-    metrics_file_string += compute_metrics(dataset,
-                    results_from_file,
-                    unique_id_to_source_coref_clusters,
-                    report_or_source=report_or_source,
-                    eval_metric_fn=tp_fp_fn_tn_role_agreement_single_gold,
-                    exact_match=False
-                    )
-    metrics_file_string += "\n\nAgreement with Coref\n"
-    metrics_file_string += compute_metrics(dataset,
-                    results_from_file,
-                    unique_id_to_source_coref_clusters,
-                    report_or_source=report_or_source,
-                    eval_metric_fn=tp_fp_fn_tn_role_agreement_multiple_gold,
-                    exact_match=False
-                    )
-    with open(os.path.join(args.model_checkpoint,
-                            f"metrics_{args.split}.txt"), "w") as f:
-        f.write(metrics_file_string)
-    
+        print(f"{args.split} results already exist on this model. Skipping inference...")    
 
 if __name__ == "__main__":
     main()

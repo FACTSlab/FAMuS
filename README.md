@@ -54,7 +54,7 @@ To reproduce the evaluation metrics in the paper, follow the below instructions:
    To run evaluation of the model on dev or test, run the following:
 
    ```
-    bash run_source_val_evaluation.sh
+    bash src/job_runs/run_source_val_evaluation.sh
    ```
 
    You can find the metrics output in `src/metrics/`

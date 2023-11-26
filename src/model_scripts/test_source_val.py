@@ -11,7 +11,7 @@ import argparse
 from torch.utils.data import Dataset
 from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_score)
 from bs4 import BeautifulSoup
-from nltk.stem import 	WordNetLemmatizer
+from nltk.stem import WordNetLemmatizer
 wordnet_lemmatizer = WordNetLemmatizer()
 
 class ListDataset(Dataset):

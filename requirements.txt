@@ -1,0 +1,7 @@
+gdown
+transformers==4.35.2
+nltk===3.8.1
+pandas
+evaluate
+scikit-learn==1.3.2
+termcolor==2.3.0

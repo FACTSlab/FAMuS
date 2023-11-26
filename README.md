@@ -11,12 +11,12 @@ The tasks are:
 1.  **Source Validation (SV)**:
     Given a report text $R$, a target event trigger (mention) $e$ occurring in $R$, and a candidate source text $S$, determine whether $S$ contains a description of the same event as the one denoted by $e$.
 
-        `data/source_validation/` contains the `train`/`dev`/`test` splits for this task and a description of all the fields in the data
+    `data/source_validation/` contains the `train`/`dev`/`test` splits for this task and a description of all the fields in the data
 
 2.  **Cross Document Argument Extraction (CDAE)**:
     Given a report text $R$, a target event trigger $e$ in $R$, and a correct source text $S$, extract all arguments of $e$ in both $R$ and $S$. We assume $e$ is assigned an event type from some underlying ontology of event types $E_1, . . . E_N$ , where each $E_i$ has roles $R_1^{(i)}, . . . , R_M^{(i)}$, and where e’s arguments must each be assigned one of these roles.
 
-        `data/cross_doc_role_extraction` contains the `train`/`dev`/`test` splits for this task description of all the fields in the data
+    `data/cross_doc_role_extraction` contains the `train`/`dev`/`test` splits for this task description of all the fields in the data
 
 For more details on the tasks, data collection, and models, please read our [paper](https://arxiv.org/abs/2311.05601).
 

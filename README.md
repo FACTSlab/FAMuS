@@ -40,9 +40,7 @@ pip install -r requirements.txt
 
 ## Models
 
-### Evaluation
-
-To reproduce the evaluation metrics in the paper, follow the below instructions:
+### Best Models
 
 1. Source Validation:
    To download the best longformer model from the paper, run the following command from the root of the repo:
@@ -51,14 +49,32 @@ To reproduce the evaluation metrics in the paper, follow the below instructions:
    bash models/source_validation/download_longformer_model.sh
    ```
 
-   To run evaluation of the model on dev or test, run the following:
+   (or directly download from [this](https://drive.google.com/uc?id=15BqtuzKsWq5ox4ShcxE9_8HjIas2pQVB) google drive link)
+
+   To reproduce the evaluation metrics in the paper, run the following:
 
    ```
     bash src/job_runs/run_source_val_evaluation.sh
    ```
 
-   You can find the metrics output in `src/metrics/`
-
 2. Cross Document Argument Extraction:
 
-   To be completed.
+   To download the best longformer qa models for both report and source from the paper, run the following command from the root of the repo:
+
+   ```
+   bash models/cdae/download_longformer_model.sh
+   ```
+
+   (or directly download from [this](https://drive.google.com/uc?id=1FCP5-tSV3ap1DnUNEH4akh5h77zvVuUf) google drive link.)
+
+   To run evaluation of the model on dev or test, run the following:
+
+   ```
+    bash src/job_runs/run_cross_doc_roles_qa_evaluation.sh
+   ```
+
+   You can find the metrics output in `src/metrics/`
+
+## Evaluation Metric - CEAF_RME (a)
+
+The CEAF_RME(a) metric that uses the normalized edit distance (read more in the paper) is implemented in the Iter-X repo and we provide an [example notebook](https://github.com/sidsvash26/iterx/blob/sv/famus/src/iterx/metrics/famus/metric_example_notebook.ipynb) showing how to compute the metric on a sample gold and predicted template set from a document.

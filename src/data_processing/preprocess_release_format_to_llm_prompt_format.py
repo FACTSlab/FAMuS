@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/data/svashishtha/rams2/src/")
+# sys.path.append("/data/svashishtha/rams2/src/")
 
 import json
 import pandas as pd

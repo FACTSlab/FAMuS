@@ -99,17 +99,17 @@ def generate_distinct_colors(n):
         additional_colors = [f"{fg}_{bg}" for fg in colors for bg in bg_colors if fg != bg.split('_')[1]]
         return colors + random.sample(additional_colors, n - len(colors))
 
-def coloredSourceText(source_dict):
-    all_tokens = source_dict['doctext-tok']
+def report_or_source_dict_to_role_highlight_text(famus_report_or_source_dict):
+    all_tokens = famus_report_or_source_dict['doctext-tok']
     colored_tokens = all_tokens.copy()
 
-    roles = [role for role in source_dict['role_annotations'].keys() if role != 'role-spans-indices-in-all-spans']
+    roles = [role for role in famus_report_or_source_dict['role_annotations'].keys() if role != 'role-spans-indices-in-all-spans']
     colors = generate_distinct_colors(len(roles))
     role_colors = dict(zip(roles, colors))
 
     # Create a list of all markers with their positions
     markers = []
-    for role, spans in source_dict['role_annotations'].items():
+    for role, spans in famus_report_or_source_dict['role_annotations'].items():
         if role != 'role-spans-indices-in-all-spans':
             for span in spans:
                 token_start_idx = span[3]
@@ -167,13 +167,17 @@ def famus_instance_to_pretty_text_with_roles(instance):
     string += f"Instance_id: {instance['instance_id']}\n"
     string += f"Frame: {instance['frame']}\n"
     string += f"###########################################################\n"
-    string += f"#####   Report Text: ########\n"
+    string += f"#####   Report Text with trigger: ########\n"
     string += f"###########################################################\n"
-    string += coloredSourceText(instance['report_dict']) + "\n"
+    string += famusInstance2ModifiedReportwithTrigger(instance)['colored-doctext'] + "\n"
     string += f"###########################################################\n"
-    string += f"#####   Source Text: ########\n"
+    string += f"#####   Report Text with Highlighted Roles: ########\n"
     string += f"###########################################################\n"
-    string += coloredSourceText(instance['source_dict']) + "\n"
+    string += report_or_source_dict_to_role_highlight_text(instance['report_dict']) + "\n"
+    string += f"###########################################################\n"
+    string += f"#####   Source Text with Highlighted Roles: ########\n"
+    string += f"###########################################################\n"
+    string += report_or_source_dict_to_role_highlight_text(instance['source_dict']) + "\n"
 
     return string
 

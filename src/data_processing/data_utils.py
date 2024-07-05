@@ -1,5 +1,7 @@
 # Purpose: Utility functions for data processing on FAMuS release format
 import json
+from termcolor import colored
+import random
 
 def famusInstance2ModifiedReportwithTrigger(instance, trigger_tag='event'):
     """
@@ -85,6 +87,95 @@ def famusInstance2coloredReportText(instance):
             
     return " ".join(all_tokens)
 
+from termcolor import colored
+import random
+
+def generate_distinct_colors(n):
+    colors = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
+    if n <= len(colors):
+        return colors[:n]
+    else:
+        bg_colors = ['on_red', 'on_green', 'on_yellow', 'on_blue', 'on_magenta', 'on_cyan', 'on_white']
+        additional_colors = [f"{fg}_{bg}" for fg in colors for bg in bg_colors if fg != bg.split('_')[1]]
+        return colors + random.sample(additional_colors, n - len(colors))
+
+def coloredSourceText(source_dict):
+    all_tokens = source_dict['doctext-tok']
+    colored_tokens = all_tokens.copy()
+
+    roles = [role for role in source_dict['role_annotations'].keys() if role != 'role-spans-indices-in-all-spans']
+    colors = generate_distinct_colors(len(roles))
+    role_colors = dict(zip(roles, colors))
+
+    # Create a list of all markers with their positions
+    markers = []
+    for role, spans in source_dict['role_annotations'].items():
+        if role != 'role-spans-indices-in-all-spans':
+            for span in spans:
+                token_start_idx = span[3]
+                token_end_idx = span[4]
+                markers.append((token_start_idx, f"{role}_start", role))
+                markers.append((token_end_idx + 1, f"{role}_end", role))
+
+    # Sort markers by position, with end markers coming before start markers at the same position
+    markers.sort(key=lambda x: (x[0], -ord(x[1][-1])))
+
+    # Apply coloring and insert markers
+    offset = 0
+    active_roles = []
+    for i, (pos, marker, role) in enumerate(markers):
+        color = role_colors[role]
+        if marker.endswith('_start'):
+            active_roles.append(role)
+        elif marker.endswith('_end'):
+            active_roles.pop()
+
+        # Color the marker
+        if '_' in color:
+            fg, bg = color.split('_')
+            colored_marker = colored(f"[{marker}]", fg, bg)
+        else:
+            colored_marker = colored(f"[{marker}]", color)
+
+        # Insert the marker
+        colored_tokens.insert(pos + offset, colored_marker)
+        offset += 1
+
+        # Color the text if this is a start marker
+        if marker.endswith('_start'):
+            current_color = role_colors[active_roles[-1]]  # Use color of the outermost active role
+            next_pos = pos + offset
+            end_pos = markers[i+1][0] + offset if i+1 < len(markers) else len(colored_tokens)
+            
+            while next_pos < end_pos:
+                if '_' in current_color:
+                    fg, bg = current_color.split('_')
+                    colored_tokens[next_pos] = colored(colored_tokens[next_pos], fg, bg)
+                else:
+                    colored_tokens[next_pos] = colored(colored_tokens[next_pos], current_color)
+                next_pos += 1
+
+    return " ".join(colored_tokens)
+
+
+def famus_instance_to_pretty_text_with_roles(instance):
+    """
+    Given a FAMuS instance, output a string of report and source sentences with the roles highlighted in different colors
+    """
+    # String denoting frame 
+    string = ""
+    string += f"Instance_id: {instance['instance_id']}\n"
+    string += f"Frame: {instance['frame']}\n"
+    string += f"###########################################################\n"
+    string += f"#####   Report Text: ########\n"
+    string += f"###########################################################\n"
+    string += coloredSourceText(instance['report_dict']) + "\n"
+    string += f"###########################################################\n"
+    string += f"#####   Source Text: ########\n"
+    string += f"###########################################################\n"
+    string += coloredSourceText(instance['source_dict']) + "\n"
+
+    return string
 
 def exportList2Jsonl(list_of_dicts, 
                      output_path):
